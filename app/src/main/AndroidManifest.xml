@@ -13,6 +13,13 @@
         android:theme="@style/Theme.HealthUp"
         tools:targetApi="31">
         <activity
+            android:name=".activities.SplashActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>

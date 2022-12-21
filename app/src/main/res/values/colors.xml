@@ -7,10 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="redx">#BE0E25</color>
+    <color name="redx">#EF5965</color>
     <color name="whitex">#F2F0F2</color>
     <color name="greyx">#A8A3BD</color>
-    <color name="bluex">#335490</color>
+    <color name="bluex">#005D7C</color>
     <color name="darkbluex">#463F64</color>
 
 </resources>
