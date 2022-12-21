@@ -12,5 +12,6 @@
     <color name="greyx">#A8A3BD</color>
     <color name="bluex">#335490</color>
     <color name="darkbluex">#463F64</color>
+    <color name="primary">#000000</color>
 
 </resources>
