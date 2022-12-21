@@ -12,5 +12,12 @@
     <color name="greyx">#A8A3BD</color>
     <color name="bluex">#005D7C</color>
     <color name="darkbluex">#463F64</color>
+    <color name="primary">#005D7C</color>
+    <color name="gray">#181A20</color>
+    <color name="gray_light">#3E4047</color>
+    <color name="gray_dark">#000000</color>
+    <color name="blue">#005D7C</color>
+    <color name="blue_light">#005D7C</color>
+    <color name="blue_dark">#005D7C</color>
 
 </resources>
