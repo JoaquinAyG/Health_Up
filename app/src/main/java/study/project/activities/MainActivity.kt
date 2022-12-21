@@ -1,18 +1,17 @@
-package study.project.activities;
+package study.project.activities
 
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import study.project.R
+import study.project.databinding.ActivityLoginBinding
 
-import android.os.Bundle;
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-import study.project.R;
-
-public class MainActivity extends AppCompatActivity {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 }
