@@ -6,7 +6,7 @@
             android:duration="150"
             android:fillAfter="true"
             android:fromAlpha="0.0"
-            android:repeatCount="10"
+            android:repeatCount="1"
             android:repeatMode="reverse"
             android:toAlpha="1.0" />
     </set>
