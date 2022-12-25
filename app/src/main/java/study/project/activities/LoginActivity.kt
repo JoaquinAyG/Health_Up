@@ -13,17 +13,21 @@ class LoginActivity : AppCompatActivity() {
         val binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.apply{
+        binding.apply {
 
             btnlogin.setOnClickListener {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
-                if(Utils.validateCredentials(username, password)){
+                if (Utils.validateCredentials(username, password)) {
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
-                }else{
-                    Toast.makeText(this@LoginActivity, "Invalid username or password", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Invalid username or password",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 

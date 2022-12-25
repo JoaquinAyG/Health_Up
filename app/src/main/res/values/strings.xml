@@ -8,4 +8,5 @@
     <string name="singup">Have you got an account? Sing up <a style="color:#FA7F08" href="">here</a></string>
     <string name="usuario">Username</string>
     <string name="pass">Password</string>
+    <string name="logo">Logo Image</string>
 </resources>
