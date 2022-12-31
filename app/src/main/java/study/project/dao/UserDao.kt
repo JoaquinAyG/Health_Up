@@ -18,14 +18,11 @@ interface UserDao : IDao<User>{
     override suspend fun insert(model: User)
 
     @Query("DELETE FROM user_table")
-    override suspend fun deleteAll()
+    override fun deleteAll()
 
     @Delete
-    override suspend fun delete(model: User)
+    override fun delete(model: User)
 
     @Update
     override suspend fun update(model: User)
-
-    @Query("SELECT * FROM user_table WHERE id = :id")
-    suspend fun getUserById(id: Int): User
 }

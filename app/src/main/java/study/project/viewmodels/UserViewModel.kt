@@ -27,8 +27,4 @@ class UserViewModel(private val repository: UserRepository) : ViewModel() {
     fun update(user: User) = viewModelScope.launch {
         repository.update(user)
     }
-
-    fun getUserById(id: Int) = viewModelScope.launch {
-        repository.getUserById(id)
-    }
 }

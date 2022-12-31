@@ -10,10 +10,10 @@ data class User(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
-    val id: Int = -1,
+    var id: Int = -1,
 
     @ColumnInfo(name = "username")
-    val username: String = "",
+    var username: String = "",
 
     @ColumnInfo(name = "password")
     var password: String = "",
@@ -25,7 +25,7 @@ data class User(
     var age: Int = 0,
 
     @ColumnInfo(name = "admin")
-    val admin: Boolean = false,
+    var admin: Boolean = false,
 
 ) : Serializable {
     override fun toString(): String {

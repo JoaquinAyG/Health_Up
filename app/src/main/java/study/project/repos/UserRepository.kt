@@ -12,16 +12,16 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun insert(user: User) {
         userDao.insert(user)
     }
-    suspend fun deleteAll() {
+    @WorkerThread
+    fun deleteAll() {
         userDao.deleteAll()
     }
-    suspend fun delete(user: User) {
+    @WorkerThread
+    fun delete(user: User) {
         userDao.delete(user)
     }
+    @WorkerThread
     suspend fun update(user: User) {
         userDao.update(user)
-    }
-    suspend fun getUserById(id: Int): User {
-        return userDao.getUserById(id)
     }
 }
