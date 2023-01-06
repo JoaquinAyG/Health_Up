@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
 
         binding.apply {
 
-            btnlogin.setOnClickListener {
+            btnLogin.setOnClickListener {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
                 if (Utils.validateCredentials(username, password)) {
@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
 
-            signup.setOnClickListener {
+            tvSignup.setOnClickListener {
                 Toast.makeText(this@LoginActivity, "Sign Up", Toast.LENGTH_SHORT).show()
 //            val intent = Intent(this, SignupActivity::class.java)
 //            startActivity(intent)
