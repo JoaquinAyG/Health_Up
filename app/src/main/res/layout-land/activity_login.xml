@@ -14,7 +14,7 @@
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="69dp"
+            android:layout_marginTop="20dp"
             android:contentDescription="@string/logo"
             android:src="@drawable/logo"
             app:layout_constraintEnd_toEndOf="parent"
@@ -23,8 +23,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
-            style="@style/LoginButtons"
-            android:layout_marginTop="69dp"
+            style="@style/LoginButtonsLanded"
+            android:layout_marginTop="20dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -41,7 +41,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
-            style="@style/LoginButtons"
+            style="@style/LoginButtonsLanded"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -62,7 +62,7 @@
             android:id="@+id/tv_signup"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="74dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:text="@string/sign_up_question"
             android:textColor="@color/white"
@@ -75,7 +75,7 @@
             android:id="@+id/btn_login"
             android:layout_width="246dp"
             android:layout_height="66dp"
-            android:layout_marginTop="74dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/main_btn"
             android:text="@string/login"
             android:textSize="22sp"
@@ -88,14 +88,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.151" />
+            app:layout_constraintGuide_percent="0.3" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.849" />
+            app:layout_constraintGuide_percent="0.7" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
