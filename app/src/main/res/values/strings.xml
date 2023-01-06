@@ -1,12 +1,10 @@
 <resources>
-    <string name="app_name">Health Up</string>
+    <string name="app_name">Health Up^</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_up_question">Don´t have account? SIGN UP</string>
     <string name="login">LOG IN</string>
     <string name="splash" translatable="false">HealthUp</string>
-    <string name="singup">Have you got an account? Sing up <a style="color:#FA7F08" href="">here</a></string>
-    <string name="usuario">Username</string>
-    <string name="pass">Password</string>
     <string name="logo">Logo Image</string>
 </resources>
+

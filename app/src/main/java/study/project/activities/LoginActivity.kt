@@ -14,7 +14,6 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-
             btnLogin.setOnClickListener {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
