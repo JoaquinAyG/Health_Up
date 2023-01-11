@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
         val binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.apply {
             btnLogin.setOnClickListener {
                 val username = etUsername.text.toString()
