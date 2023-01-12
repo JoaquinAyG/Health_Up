@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import study.project.fragments.Page1;
 import study.project.fragments.Page2;
 import study.project.fragments.Page3;
+import study.project.fragments.Page4;
 
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
@@ -37,6 +38,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 return new Page2();
             case 2:
                 return new Page3();
+            case 3:
+                return new Page4();
             default:
                 return null;
 
@@ -56,6 +59,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 4;
     }
 }
