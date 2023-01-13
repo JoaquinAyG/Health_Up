@@ -22,7 +22,7 @@
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/ic_launcher_round" />
+            app:srcCompat="@drawable/logo" />
 
         <TextView
             android:id="@+id/tv_username"
@@ -170,6 +170,16 @@
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cardWeight" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@mipmap/editpen_round"
+            app:layout_constraintRight_toRightOf="@id/iv_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+             />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
