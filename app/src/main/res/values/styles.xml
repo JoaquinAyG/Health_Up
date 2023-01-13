@@ -51,7 +51,7 @@
     <style name="login_et">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:backgroundTint">@color/primary_dark</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">@color/white</item>

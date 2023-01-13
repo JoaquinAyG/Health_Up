@@ -8,11 +8,6 @@ import android.view.ViewGroup;
 import androidx.fragment.app.Fragment;
 
 import study.project.R;
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Page1#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class Page1 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
