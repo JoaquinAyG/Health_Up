@@ -26,18 +26,9 @@ public class Page2 extends Fragment {
     private String mParam2;
 
     public Page2() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment2.
-     */
-    // TODO: Rename and change types and number of parameters
+
     public static Page2 newInstance(String param1, String param2) {
         Page2 fragment = new Page2();
         Bundle args = new Bundle();
