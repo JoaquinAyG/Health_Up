@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthUp"
         tools:targetApi="31">
-
+        <activity
+            android:name=".activities.OnBoardingActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.SplashActivity"
             android:exported="true">
@@ -24,7 +26,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".activities.MainActivity"
@@ -40,7 +41,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
     </application>
 
 </manifest>
