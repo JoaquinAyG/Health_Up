@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary_gray"
+        tools:context=".fragments.Page1">
+
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/user"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            android:useLevel="false" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="1dp"
+            android:text="Joaquin Ayingui"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/whitex"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDays"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="35dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:alpha="0.6"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardGender" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="79dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="92dp"
+            android:text="Age"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/whitex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <TextView
+            android:id="@+id/tv_height"
+            android:layout_width="82dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="128dp"
+            android:text="Height"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/whitex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <TextView
+            android:id="@+id/tv_weight"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="164dp"
+            android:text="Weight"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/whitex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <TextView
+            android:id="@+id/tv_gender"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="196dp"
+            android:text="Gender"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/whitex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <TextView
+            android:id="@+id/tv_days"
+            android:layout_width="175dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="228dp"
+            android:text="capable days"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/whitex"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardage"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="35dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="92dp"
+            android:layout_marginEnd="1dp"
+            android:alpha="0.6"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardHeight"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="35dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:alpha="0.6"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardage" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWeight"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="35dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:alpha="0.6"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardHeight" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardGender"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="35dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:alpha="0.6"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardWeight" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:src="@mipmap/editpen_round"
+            app:layout_constraintRight_toRightOf="@id/iv_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

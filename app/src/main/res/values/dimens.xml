@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="top_margin">64dp</dimen>
+    <dimen name="toolbar_height">76dp</dimen>
+    <dimen name="card_width">330dp</dimen>
+
 </resources>
