@@ -185,6 +185,5 @@
             app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
              />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
