@@ -5,11 +5,13 @@
 ![Login](img/login.png)
 
 
+
 -- Presentación de la aplicación en el primer inicio de sesión --
 
 ![presentacion](img/presentacion1.png)
 
 ![presentacion](img/presentacion2.png)
+
 
 
 -- Prototipo en figma --
@@ -24,17 +26,11 @@ Navigation bar
 
 Progress bar para Sign up
 
-![Progress bar](img/progress1.png)![Progress bar](img/progress2.png)
+![Progress bar](img/progress1.png)  ![Progress bar](img/progress2.png)
 
 Ejemplos del Sign up
 
-![training days](img/capable.png)
-
-
-![check](img/check.png)
-
-
-![password](img/password.png)
+![training days](img/capable.png)   ![check](img/check.png)!    [password](img/password.png)
 
 Pantalla de ejercicios
 
@@ -44,6 +40,9 @@ Pantalla de favoritos
 
 ![Favorites](img/favoritos.png)
 
+
+
+-- Enlace a nuestro figma --
 
 https://www.figma.com/file/fHtFCWCAkLZTQdqZ4F44fX/Untitled?node-id=0%3A1&t=RsfQHG8iXH8gJREM-0
 
