@@ -13,9 +13,11 @@
 -- Prototipo en figma --
 
 Pelfil del usuario
+
 ![Profile](img/profile.png)
 
 Navigation bar
+
 ![navegacion](img/navegacion.png)
 
 Progress bar para Sign up
@@ -23,20 +25,24 @@ Progress bar para Sign up
 ![Progress bar](img/progress1.png)      ![Progress bar](img/progress2.png)
 
 Ejemplos del Sign up
+
 ![training days](img/capable.png)
+
 
 ![check](img/check.png)
 
+
 ![password](img/password.png)
+
 
 Pantalla de ejercicios
 
 ![ejercicio](img/ejercicios1.png)       ![ejercicio](img/ejercicios2.png)
 
 
+Pantalla de favoritos
 
-
-
+![Favorites](img/favoritos.png)
 
 
 https://www.figma.com/file/fHtFCWCAkLZTQdqZ4F44fX/Untitled?node-id=0%3A1&t=RsfQHG8iXH8gJREM-0
