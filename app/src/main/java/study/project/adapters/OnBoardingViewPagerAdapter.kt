@@ -1,18 +1,19 @@
 package study.project.adapters
 
-import android.R
+
+import study.project.R
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RelativeLayout
+import android.widget.TextView
 import androidx.viewpager.widget.PagerAdapter
-import study.project.databinding.OnboardingSliderBinding
 
 
-class OnBoardingViewPagerAdapter(val context: Context, val pagesList: ArrayList<String>) : PagerAdapter() {
+class OnBoardingViewPagerAdapter(val context: Context, private val pagesList: ArrayList<String>) : PagerAdapter() {
 
-    private val binding : OnboardingSliderBinding = OnboardingSliderBinding.inflate(LayoutInflater.from(context))
+    private var layoutInflater: LayoutInflater? = null
 
     override fun getCount(): Int {
         return pagesList.size
@@ -23,16 +24,15 @@ class OnBoardingViewPagerAdapter(val context: Context, val pagesList: ArrayList<
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-
-        val layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-
-        binding.tvTitle.text = pagesList[position]
-        container.addView(binding.root)
-
-        return binding.root
+        layoutInflater = LayoutInflater.from(context)
+        val view =    layoutInflater!!.inflate(R.layout.onboarding_slider, container, false)
+        val textview: TextView = view.findViewById(R.id.tvTitle)
+        textview.text = pagesList[position]
+        container.addView(view)
+        return view
     }
 
     override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        container.removeView(`object` as RelativeLayout)
+        container.removeView(`object` as View)
     }
 }
