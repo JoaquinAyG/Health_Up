@@ -6,5 +6,6 @@
     <string name="login">LOG IN</string>
     <string name="splash" translatable="false">HealthUp</string>
     <string name="logo">Logo Image</string>
+    <string name="abdominal">abdominal</string>
 </resources>
 
