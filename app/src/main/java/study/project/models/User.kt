@@ -21,6 +21,18 @@ data class User(
     @ColumnInfo(name = "email")
     var email: String = "",
 
+    @ColumnInfo(name = "weight")
+    var weight: Int = 0,
+
+    @ColumnInfo(name = "height")
+    var height: Int = 0,
+
+    @ColumnInfo(name = "gender")
+    var gender: String = "",
+
+    @ColumnInfo(name = "capableDays")
+    var capableDays: Int = 0,
+
     @ColumnInfo(name = "age")
     var age: Int = 0,
 
