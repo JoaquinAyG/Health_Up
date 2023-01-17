@@ -30,11 +30,11 @@ Progress bar para Sign up
 
 Ejemplos del Sign up
 
-![training days](img/capable.png)   ![check](img/check.png)!    [password](img/password.png)
+![training days](img/capable.png)   ![check](img/check.png)    ![password](img/password.png)
 
 Pantalla de ejercicios
 
-![ejercicio](img/ejercicios1.png)![ejercicio](img/ejercicios2.png)
+![ejercicio](img/ejercicios1.png)   ![ejercicio](img/ejercicios2.png)
 
 Pantalla de favoritos
 
