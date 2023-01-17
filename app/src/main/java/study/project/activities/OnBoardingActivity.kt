@@ -15,12 +15,15 @@ import study.project.adapters.OnBoardingViewPagerAdapter
 class OnBoardingActivity : AppCompatActivity() {
 
     lateinit var llSliderDots: LinearLayout
+    lateinit var btnContinue: Button
+    lateinit var btnFinish: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
 
         val vpOnboarding = findViewById<ViewPager>(R.id.vp_onboarding)
-        val btnContinue = findViewById<Button>(R.id.btn_continue)
+        btnContinue = findViewById<Button>(R.id.btn_continue)
+        btnFinish = findViewById<Button>(R.id.btn_finish)
         llSliderDots = findViewById(R.id.llSliderDots)
 
         val pages = arrayListOf("Page 1", "Page 2", "Page 3", "Page 4")
@@ -38,6 +41,7 @@ class OnBoardingActivity : AppCompatActivity() {
 
             override fun onPageSelected(position: Int) {
                 setDots(pages.size, position)
+                setButtonVisibility(pages.size, position)
             }
 
             override fun onPageScrollStateChanged(state: Int) {
@@ -49,7 +53,24 @@ class OnBoardingActivity : AppCompatActivity() {
         setDots(pages.size, 0)
 
         btnContinue.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            vpOnboarding.currentItem = vpOnboarding.currentItem + 1
+        }
+
+        btnFinish.setOnClickListener{
+            startActivity(Intent(this@OnBoardingActivity, LoginActivity::class.java))
+            finish()
+        }
+
+        //TODO(Set activity to only show once)
+    }
+
+    private fun setButtonVisibility(size: Int, pos: Int) {
+        if (pos == size - 1) {
+            btnContinue.visibility = Button.GONE
+            btnFinish.visibility = Button.VISIBLE
+        } else {
+            btnContinue.visibility = Button.VISIBLE
+            btnFinish.visibility = Button.GONE
         }
     }
 
