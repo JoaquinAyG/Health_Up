@@ -6,5 +6,8 @@
     <string name="login">LOG IN</string>
     <string name="splash" translatable="false">HealthUp</string>
     <string name="logo">Logo Image</string>
+    <string name="onboarding_welcome">WELCOME!!</string>
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboardong_finish">FINISH</string>
 </resources>
 

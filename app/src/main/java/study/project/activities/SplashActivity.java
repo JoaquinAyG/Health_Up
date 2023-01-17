@@ -31,6 +31,7 @@ public class SplashActivity extends AppCompatActivity {
         Animation myanim = AnimationUtils.loadAnimation(this, R.anim.blink);
         vital.startAnimation(myanim);
 
+        //TODO()
 
         //    Glide for loading girls
         ImageView mSea = findViewById(R.id.fondo);
@@ -58,10 +59,10 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent intent = new Intent(SplashActivity
-                        .this, LoginActivity.class);
+                        .this, OnBoardingActivity.class);
                 startActivity(intent);
             }
-        }, 1000);
+        }, 5000);
 
 
     }
