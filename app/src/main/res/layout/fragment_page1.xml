@@ -1,104 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frameLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/primary_gray"
-    tools:context=".fragments.Page1">
-
-
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
 
 
     <TextView
-        android:id="@+id/tv_username"
+        android:id="@+id/tv_abdominal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="1dp"
-        android:text="Joaquin Ayingui"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="@color/whitex"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/iv_profile" />
-
-    <TextView
-        android:id="@+id/tv_days"
-        android:layout_width="175dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="228dp"
-        android:text="capable days"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/ejizqtext"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/abdominal"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/whitex"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+        android:textStyle="bold"
+        android:theme="@style/Theme.AppCompat.Light"/>
 
-    <TextView
-        android:id="@+id/tv_weight"
-        android:layout_width="80dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="164dp"
-        android:text="Weight"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/whitex"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="@dimen/ejizq">
+        <HorizontalScrollView
+            android:scrollbarFadeDuration="@integer/material_motion_duration_long_1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/horizontalScrollView">
 
-    <TextView
-        android:id="@+id/tv_height"
-        android:layout_width="82dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="128dp"
-        android:text="Height"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/whitex"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Button1"
+                    android:id="@+id/button1" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Button2"
+                    android:id="@+id/button2" />
 
-    <TextView
-        android:id="@+id/tv_gender"
-        android:layout_width="80dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="196dp"
-        android:text="Gender"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/whitex"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
-
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="79dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="92dp"
-        android:text="Age"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/whitex"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_username" />
-    <ImageView
-        android:id="@+id/iv_profile"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/logo" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Button3"
+                    android:id="@+id/button3" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Button4"
+                    android:id="@+id/button4" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+        </HorizontalScrollView>
+    </LinearLayout>
+</RelativeLayout>
