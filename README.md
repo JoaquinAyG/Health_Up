@@ -1,8 +1,8 @@
-definimos el logo en el manifest
-![logo](img/logo.png)
+# Health up -- Alimentacion y deporte
 
-Creamos un incio de sesion con una logo con animacion parpadeante y fondo splash que te lleva al login con otra animacion del logo, un gradiante de fondo junto con una imagen...
-![LOGIN](img/inicio.gif)
+Login de inicio de aplicacion
+![Login](img/login.png)
+
 
 
 >This repository is licensed under
