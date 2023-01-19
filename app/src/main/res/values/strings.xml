@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Health Up</string>
+    <string name="gender">Gender</string>
+    <string name="welcome">Welcome</string>
+    <string name="text">Gender</string>
+    <string name="gender">Gender</string>
+    <string name="gender">Gender</string>
+    <string name="gender">Gender</string>
+
 </resources>
