@@ -1,6 +1,8 @@
 package study.project.activities
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import study.project.R
@@ -21,5 +23,10 @@ class MainActivity : AppCompatActivity() {
 //        ViewPager viewPager = findViewById(R.id.view_pager);
         //        ViewPager viewPager = findViewById(R.id.view_pager);
         viewPager.adapter = sectionsPagerAdapter
+
+        fun ExercisePage(view: View) {
+            val intent = Intent(this, ExerciseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
