@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <dimen name="button_margin_bot"> 50dp</dimen>
+    <dimen name="btdays_top">35dp</dimen>
+    <dimen name="btdays_width">110dp</dimen>
+    <dimen name="btdays_height">55dp</dimen>
+
+</resources>
