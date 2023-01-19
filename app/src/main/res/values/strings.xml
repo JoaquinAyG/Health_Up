@@ -1,4 +1,16 @@
 <resources>
+        <string name="app_name">Health Up^</string>
+        <string name="username">Username</string>
+        <string name="password">Password</string>
+        <string name="sign_up_question">Don´t have account? SIGN UP</string>
+        <string name="login">LOG IN</string>
+        <string name="splash" translatable="false">HealthUp</string>
+        <string name="logo">Logo Image</string>
+        <string name="abdominal">abdominal</string>
+        <string name="onboarding_welcome">WELCOME!!</string>
+        <string name="onboarding_continue">Continue</string>
+        <string name="onboardong_finish">FINISH</string>
+
     <string-array name="onboarding_text">
 
 <!--        Welcome-->
