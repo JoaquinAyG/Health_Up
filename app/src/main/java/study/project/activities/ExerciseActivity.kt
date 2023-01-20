@@ -16,9 +16,9 @@ class ExerciseActivity : AppCompatActivity() {
     val exercise = Exercise()
     lateinit var binding: ActivityExerciseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_exercise)
         binding = ActivityExerciseBinding.inflate(layoutInflater)
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
         loadImage(binding.imageView, exercise.imageUrlMain)
         binding.imageView.setImageURI(Uri.parse(exercise.imageUrlMain))
         binding.tvTittle.text=exercise.nameEn
@@ -38,6 +38,7 @@ class ExerciseActivity : AppCompatActivity() {
         private fun loadImage(view: ImageView, image: String) {
             Glide.with(view.context)
                 .load(image)
+                .centerCrop()
                 .into(view)
         }
     }
