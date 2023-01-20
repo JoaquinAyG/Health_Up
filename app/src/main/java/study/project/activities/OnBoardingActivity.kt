@@ -22,8 +22,8 @@ class OnBoardingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_on_boarding)
 
         val vpOnboarding = findViewById<ViewPager>(R.id.vp_onboarding)
-        btnContinue = findViewById<Button>(R.id.btn_continue)
-        btnFinish = findViewById<Button>(R.id.btn_finish)
+        btnContinue = findViewById(R.id.btn_continue)
+        btnFinish = findViewById(R.id.btn_finish)
         llSliderDots = findViewById(R.id.llSliderDots)
 
         val pages = arrayListOf("Page 1", "Page 2", "Page 3", "Page 4")

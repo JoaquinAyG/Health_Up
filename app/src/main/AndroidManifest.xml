@@ -16,6 +16,9 @@
         android:theme="@style/Theme.HealthUp"
         tools:targetApi="31">
         <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.OnBoardingActivity"
             android:exported="false" />
         <activity

@@ -42,7 +42,7 @@ public class SplashActivity extends AppCompatActivity {
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
 //                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.bluex)))
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.blue)))
 //                .circleCrop()
                 .into(mSea);
 
