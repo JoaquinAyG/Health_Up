@@ -1,5 +1,6 @@
 package study.project.activities
 
+
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
@@ -41,5 +42,6 @@ class ExerciseActivity : AppCompatActivity() {
                 .centerCrop()
                 .into(view)
         }
+
     }
 }
