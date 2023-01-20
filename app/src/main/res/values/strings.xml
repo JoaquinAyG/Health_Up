@@ -13,7 +13,6 @@
 
     <string name="ready">Ready to Start!</string>
     <string name="gender">Gender</string>
-    <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="age">Age</string>
     <string name="height">Height</string>
