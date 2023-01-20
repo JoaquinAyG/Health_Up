@@ -1,4 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.ExerciseActivity"
+        android:background="@color/gray_light">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="175dp"
+            android:layout_height="190dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/usuario" />
+
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Exercise"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/whitex"/>
+
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="20dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tittle"
+            android:textColor="@color/whitex"/>
+
+        <TextView
+            android:id="@+id/tv_musclist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="muscle"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
+            app:layout_constraintTop_toBottomOf="@+id/tv_category"
+            android:textColor="@color/whitex"/>
+
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="329dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="28dp"
+
+            android:text="Descripción del ejercicio Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor "
+            android:textColor="@color/whitex"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/tv_vari"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
+            android:text="Variants"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
+            tools:layout_editor_absoluteX="45dp"
+            android:textColor="@color/whitex"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineizq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent=".1"
+            android:orientation="vertical">
+
+        </androidx.constraintlayout.widget.Guideline>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent=".9"
+            android:orientation="vertical">
+
+        </androidx.constraintlayout.widget.Guideline>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+=======
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -102,3 +203,4 @@
 
     </androidx.constraintlayout.widget.Guideline>
 </androidx.constraintlayout.widget.ConstraintLayout>
+

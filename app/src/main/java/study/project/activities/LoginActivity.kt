@@ -2,6 +2,7 @@ package study.project.activities
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import study.project.databinding.ActivityLoginBinding
@@ -37,5 +38,9 @@ class LoginActivity : AppCompatActivity() {
 //            startActivity(intent)
             }
         }
+    }
+    fun ExercisePage(view: View?) {
+        val intent = Intent(this, ExerciseActivity::class.java)
+        startActivity(intent)
     }
 }

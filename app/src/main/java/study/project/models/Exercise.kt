@@ -1,17 +1,18 @@
 package study.project.models
 
+import study.project.activities.ExerciseActivity
 import java.io.Serializable
 
 data class Exercise(
 
-    var id                : Int?     = null,
-    var name              : String?  = null,
-    var nameEn            : String?  = null,
-    var isFront           : Boolean? = null,
-    var imageUrlMain      : String?  = null,
-    var imageUrlSecondary : String?  = null,
-    var descriptionEn     : String?  = null,
-    var muscles          : String?  = null,
-    var category: String? = null,
-    var variations: List<Int>? = null,
+    var id                : Int     = 0,
+    var name              : String  = "Exercise",
+    var nameEn            : String  = "Excercise",
+    var isFront           : Boolean = false,
+    var imageUrlMain      : String  = "https://pbs.twimg.com/media/EcAED4eWkAAsEZZ.jpg",
+    var imageUrlSecondary : String  = "https://pbs.twimg.com/media/EcAED4eWkAAsEZZ.jpg",
+    var descriptionEn     : String  = "This is the description of the excersise, enjoy nothing",
+    var muscles          : List<String> = listOf(),
+    var category: String = "Category",
+    var variations: List<Int> = listOf(),
 ) : Serializable
