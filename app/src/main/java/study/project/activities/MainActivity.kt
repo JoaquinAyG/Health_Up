@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import study.project.R
+import study.project.adapters.MainViewPagerAdapter
 import study.project.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.getRoot())
 
-        val sectionsPagerAdapter = SectionsPagerAdapter(
+        val sectionsPagerAdapter = MainViewPagerAdapter(
             this,
             supportFragmentManager
         )

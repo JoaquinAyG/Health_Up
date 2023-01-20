@@ -20,6 +20,8 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
+        //no action bar
+        supportActionBar?.hide();
 
         val vpOnboarding = findViewById<ViewPager>(R.id.vp_onboarding)
         btnContinue = findViewById<Button>(R.id.btn_continue)
