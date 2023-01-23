@@ -10,7 +10,13 @@
     <string name="onboarding_welcome">WELCOME!!</string>
     <string name="onboarding_continue">Continue</string>
     <string name="onboardong_finish">FINISH</string>
-
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="user">User</string>
+    <string name="profile">Profile</string>
+    
     <string name="ready">Ready to Start!</string>
     <string name="gender">Gender</string>
     <string name="email">Email</string>

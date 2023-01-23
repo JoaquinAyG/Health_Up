@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
                 if (Utils.validateCredentials(username, password)) {
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    val intent = Intent(this@LoginActivity, TabbedActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
@@ -41,6 +41,10 @@ class LoginActivity : AppCompatActivity() {
     }
     fun ExercisePage(view: View?) {
         val intent = Intent(this, ExerciseActivity::class.java)
+        startActivity(intent)
+    }
+    fun ExercisePage2(view: View?) {
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }
