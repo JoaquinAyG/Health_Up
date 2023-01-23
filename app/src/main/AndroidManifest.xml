@@ -16,6 +16,14 @@
         android:theme="@style/Theme.HealthUp"
         tools:targetApi="31">
         <activity
+            android:name=".BottomActivity"
+            android:exported="false"
+            android:label="@string/title_activity_bottom">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.ExerciseActivity"
             android:exported="false">
             <meta-data

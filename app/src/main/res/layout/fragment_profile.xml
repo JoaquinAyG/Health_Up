@@ -6,25 +6,20 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.MainActivity">
+        tools:context=".ui.profile.ProfileFragment">
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
+        <TextView
+            android:id="@+id/text_profile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="731dp"
-            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/view_pager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-
-
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
