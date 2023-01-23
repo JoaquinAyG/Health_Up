@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import study.project.BottomActivity
 import study.project.databinding.ActivityLoginBinding
 import study.project.utils.Utils
 
@@ -21,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
                 if (Utils.validateCredentials(username, password)) {
-                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    val intent = Intent(this@LoginActivity, TabbedActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
@@ -45,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
     }
     fun ExercisePage2(view: View?) {
-        val intent = Intent(this, BottomActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }
