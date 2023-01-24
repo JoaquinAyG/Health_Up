@@ -10,5 +10,8 @@
     <string name="onboarding_welcome">WELCOME!!</string>
     <string name="onboarding_continue">Continue</string>
     <string name="onboardong_finish">FINISH</string>
+    <string name="confPass">Confirm Password</string>
+    <string name="bttCreate">Create account</string>
+    <string name="ttlpassword">Create a Password</string>
 </resources>
 
