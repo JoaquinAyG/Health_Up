@@ -41,14 +41,11 @@ public class SplashActivity extends AppCompatActivity {
     }
     private void openApp() {
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable()
-        {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity
-                        .this, OnBoardingActivity.class);
-                startActivity(intent);
-            }
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(SplashActivity
+                    .this, OnBoardingActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }, 5000);
 
 
