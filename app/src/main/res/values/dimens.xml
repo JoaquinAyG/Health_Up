@@ -10,4 +10,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="button_margin_bot"> 50dp</dimen>
+    <dimen name="btdays_top">35dp</dimen>
+    <dimen name="btdays_width">110dp</dimen>
+    <dimen name="btdays_height">55dp</dimen>
 </resources>
