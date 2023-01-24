@@ -39,12 +39,15 @@ android {
     }
     buildFeatures {
         dataBinding true
+        viewBinding true
     }
 }
 
 dependencies {
     implementation "androidx.activity:activity-ktx:1.6.1"
     implementation "androidx.room:room-ktx:2.4.3"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
     annotationProcessor "androidx.room:room-compiler:2.4.3"
     androidTestImplementation "androidx.room:room-testing:2.4.3"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"

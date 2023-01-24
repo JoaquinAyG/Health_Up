@@ -9,5 +9,9 @@
     <string name="onboarding_welcome">WELCOME!!</string>
     <string name="onboarding_continue">Continue</string>
     <string name="onboardong_finish">FINISH</string>
+    <string name="title_activity_registerr">RegisterrActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
 
