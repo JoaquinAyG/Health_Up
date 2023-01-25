@@ -40,28 +40,5 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-    private fun cerrarAplicacion() {
-        AlertDialog.Builder(this)
-            .setIcon(R.drawable.logo)
-            .setTitle("Are you sure you want to exit?")
-            .setCancelable(false)
-            .setNegativeButton("Cancel", null)
-            .setPositiveButton(
-                "exit",
-                DialogInterface.OnClickListener { dialog, which ->
-
-
-                    Process.killProcess(Process.myPid())
-                }).show()
-
-    }
-    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            cerrarAplicacion()
-            return true
-        }
-        return super.onKeyDown(keyCode, event)
-    }
-
 
 }
