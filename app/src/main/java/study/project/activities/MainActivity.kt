@@ -1,16 +1,15 @@
 package study.project.activities
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
 import android.os.Process
 import android.view.KeyEvent
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import study.project.R
 import study.project.databinding.ActivityMainBinding
 
@@ -47,12 +46,10 @@ class MainActivity : AppCompatActivity() {
             .setCancelable(false)
             .setNegativeButton("Cancel", null)
             .setPositiveButton(
-                "exit",
-                DialogInterface.OnClickListener { dialog, which ->
-
-
-                    Process.killProcess(Process.myPid())
-                }).show()
+                "exit"
+            ) { _, _ ->
+                Process.killProcess(Process.myPid())
+            }.show()
 
     }
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {

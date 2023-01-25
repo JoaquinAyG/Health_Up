@@ -13,6 +13,22 @@
         android:layout_height="match_parent"
         android:theme="@style/Theme.HealthUpNoActionBar">
 
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/gray_light"
+            android:elevation="4dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
         <androidx.appcompat.widget.Toolbar
             app:layout_constraintTop_toTopOf="parent"
             android:id="@+id/toolbar"
@@ -21,8 +37,17 @@
             android:background="@color/gray_light"
             android:orientation="vertical">
 
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/arrow_back_24"
+                android:contentDescription="@string/back" />
+
             <ProgressBar
-                android:id="@+id/register_toolbar"
+                android:id="@+id/progress_bar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:progressDrawable="@drawable/progessbar_register"
                 android:layout_gravity="center"
@@ -32,13 +57,18 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/vp_register"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/button_main_height"
+            android:text="@string/onboarding_continue"
+            style="@style/LoginButtons"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/main_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
