@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.OnBoardingActivity"
+    android:background="@color/gray_light"
     android:theme="@style/Theme.HealthUpNoActionBar">
 
     <TextView
@@ -23,6 +24,8 @@
         android:id="@+id/vp_onboarding"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintTop_toTopOf="@+id/guidelineTop"
         app:layout_constraintBottom_toBottomOf="@+id/guidelineBot"
          />
@@ -35,7 +38,8 @@
         app:layout_constraintTop_toBottomOf="@+id/vp_onboarding"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
     </LinearLayout>
 
     <Button
