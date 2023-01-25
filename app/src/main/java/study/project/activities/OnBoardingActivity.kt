@@ -1,8 +1,12 @@
 package study.project.activities
 
 import android.app.ActionBar.LayoutParams
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.os.Process
+import android.view.KeyEvent
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -20,6 +24,8 @@ class OnBoardingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_on_boarding)
+        //no action bar
+        supportActionBar?.hide();
 
         val vpOnboarding = findViewById<ViewPager>(R.id.vp_onboarding)
         btnContinue = findViewById(R.id.btn_continue)
@@ -89,6 +95,26 @@ class OnBoardingActivity : AppCompatActivity() {
             iv.layoutParams = params
             llSliderDots.addView(iv)
         }
+    }
+    private fun cerrarAplicacion() {
+        AlertDialog.Builder(this)
+            .setIcon(R.drawable.logo)
+            .setTitle("Are you sure you want to exit?")
+            .setCancelable(false)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton(
+                "exit",
+                DialogInterface.OnClickListener { dialog, which ->
+
+                    Process.killProcess(Process.myPid())   }).show()
+
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            cerrarAplicacion()
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
     }
 
 }

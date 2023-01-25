@@ -22,4 +22,8 @@
     <color name="primary_dark">#181A20</color>
     <color name="white_dark">#D9D9D9</color>
 
+    <color name="primary2">#3e4047</color>
+   <color name="secondary">#005d7c</color>
+    <color name="secondary_letter">#468AAB</color>
+
 </resources>

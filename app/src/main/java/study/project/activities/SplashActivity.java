@@ -24,6 +24,8 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         openApp();
+        getSupportActionBar().hide();
+
         texto = findViewById(R.id.health);
 
         ImageView vital = findViewById(R.id.vital);
@@ -42,7 +44,7 @@ public class SplashActivity extends AppCompatActivity {
                 .transition(DrawableTransitionOptions.withCrossFade(100))
                 .centerCrop()
 //                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.blue)))
+                .placeholder(new ColorDrawable(this.getResources().getColor(R.color.bluex)))
 //                .circleCrop()
                 .into(mSea);
 
@@ -54,14 +56,14 @@ public class SplashActivity extends AppCompatActivity {
     }
     private void openApp() {
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable()
-        {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity
-                        .this, OnBoardingActivity.class);
-                startActivity(intent);
-            }
+        handler.postDelayed(() -> {
+            Intent intent = new Intent(SplashActivity
+                    .this, OnBoardingActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
+            finish();
+
         }, 5000);
 
 

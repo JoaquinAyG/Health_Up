@@ -6,12 +6,34 @@
     <string name="login">LOG IN</string>
     <string name="splash" translatable="false">HealthUp</string>
     <string name="logo">Logo Image</string>
+    <string name="abdominal">abdominal</string>
     <string name="onboarding_welcome">WELCOME!!</string>
     <string name="onboarding_continue">Continue</string>
     <string name="onboardong_finish">FINISH</string>
-    <string name="title_activity_registerr">RegisterrActivity</string>
+    <string name="title_activity_bottom">BottomActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="user">User</string>
+    <string name="profile">Profile</string>
+    <string name="ready">Ready to Start!</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="age">Age</string>
+    <string name="height">Height</string>
+    <string name="weight">Weight</string>
+    <string name="name">Name</string>
+    <string name="days">Capable days</string>
+    <string name="next">NEXT</string>
+    <string name="health_up">Health_Up</string>
+    <string name="ttl_capable_days">Your trainning days</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="sunday">Sunday</string>
+    <string name="saturday">Saturday</string>
+    <string name="title_activity_registerr">RegisterrActivity</string>
 </resources>
 
