@@ -1,12 +1,18 @@
 package study.project.activities
 
+import android.R
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.os.Process
+import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import study.project.databinding.ActivityLoginBinding
 import study.project.utils.Utils
+
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +44,7 @@ class LoginActivity : AppCompatActivity() {
 //            startActivity(intent)
             }
         }
+
     }
     fun ExercisePage(view: View?) {
         val intent = Intent(this, ExerciseActivity::class.java)
@@ -47,4 +54,27 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+
+    private fun cerrarAplicacion() {
+        AlertDialog.Builder(this)
+            .setIcon(study.project.R.drawable.logo)
+            .setTitle("Are you sure you want to exit?")
+            .setCancelable(false)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton(
+                "exit",
+                DialogInterface.OnClickListener { dialog, which ->
+
+                     Process.killProcess(Process.myPid())
+                }).show()
+
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            cerrarAplicacion()
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+
 }
