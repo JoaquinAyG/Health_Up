@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bluex"
+    android:background="@color/blue"
     android:theme="@style/Theme.HealthUpNoActionBar">
 
     <ImageView
@@ -56,6 +56,5 @@
         android:orientation="vertical"
         android:id="@+id/rightGuide"
         app:layout_constraintGuide_percent="0.8"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
