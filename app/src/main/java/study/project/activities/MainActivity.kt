@@ -1,10 +1,5 @@
 package study.project.activities
 import android.app.AlertDialog
-import android.content.DialogInterface
-import android.os.Bundle
-import android.os.Process
-import android.view.KeyEvent
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.os.Bundle
 import android.os.Process
 import android.view.KeyEvent
