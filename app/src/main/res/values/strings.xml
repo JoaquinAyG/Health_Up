@@ -34,4 +34,34 @@
     <string name="friday">Friday</string>
     <string name="sunday">Sunday</string>
     <string name="saturday">Saturday</string>
+    <string name="title_activity_registerr">RegisterrActivity</string>
+    <string name="back">back</string>
+    <string-array name="onboarding_welcome">
+        <item>"Welcome to Health Up"</item>
+        <item>"In this application you can have a healthier life with a plan designed for you"</item>
+        <item>"These Terms and Conditions of Use regulate the rules to which the use of Health Up is subject."</item>
+        <item>"Downloading or using the application attributes the condition of User to whoever does so and implies acceptance of all the conditions included in this document and in the Privacy Policy and Legal Notice of said Web page."</item>
+    </string-array>
+    <string-array name="onboarding_terms_and_conditions">
+        <item>"1. The User should read these conditions each time they use the application, since they could be modified in the future."</item>
+        <item>"2. Only Users expressly authorized by Health up will be able to download and use the application.\nUsers who do not have authorization will not be able to access said content."</item>
+        <item>"3. Charges: You are responsible for payment of all costs or expenses you incur as a result of downloading and using the Health Up Application, including any carrier network or roaming charges. Check with your service provider for details on this."</item>
+        <item>"4. Anonymous Statistics: Health Up reserves the right to track your activity on the Application and report it to our third-party statistical service providers. All this anonymously."</item>
+        <item>"5. Protection of your personal information: we want to help you carry out all the necessary steps to protect your privacy and information.\nPlease review the Health Up Privacy Policy and App privacy notices to learn what information we collect and the steps we take to protect your personal information."</item>
+    </string-array>
+    <string-array name="onboarding_usage">
+        <item>"This application keep track of your diet and exercise to lead a healthy life"</item>
+        <item>"You have a profile where you can see all your data and edit it"</item>
+        <item>"In the exercises part you can search for the type of training you want to do"</item>
+        <item>"In the food part we will recommend recipes according to your preferences"</item>
+        <item>"You can also save your preferred exercises and recipes in the favorites section"</item>
+    </string-array>
+    <string-array name="onboarding_authors">
+        <!--            autores -->
+        <item>"Joaquin Ayllon"</item>
+        <item>"Alvaro Bell"</item>
+        <item>"Jordan Chimborazo"</item>
+        <item>"Marta López"</item>
+    </string-array>
 </resources>
+

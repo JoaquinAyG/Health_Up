@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bluex"
+    android:background="@color/blue"
     android:theme="@style/Theme.HealthUpNoActionBar">
 
     <ImageView
@@ -12,20 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="49dp" />
 
     <TextView
         android:id="@+id/health"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Health Up^"
+        android:layout_marginTop="56dp"
         android:fontFamily="sans-serif-black"
+        android:text="Health Up^"
         android:textColor="@color/redx"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@id/rightGuide"
-        app:layout_constraintHorizontal_bias="0.738"
+        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="@+id/leftGuide"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -34,14 +34,16 @@
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/vital"
         android:layout_width="796dp"
-        android:layout_height="585dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
+        app:lottie_colorFilter="@color/whitex"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/vital2" />
+        app:lottie_rawRes="@raw/vital" />
 
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="match_parent"
@@ -56,6 +58,5 @@
         android:orientation="vertical"
         android:id="@+id/rightGuide"
         app:layout_constraintGuide_percent="0.8"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

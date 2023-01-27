@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/inter_bold"
-        android:gravity="center"
+        android:autoSizeTextType="uniform"
         android:text="@string/onboarding_welcome"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="@color/white"
-        android:textSize="30sp" />
+        android:autoSizeMaxTextSize="30sp" />
 </RelativeLayout>

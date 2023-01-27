@@ -1,12 +1,14 @@
 package study.project.activities
-
+import android.app.AlertDialog
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.os.Process
+import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import study.project.R
 import study.project.databinding.ActivityMainBinding
 
@@ -36,4 +38,27 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    private fun cerrarAplicacion() {
+        AlertDialog.Builder(this)
+            .setIcon(R.drawable.logo)
+            .setTitle("Are you sure you want to exit?")
+            .setCancelable(false)
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton(
+                "exit"
+            ) { _, _ ->
+                Process.killProcess(Process.myPid())
+            }.show()
+
+    }
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            cerrarAplicacion()
+            return true
+        }
+        return super.onKeyDown(keyCode, event)
+    }
+
+
 }
