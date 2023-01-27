@@ -36,6 +36,18 @@
     <string name="saturday">Saturday</string>
     <string name="title_activity_registerr">RegisterrActivity</string>
     <string name="back">back</string>
+
+<!--     TITLES     -->
+    <string name="gender_t">Tell us about you</string>
+    <string name="age_t">How old are you</string>
+    <string name="weight_t">Tell us your weight</string>
+    <string name="height_t">Tell us your height</string>
+    <string name="name_t">What is your name</string>
+    <string name="email_t">Enter your email</string>
+    <string name="male">male</string>
+    <string name="female">female</string>
+
+
     <string-array name="onboarding_welcome">
         <item>"Welcome to Health Up"</item>
         <item>"In this application you can have a healthier life with a plan designed for you"</item>
