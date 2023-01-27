@@ -1,4 +1,4 @@
-package study.project.activities.ui.home
+package study.project.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

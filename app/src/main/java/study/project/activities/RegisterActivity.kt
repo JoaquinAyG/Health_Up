@@ -4,8 +4,8 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
-import study.project.activities.ui.register.CapableDaysFragment
-import study.project.activities.ui.register.CheckFragment
+import study.project.fragments.register.CapableDaysFragment
+import study.project.fragments.register.CheckFragment
 import study.project.adapters.RegisterViewPageAdapter
 import study.project.databinding.ActivityRegisterBinding
 
