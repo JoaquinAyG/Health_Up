@@ -1,4 +1,4 @@
-package study.project.activities.ui.register
+package study.project.fragments.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
