@@ -25,7 +25,7 @@ class OnBoardingViewPagerAdapter(val context: Context, private val pagesList: Ar
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         layoutInflater = LayoutInflater.from(context)
-        val view =    layoutInflater!!.inflate(R.layout.onboarding_slider, container, false)
+        val view = layoutInflater!!.inflate(R.layout.onboarding_slider, container, false)
         val textview: TextView = view.findViewById(R.id.tvTitle)
         textview.text = pagesList[position]
         container.addView(view)
