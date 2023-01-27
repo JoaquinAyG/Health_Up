@@ -8,10 +8,10 @@
     android:theme="@style/Theme.HealthUp">
 
     <TextView
-        android:id="@+id/title_a"
+        android:id="@+id/title_n"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/age_t"
+        android:text="@string/name_t"
         style="@style/titles"
         tools:ignore="MissingConstraints"
         app:layout_constraintStart_toStartOf="@id/guide1"
@@ -27,8 +27,9 @@
         android:inputType="number"
         app:layout_constraintStart_toStartOf="@id/guide1"
         app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@id/title_a"
+        app:layout_constraintTop_toBottomOf="@id/title_n"
         android:layout_marginTop="150dp"
+        android:hint="@string/name"
         android:textAlignment="center"
         android:textColorHint="@color/white1"
         android:backgroundTint="@color/blue1">
