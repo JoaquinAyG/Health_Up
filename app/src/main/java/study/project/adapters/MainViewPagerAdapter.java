@@ -1,4 +1,4 @@
-package study.project.activities;
+package study.project.adapters;
 
 import android.content.Context;
 
@@ -11,11 +11,11 @@ import study.project.fragments.Page2;
 import study.project.fragments.Page3;
 import study.project.fragments.Page4;
 
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class MainViewPagerAdapter extends FragmentPagerAdapter {
 
     private final Context mContext;
 
-    public SectionsPagerAdapter(Context context, FragmentManager fm) {
+    public MainViewPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
     }
