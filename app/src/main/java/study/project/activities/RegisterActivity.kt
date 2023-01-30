@@ -8,6 +8,7 @@ import study.project.fragments.register.CapableDaysFragment
 import study.project.fragments.register.CheckFragment
 import study.project.adapters.RegisterViewPageAdapter
 import study.project.databinding.ActivityRegisterBinding
+import study.project.fragments.register.FragmentPasswordActivity
 
 class RegisterActivity : FragmentActivity() {
 
@@ -27,7 +28,7 @@ class RegisterActivity : FragmentActivity() {
             CheckFragment(),
             CheckFragment(),
             CheckFragment(),
-            CheckFragment(),
+            FragmentPasswordActivity()
 
         )
         val adapter = RegisterViewPageAdapter(supportFragmentManager, fragments)
