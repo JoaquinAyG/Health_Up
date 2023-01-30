@@ -71,10 +71,10 @@ class LoginActivity : AppCompatActivity() {
             .setCancelable(false)
             .setNegativeButton("Cancel", null)
             .setPositiveButton(
-                "exit",
-                { _, _ ->
-                     Process.killProcess(Process.myPid())
-                }).show()
+                "exit"
+            ) { _, _ ->
+                Process.killProcess(Process.myPid())
+            }.show()
 
     }
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
