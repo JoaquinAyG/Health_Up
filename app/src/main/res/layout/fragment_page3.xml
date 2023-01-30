@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragments.Page3"
-    android:background="@color/teal_700"
+    android:background="@color/gray_light"
     android:alpha="0.85">
 
 

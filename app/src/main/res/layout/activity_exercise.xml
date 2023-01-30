@@ -32,7 +32,7 @@
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             app:layout_constraintTop_toTopOf="parent"
-            android:textColor="@color/whitex"/>
+            android:textColor="@color/white_light"/>
 
         <TextView
             android:id="@+id/tv_category"
@@ -43,7 +43,7 @@
             android:textStyle="bold|italic"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             app:layout_constraintTop_toBottomOf="@+id/tv_tittle"
-            android:textColor="@color/whitex"/>
+            android:textColor="@color/white_light"/>
 
         <TextView
             android:id="@+id/tv_musclist"
@@ -54,7 +54,7 @@
             android:textSize="18dp"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             app:layout_constraintTop_toBottomOf="@+id/tv_category"
-            android:textColor="@color/whitex"/>
+            android:textColor="@color/white_light"/>
 
 
         <TextView
@@ -64,7 +64,7 @@
             android:layout_marginTop="28dp"
 
             android:text="Descripción del ejercicio Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor "
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -77,7 +77,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tv_desc"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             tools:layout_editor_absoluteX="45dp"
-            android:textColor="@color/whitex"/>
+            android:textColor="@color/white_light"/>
 
 
         <androidx.constraintlayout.widget.Guideline
