@@ -26,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
                 if (Utils.validateCredentials(username, password)) {
-                    val intent = Intent(this@LoginActivity, TabbedActivity::class.java)
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
                 } else {
@@ -46,11 +46,21 @@ class LoginActivity : AppCompatActivity() {
 
     }
     fun ExercisePage(view: View?) {
+        Toast.makeText(
+            this@LoginActivity,
+            "Exercise Page",
+            Toast.LENGTH_SHORT
+        ).show()
         val intent = Intent(this, ExerciseActivity::class.java)
         startActivity(intent)
     }
     fun ExercisePage2(view: View?) {
-        val intent = Intent(this, MainActivity::class.java)
+        Toast.makeText(
+            this@LoginActivity,
+            "Easter Egg Page",
+            Toast.LENGTH_SHORT
+        ).show()
+        val intent = Intent(this, TabbedActivity::class.java)
         startActivity(intent)
     }
 
@@ -61,11 +71,10 @@ class LoginActivity : AppCompatActivity() {
             .setCancelable(false)
             .setNegativeButton("Cancel", null)
             .setPositiveButton(
-                "exit",
-                DialogInterface.OnClickListener { dialog, which ->
-
-                     Process.killProcess(Process.myPid())
-                }).show()
+                "exit"
+            ) { _, _ ->
+                Process.killProcess(Process.myPid())
+            }.show()
 
     }
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
