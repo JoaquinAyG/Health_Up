@@ -7,8 +7,8 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/accentRed</item>
+        <item name="colorSecondaryVariant">@color/accentRed</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
@@ -21,8 +21,8 @@
         <item name="colorOnPrimary">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/accentRed</item>
+        <item name="colorSecondaryVariant">@color/accentRed</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/primary</item>

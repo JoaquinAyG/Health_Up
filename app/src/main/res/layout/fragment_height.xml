@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black2"
+    android:background="@color/gray_light"
     android:theme="@style/Theme.HealthUp">
 
     <TextView
@@ -31,8 +31,8 @@
         android:layout_marginTop="150dp"
         android:textSize="14dp"
         android:textAlignment="center"
-        android:textColorHint="@color/white1"
-        android:backgroundTint="@color/blue1">
+        android:textColorHint="@color/white_dark"
+        android:backgroundTint="@color/blue">
 
     </EditText>
 
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:text="cm"
         android:textSize="20dp"
-        android:textColor="@color/white1"
+        android:textColor="@color/white_dark"
         app:layout_constraintStart_toEndOf="@id/edit_text"
         app:layout_constraintTop_toBottomOf="@id/title_e"
         android:layout_marginTop="160dp"

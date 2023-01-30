@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         tools:context=".CapableDaysActivity"
         android:paddingTop="@dimen/toolbar_height"
-        android:background="@color/primary2">
+        android:background="@color/gray_light">
 
         <!--Title-->
         <TextView

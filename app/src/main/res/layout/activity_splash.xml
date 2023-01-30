@@ -22,7 +22,7 @@
         android:layout_marginTop="56dp"
         android:fontFamily="sans-serif-black"
         android:text="Health Up^"
-        android:textColor="@color/redx"
+        android:textColor="@color/accentRed"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@id/rightGuide"
         app:layout_constraintHorizontal_bias="0.333"
@@ -41,7 +41,7 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:lottie_autoPlay="true"
-        app:lottie_colorFilter="@color/whitex"
+        app:lottie_colorFilter="@color/white_light"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/vital" />
 
