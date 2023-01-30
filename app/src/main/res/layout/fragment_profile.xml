@@ -7,7 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.profile.ProfileFragment"
-        android:background="@color/primary_gray">
+        android:background="@color/gray_light">
 
         <ImageView
             android:id="@+id/iv_profile"
@@ -35,7 +35,7 @@
             android:layout_marginEnd="1dp"
             android:text="Joaquin Ayingui"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.494"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,7 +64,7 @@
             android:layout_marginTop="92dp"
             android:text="Age"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_username" />
 
@@ -76,7 +76,7 @@
             android:layout_marginTop="128dp"
             android:text="Height"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_username" />
 
@@ -88,7 +88,7 @@
             android:layout_marginTop="164dp"
             android:text="Weight"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_username" />
 
@@ -100,7 +100,7 @@
             android:layout_marginTop="196dp"
             android:text="Gender"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_username" />
 
@@ -112,7 +112,7 @@
             android:layout_marginTop="228dp"
             android:text="capable days"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="@color/whitex"
+            android:textColor="@color/white_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_username" />
 

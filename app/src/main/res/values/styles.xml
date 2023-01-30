@@ -52,7 +52,7 @@
     <style name="login_et">
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:backgroundTint">@color/primary_dark</item>
+        <item name="android:backgroundTint">@color/gray</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textColorHint">@color/white</item>
@@ -64,7 +64,7 @@
     </style>
 
     <style name="edtext" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:textColor">@color/secondary_letter</item>
+        <item name="android:textColor">@color/blue_light</item>
         <item name="android:textSize">20dp</item>
         <item name="android:gravity">end</item>
         <item name="android:textStyle">bold</item>
@@ -77,8 +77,8 @@
     </style>
 
     <style name="button_gender">
-        <item name="android:backgroundTint">@color/white1</item>
-        <item name="android:textColor">@color/blue1</item>
+        <item name="android:backgroundTint">@color/white_dark</item>
+        <item name="android:textColor">@color/blue</item>
         <item name="android:textSize">16dp</item>
         <item name="chipCornerRadius">15dp</item>
         <item name="android:textStyle">bold</item>
@@ -86,8 +86,8 @@
     </style>
 
     <style name="button_next">
-        <item name="android:backgroundTint">@color/blue1</item>
-        <item name="android:textColor">@color/white1</item>
+        <item name="android:backgroundTint">@color/blue</item>
+        <item name="android:textColor">@color/white_dark</item>
         <item name="android:textSize">20dp</item>
         <item name="chipCornerRadius">20dp</item>
         <item name="android:textStyle">bold</item>
@@ -95,9 +95,9 @@
     </style>
 
     <style name="edit_text">
-        <item name="colorControlNormal">@color/blue1</item>
-        <item name="colorControlActivated">@color/blue1</item>
-        <item name="colorControlHighlight">@color/blue1</item>
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlHighlight">@color/blue</item>
     </style>
 
 </resources>
