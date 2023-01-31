@@ -9,13 +9,22 @@ import study.project.databinding.FragmentWeightBinding
 
 class WeightFragment : Fragment() {
 
-    val binding = FragmentWeightBinding.inflate(layoutInflater)
+    private var _binding: FragmentWeightBinding? = null
+    private val binding get() = _binding!!
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        _binding = FragmentWeightBinding.inflate(inflater, container, false)
+
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }
