@@ -49,7 +49,6 @@ class OnBoardActivity : AppCompatActivity(){
         }
 
         setListeners()
-        //TODO(Set activity to only show once)
     }
 
     private fun setListeners(){
