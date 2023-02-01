@@ -1,5 +1,4 @@
 package study.project.activities
-
 import android.app.AlertDialog
 import android.os.Bundle
 import android.os.Process
@@ -39,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
     private fun cerrarAplicacion() {
         AlertDialog.Builder(this)
             .setIcon(R.drawable.logo)

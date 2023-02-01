@@ -4,10 +4,17 @@ import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager.widget.ViewPager
-import study.project.activities.ui.register.CapableDaysFragment
-import study.project.activities.ui.register.CheckFragment
+import study.project.fragments.register.CapableDaysFragment
+import study.project.fragments.register.CheckFragment
 import study.project.adapters.RegisterViewPageAdapter
 import study.project.databinding.ActivityRegisterBinding
+import study.project.fragments.register.AgeFragment
+import study.project.fragments.register.FragmentPasswordActivity
+import study.project.fragments.register.GenderFragment
+import study.project.fragments.register.HeightFragment
+import study.project.fragments.register.MailFragment
+import study.project.fragments.register.NameFragment
+import study.project.fragments.register.WeightFragment
 
 class RegisterActivity : FragmentActivity() {
 
@@ -22,13 +29,15 @@ class RegisterActivity : FragmentActivity() {
 
         val fragments = listOf(
             //Insert here the fragments in order pls
+            GenderFragment(),
+            AgeFragment(),
+            WeightFragment(),
+            HeightFragment(),
+            NameFragment(),
+            MailFragment(),
             CapableDaysFragment(),
             CheckFragment(),
-            CheckFragment(),
-            CheckFragment(),
-            CheckFragment(),
-            CheckFragment(),
-
+            FragmentPasswordActivity()
         )
         val adapter = RegisterViewPageAdapter(supportFragmentManager, fragments)
 

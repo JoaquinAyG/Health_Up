@@ -1,15 +1,15 @@
-package study.project.activities.ui.register
+package study.project.fragments.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import study.project.databinding.FragmentCheckBinding
+import study.project.databinding.FragmentWeightBinding
 
-class CheckFragment : Fragment() {
+class WeightFragment : Fragment() {
 
-    private var _binding: FragmentCheckBinding? = null
+    private var _binding: FragmentWeightBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +17,7 @@ class CheckFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCheckBinding.inflate(inflater, container, false)
+        _binding = FragmentWeightBinding.inflate(inflater, container, false)
 
         return binding.root
     }
@@ -26,4 +26,5 @@ class CheckFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

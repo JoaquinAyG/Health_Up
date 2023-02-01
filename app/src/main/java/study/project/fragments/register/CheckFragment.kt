@@ -1,15 +1,15 @@
-package study.project.activities.ui.register
+package study.project.fragments.register
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import study.project.databinding.FragmentCapableDaysBinding
+import study.project.databinding.FragmentCheckBinding
 
-class CapableDaysFragment : Fragment() {
+class CheckFragment : Fragment() {
 
-    private var _binding: FragmentCapableDaysBinding? = null
+    private var _binding: FragmentCheckBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,10 +17,9 @@ class CapableDaysFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCapableDaysBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        _binding = FragmentCheckBinding.inflate(inflater, container, false)
 
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
