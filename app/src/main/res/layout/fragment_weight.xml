@@ -1,86 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/gray_light"
-    android:theme="@style/Theme.HealthUp">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/title_e"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/weight_t"
-        style="@style/titles"
-        tools:ignore="MissingConstraints"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@id/guide3"
-        android:layout_marginTop="120dp">
-    </TextView>
+    <data>
 
-    <EditText
-        android:id="@+id/edit_text"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@id/title_e"
-        android:layout_marginTop="150dp"
-        android:textSize="14dp"
-        android:textAlignment="center"
-        android:textColorHint="@color/white_dark"
-        android:backgroundTint="@color/blue">
+    </data>
 
-    </EditText>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light">
 
-    <TextView
-        android:id="@+id/kg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="kg"
-        android:textSize="20dp"
-        android:textColor="@color/white_dark"
-        app:layout_constraintStart_toEndOf="@id/edit_text"
-        app:layout_constraintTop_toBottomOf="@id/title_e"
-        android:layout_marginTop="160dp"
-        android:layout_marginLeft="5dp"
-        tools:ignore="MissingConstraints">
-    </TextView>
+        <TextView
+            android:id="@+id/title_e"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight_t"
+            style="@style/titles"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintEnd_toEndOf="@id/guide2"
+            app:layout_constraintTop_toBottomOf="@id/guide3"
+            android:layout_marginTop="120dp"></TextView>
 
-    <Button
-        android:id="@+id/button_next"
-        android:layout_height="80dp"
-        android:layout_width="160dp"
-        style="@style/button_next"
-        app:layout_constraintTop_toBottomOf="@id/edit_text"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        android:layout_marginTop="200dp"
-        android:text="@string/next"
-        />
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintEnd_toEndOf="@id/guide2"
+            app:layout_constraintTop_toBottomOf="@id/title_e"
+            android:layout_marginTop="150dp"
+            android:textSize="14dp"
+            android:textAlignment="center"
+            android:textColorHint="@color/white_dark"
+            android:backgroundTint="@color/blue">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20" />
+        </EditText>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80" />
+        <TextView
+            android:id="@+id/kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="kg"
+            android:textSize="20dp"
+            android:textColor="@color/white_dark"
+            app:layout_constraintStart_toEndOf="@id/edit_text"
+            app:layout_constraintTop_toBottomOf="@id/title_e"
+            android:layout_marginTop="160dp"
+            android:layout_marginLeft="5dp"
+            tools:ignore="MissingConstraints"></TextView>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0" />
+        <Button
+            android:id="@+id/button_next"
+            android:layout_height="80dp"
+            android:layout_width="160dp"
+            style="@style/button_next"
+            app:layout_constraintTop_toBottomOf="@id/edit_text"
+            app:layout_constraintStart_toStartOf="@id/guide1"
+            app:layout_constraintEnd_toEndOf="@id/guide2"
+            android:layout_marginTop="200dp"
+            android:text="@string/next" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.80" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
