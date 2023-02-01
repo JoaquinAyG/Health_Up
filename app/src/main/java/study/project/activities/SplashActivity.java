@@ -34,7 +34,7 @@ public class SplashActivity extends AppCompatActivity {
         Handler handler = new Handler();
         handler.postDelayed(() -> {
             Intent intent = new Intent(SplashActivity
-                    .this, OnBoardingActivity.class);
+                    .this, OnBoardActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
 
