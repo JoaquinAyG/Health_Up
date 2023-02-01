@@ -35,7 +35,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.OnBoardingActivity"
+            android:name=".activities.OnBoardActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SplashActivity"
