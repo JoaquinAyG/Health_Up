@@ -4,10 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import study.project.databinding.FragmentCapableDaysBinding
 
-class CapableDaysFragment : Fragment() {
+class CapableDaysFragment : RegisterFragmentBase() {
 
     private var _binding: FragmentCapableDaysBinding? = null
     private val binding get() = _binding!!
