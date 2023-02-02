@@ -24,6 +24,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
             style="@style/LoginButtons"
+            android:layout_width="248dp"
+            android:layout_height="55dp"
             android:layout_marginTop="69dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
@@ -42,6 +44,8 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
             style="@style/LoginButtons"
+            android:layout_width="248dp"
+            android:layout_height="55dp"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -51,6 +55,8 @@
             <EditText
                 android:id="@+id/et_password"
                 style="@style/login_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:hint="@string/password"
                 android:inputType="textPassword">
 
@@ -60,19 +66,18 @@
 
         <TextView
             android:id="@+id/tv_signup"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp"
             android:gravity="center"
             android:text="@string/sign_up_question"
             android:textColor="@color/white"
-            android:textSize="18sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@+id/btn_login"
             app:layout_constraintEnd_toEndOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline1"
             app:layout_constraintTop_toBottomOf="@+id/til_password"
-            app:layout_constraintVertical_bias="1.0" />
+            />
 
         <Button
             android:id="@+id/btn_login"
