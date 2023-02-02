@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import study.project.databinding.FragmentHeightBinding
 import study.project.utils.isInt
-import study.project.utils.isNumber
 
 class HeightFragment : RegisterFragmentBase() {
 
@@ -19,7 +18,7 @@ class HeightFragment : RegisterFragmentBase() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentHeightBinding.inflate(inflater, container, false)
-
+        binding.etHeight.requestFocus()
         return binding.root
     }
 

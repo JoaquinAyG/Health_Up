@@ -18,7 +18,7 @@ class AgeFragment : RegisterFragmentBase() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentAgeBinding.inflate(inflater, container, false)
-
+        binding.etAge.requestFocus()
         return binding.root
     }
 

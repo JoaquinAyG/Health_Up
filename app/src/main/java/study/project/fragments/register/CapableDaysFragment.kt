@@ -17,13 +17,26 @@ class CapableDaysFragment : RegisterFragmentBase() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentCapableDaysBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        return root
+        return binding.root
     }
 
     override fun commitChanges(): Boolean {
-        viewModel.updateCapableDays(listOf(1,4,7))
+        val list = mutableListOf<Int>()
+        binding.apply {
+            list.addAll(listOf(1, 2, 3, 4, 5, 6, 7).filter {
+                when (it) {
+                    1 -> btMonday.isChecked
+                    2 -> btTuesday.isChecked
+                    3 -> btWednesday.isChecked
+                    4 -> btThursday.isChecked
+                    5 -> btFriday.isChecked
+                    6 -> btSaturday.isChecked
+                    7 -> btSunday.isChecked
+                    else -> false
+                }
+            })
+        }
+        viewModel.updateCapableDays(list)
         return true
     }
 

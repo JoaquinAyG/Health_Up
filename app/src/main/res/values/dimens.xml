@@ -17,4 +17,5 @@
     <dimen name="register_title_top_margin">120dp</dimen>
     <dimen name="register_toggle_height">70dp</dimen>
     <dimen name="register_toggle_width">120dp</dimen>
+    <dimen name="register_toggle_top_margin">40dp</dimen>
 </resources>

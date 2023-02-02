@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import study.project.databinding.FragmentPasswordBinding
-import study.project.utils.isNumber
 
 class PasswordFragment : RegisterFragmentBase(){
 
@@ -19,12 +18,12 @@ class PasswordFragment : RegisterFragmentBase(){
                 return false
             }
 
-            if (etPassword.text.toString() == etConfirmPassword.text.toString()){
+            return if (etPassword.text.toString() == etConfirmPassword.text.toString()){
                 viewModel.updatePassword(etPassword.text.toString())
-                return true
+                true
             } else {
                 etPassword.error = "Passwords do not match"
-                return false
+                false
             }
         }
     }
@@ -34,7 +33,7 @@ class PasswordFragment : RegisterFragmentBase(){
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentPasswordBinding.inflate(inflater, container, false)
-
+        binding.etPassword.requestFocus()
         return binding.root
     }
 

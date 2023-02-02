@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import study.project.databinding.FragmentNameBinding
-import study.project.databinding.FragmentWeightBinding
-import study.project.utils.isNumber
 
 class NameFragment : RegisterFragmentBase() {
 
@@ -19,7 +17,7 @@ class NameFragment : RegisterFragmentBase() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentNameBinding.inflate(inflater, container, false)
-
+        binding.etName.requestFocus()
         return binding.root
     }
 

@@ -31,7 +31,7 @@ class CheckFragment : RegisterFragmentBase() {
         binding.apply {
             editGender.text = user.gender
             editAge.text = user.age.toString()
-            editDays.text = user.capableDays.toString()
+            editDays.text = user.capableDays.joinToString()
             editEmail.text = user.email
             editName.text = user.username
             editWeight.text = user.weight.toString()
@@ -46,5 +46,13 @@ class CheckFragment : RegisterFragmentBase() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    @Deprecated("Deprecated in Java")
+    override fun setUserVisibleHint(isVisibleToUser: Boolean) {
+        super.setUserVisibleHint(isVisibleToUser)
+        if (isVisibleToUser) {
+            initView()
+        }
     }
 }

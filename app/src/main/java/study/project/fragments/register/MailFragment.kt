@@ -19,7 +19,7 @@ class MailFragment : RegisterFragmentBase() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentEmailBinding.inflate(inflater, container, false)
-
+        binding.etMail.requestFocus()
         return binding.root
     }
 

@@ -24,17 +24,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="@dimen/register_toggle_height"
+            android:layout_marginTop="@dimen/register_toggle_top_margin"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_capable_days">
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btMonday"
-                android:text="@string/monday"
+                android:textOff="@string/monday"
+                android:textOn="@string/monday"
                 style="@style/register_toggle_button"/>
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btTuesday"
-                android:text="@string/tuesday"
+                android:textOff="@string/tuesday"
+                android:textOn="@string/tuesday"
                 style="@style/register_toggle_button"/>
 
         </LinearLayout>
@@ -45,22 +47,25 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="@dimen/register_toggle_height"
+            android:layout_marginTop="@dimen/register_toggle_top_margin"
             app:layout_constraintTop_toBottomOf="@+id/ll_1_row">
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btWednesday"
-                android:text="@string/wednesday"
+                android:textOff="@string/wednesday"
+                android:textOn="@string/wednesday"
                 style="@style/register_toggle_button"/>
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btThursday"
-                android:text="@string/thursday"
+                android:textOff="@string/thursday"
+                android:textOn="@string/thursday"
                 style="@style/register_toggle_button"/>
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btFriday"
-                android:text="@string/friday"
+                android:textOff="@string/friday"
+                android:textOn="@string/friday"
                 style="@style/register_toggle_button"/>
 
         </LinearLayout>
@@ -70,16 +75,19 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginTop="@dimen/register_toggle_height"
+            android:layout_marginTop="@dimen/register_toggle_top_margin"
             app:layout_constraintTop_toBottomOf="@+id/ll_2_row">
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btSaturday"
+                android:textOff="@string/saturday"
+                android:textOn="@string/saturday"
                 style="@style/register_toggle_button"/>
 
-            <android.widget.Button
+            <android.widget.ToggleButton
                 android:id="@+id/btSunday"
-                android:text="@string/sunday"
+                android:textOff="@string/sunday"
+                android:textOn="@string/sunday"
                 style="@style/register_toggle_button"/>
 
         </LinearLayout>

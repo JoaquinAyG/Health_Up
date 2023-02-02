@@ -9,6 +9,7 @@
     <string name="abdominal">abdominal</string>
     <string name="onboarding_welcome">WELCOME!!</string>
     <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_confirm">Confirm</string>
     <string name="onboardong_finish">FINISH</string>
     <string name="confPass">Confirm Password</string>
     <string name="bttCreate">Create account</string>
