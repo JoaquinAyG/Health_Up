@@ -5,8 +5,8 @@
     <dimen name="card_width">330dp</dimen>
     <dimen name="ejizq">15dp</dimen>
     <dimen name="ejizqtext">30dp</dimen>
-    <dimen name="button_main_width">246dp</dimen>
-    <dimen name="button_main_height">74dp</dimen>
+    <dimen name="button_main_width">248dp</dimen>
+    <dimen name="button_main_height">55dp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
