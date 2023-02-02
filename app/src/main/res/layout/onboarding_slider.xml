@@ -1,18 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/idRLSlider"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    <data>
 
-    <TextView
-        android:id="@+id/tvTitle"
+    </data>
+
+    <LinearLayout
+        android:id="@+id/silder_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fontFamily="@font/inter_bold"
-        android:autoSizeTextType="uniform"
-        android:text="@string/onboarding_welcome"
-        android:textAlignment="textStart"
-        android:textColor="@color/white"
-        android:autoSizeMaxTextSize="30sp" />
-</RelativeLayout>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/onboarding_welcome"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTop"/>
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/inter_bold"
+            android:layout_marginTop="10dp"
+            android:text="@string/onboarding_welcome"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeTextType="uniform"
+            android:layout_height="fill_parent"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop"
+            app:layout_constraintTop_toBottomOf="parent"/>
+
+    </LinearLayout>
+</layout>

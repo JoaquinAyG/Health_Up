@@ -50,6 +50,10 @@
     <string name="male">male</string>
     <string name="female">female</string>
 
+    <string name="onboarding_welcome_title">WELCOME!!</string>
+    <string name="onboarding_terms_and_conditions_title">Terms and Conditions</string>
+    <string name="onboarding_usage_title">Usage</string>
+    <string name="onboarding_authors_title">Authors</string>
 
     <string-array name="onboarding_welcome">
         <item>"Welcome to Health Up"</item>
@@ -77,6 +81,7 @@
         <item>"Alvaro Bell"</item>
         <item>"Jordan Chimborazo"</item>
         <item>"Marta López"</item>
+        <item>"https://github.com/JoaquinAyG/Health_Up"</item>
     </string-array>
 </resources>
 
