@@ -9,11 +9,11 @@ import study.project.fragments.register.CheckFragment
 import study.project.adapters.RegisterViewPageAdapter
 import study.project.databinding.ActivityRegisterBinding
 import study.project.fragments.register.AgeFragment
+import study.project.fragments.register.FragmentPasswordActivity
 import study.project.fragments.register.GenderFragment
 import study.project.fragments.register.HeightFragment
 import study.project.fragments.register.MailFragment
 import study.project.fragments.register.NameFragment
-import study.project.fragments.register.PasswordFragment
 import study.project.fragments.register.WeightFragment
 
 class RegisterActivity : FragmentActivity() {
@@ -37,7 +37,7 @@ class RegisterActivity : FragmentActivity() {
             MailFragment(),
             CapableDaysFragment(),
             CheckFragment(),
-            PasswordFragment()
+            FragmentPasswordActivity()
         )
         val adapter = RegisterViewPageAdapter(supportFragmentManager, fragments)
 
@@ -49,11 +49,15 @@ class RegisterActivity : FragmentActivity() {
             }
             progressBar.progress = 100 / vpRegister.adapter!!.count
             vpRegister.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-                override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+                override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+                }
+
                 override fun onPageSelected(position: Int) {
                     progressBar.progress = (position + 1) * 100 / vpRegister.adapter!!.count
                 }
-                override fun onPageScrollStateChanged(state: Int) {}
+
+                override fun onPageScrollStateChanged(state: Int) {
+                }
             })
             binding.btnBack.setOnClickListener {
                 onBackPressedDispatcher.onBackPressed()
