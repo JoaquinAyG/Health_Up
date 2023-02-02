@@ -23,7 +23,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_username"
-            style="@style/LoginButtons"
+            style="@style/login_containers"
             android:layout_width="248dp"
             android:layout_height="55dp"
             android:layout_marginTop="69dp"
@@ -43,7 +43,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
-            style="@style/LoginButtons"
+            style="@style/login_containers"
             android:layout_width="248dp"
             android:layout_height="55dp"
             app:boxCornerRadiusBottomEnd="15dp"
@@ -69,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
             android:gravity="center"
             android:text="@string/sign_up_question"
             android:textColor="@color/white"
@@ -84,7 +85,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="79dp"
             android:background="@drawable/main_btn"
-            style="@style/LoginButtons"
+            style="@style/login_containers"
             android:text="@string/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/guideline2"
