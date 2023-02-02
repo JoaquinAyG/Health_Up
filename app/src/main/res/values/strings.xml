@@ -14,9 +14,9 @@
     <string name="bttCreate">Create account</string>
     <string name="ttlpassword">Create a Password</string>
     <string name="title_activity_bottom">BottomActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_excercise">Exercise</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="title_favorites">Favorites</string>
     <string name="user">User</string>
     <string name="profile">Profile</string>
     <string name="ready">Ready to Start!</string>
