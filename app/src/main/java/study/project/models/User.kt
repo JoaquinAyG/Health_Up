@@ -31,7 +31,7 @@ data class User(
     var gender: String = "",
 
     @ColumnInfo(name = "capableDays")
-    var capableDays: Int = 0,
+    var capableDays: List<Int> = listOf(),
 
     @ColumnInfo(name = "age")
     var age: Int = 0,

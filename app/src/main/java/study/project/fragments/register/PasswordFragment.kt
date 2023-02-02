@@ -4,12 +4,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import study.project.databinding.FragmentGenderBinding
+import study.project.databinding.FragmentPasswordBinding
 
-class GenderFragment: RegisterFragmentBase(){
+class PasswordFragment : RegisterFragmentBase(){
 
-    private var _binding: FragmentGenderBinding? = null
+    private var _binding: FragmentPasswordBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +16,7 @@ class GenderFragment: RegisterFragmentBase(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentGenderBinding.inflate(inflater, container, false)
+        _binding = FragmentPasswordBinding.inflate(inflater, container, false)
 
         return binding.root
     }
