@@ -4,11 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import study.project.databinding.FragmentCheckBinding
 import study.project.models.User
 
-class CheckFragment : Fragment() {
+class CheckFragment : RegisterFragmentBase() {
 
     private var _binding: FragmentCheckBinding? = null
     private val binding get() = _binding!!
