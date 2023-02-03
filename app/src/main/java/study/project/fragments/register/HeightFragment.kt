@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import study.project.databinding.FragmentHeightBinding
+import study.project.utils.isInt
+import study.project.utils.isNumber
 
 class HeightFragment : RegisterFragmentBase() {
 
@@ -19,6 +21,23 @@ class HeightFragment : RegisterFragmentBase() {
         _binding = FragmentHeightBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+    override fun commitChanges(): Boolean {
+        binding.apply {
+            if (etHeight.text.toString().isEmpty()) {
+                etHeight.error = "Please enter your height"
+                return false
+            }
+
+            if (etHeight.text.toString().isInt()){
+                viewModel.updateHeight(etHeight.text.toString().toInt())
+                return true
+            } else {
+                etHeight.error = "Please enter the height in centimeters"
+                return false
+            }
+        }
     }
 
     override fun onDestroyView() {

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import study.project.databinding.FragmentEmailBinding
+import study.project.utils.isMail
 
 class MailFragment : RegisterFragmentBase() {
 
@@ -20,6 +21,23 @@ class MailFragment : RegisterFragmentBase() {
         _binding = FragmentEmailBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+    override fun commitChanges(): Boolean {
+        binding.apply {
+            if (etMail.text.toString().isEmpty()) {
+                etMail.error = "Please enter your mail"
+                return false
+            }
+            if (!etMail.text.toString().isMail()){
+                etMail.error = "That mail is not valid"
+                return false
+            }
+
+            //TODO Check if mail is already in use
+            viewModel.updateEmail(etMail.text.toString())
+            return true
+        }
     }
 
     override fun onDestroyView() {

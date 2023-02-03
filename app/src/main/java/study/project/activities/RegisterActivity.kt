@@ -15,6 +15,7 @@ import study.project.fragments.register.MailFragment
 import study.project.fragments.register.NameFragment
 import study.project.fragments.register.PasswordFragment
 import study.project.fragments.register.WeightFragment
+import study.project.models.NonSweepViewPager
 
 class RegisterActivity : FragmentActivity() {
 
@@ -44,9 +45,13 @@ class RegisterActivity : FragmentActivity() {
         binding.apply {
             vpRegister.adapter = adapter
             tabLayout.setupWithViewPager(vpRegister)
+
             btnNext.setOnClickListener{
-                vpRegister.currentItem = vpRegister.currentItem + 1
+                if(adapter.getFragment(vpRegister.currentItem).commitChanges()) {
+                    vpRegister.currentItem = vpRegister.currentItem + 1
+                }
             }
+
             progressBar.progress = 100 / vpRegister.adapter!!.count
             vpRegister.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
                 override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
@@ -55,6 +60,7 @@ class RegisterActivity : FragmentActivity() {
                 }
                 override fun onPageScrollStateChanged(state: Int) {}
             })
+
             binding.btnBack.setOnClickListener {
                 onBackPressedDispatcher.onBackPressed()
             }

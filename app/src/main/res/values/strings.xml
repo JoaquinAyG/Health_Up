@@ -41,12 +41,12 @@
     <string name="back">back</string>
 
 <!--     TITLES     -->
-    <string name="gender_t">Tell us about you</string>
-    <string name="age_t">How old are you</string>
-    <string name="weight_t">Tell us your weight</string>
-    <string name="height_t">Tell us your height</string>
-    <string name="name_t">What is your name</string>
-    <string name="email_t">Enter your email</string>
+    <string name="register_gender_title">Tell us about you</string>
+    <string name="register_age_title">How old are you</string>
+    <string name="register_weight_title">Tell us your weight</string>
+    <string name="register_height_title">Tell us your height</string>
+    <string name="register_name_title">Tell us your name</string>
+    <string name="register_register_title">Enter your email</string>
     <string name="male">male</string>
     <string name="female">female</string>
 
@@ -54,6 +54,8 @@
     <string name="onboarding_terms_and_conditions_title">Terms and Conditions</string>
     <string name="onboarding_usage_title">Usage</string>
     <string name="onboarding_authors_title">Authors</string>
+    <string name="kg_symbol">kg</string>
+    <string name="cm_symbol">cm</string>
 
     <string-array name="onboarding_welcome">
         <item>"Welcome to Health Up"</item>

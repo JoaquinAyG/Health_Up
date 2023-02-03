@@ -66,7 +66,7 @@ class RegisterViewModel : ViewModel() {
         user.value = u
     }
 
-    fun updateWeight(weight: Int) {
+    fun updateWeight(weight: Double) {
         val u = user.value
         if (u != null) {
             u.weight = weight

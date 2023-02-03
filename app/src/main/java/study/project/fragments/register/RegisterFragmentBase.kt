@@ -8,4 +8,6 @@ abstract class RegisterFragmentBase : Fragment() {
 
     val viewModel: RegisterViewModel by activityViewModels()
 
+    abstract fun commitChanges(): Boolean
+
 }

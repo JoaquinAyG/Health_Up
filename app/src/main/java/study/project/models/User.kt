@@ -22,7 +22,7 @@ data class User(
     var email: String = "",
 
     @ColumnInfo(name = "weight")
-    var weight: Int = 0,
+    var weight: Double = 0.0,
 
     @ColumnInfo(name = "height")
     var height: Int = 0,

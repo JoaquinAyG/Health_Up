@@ -22,6 +22,11 @@ class CapableDaysFragment : RegisterFragmentBase() {
         return root
     }
 
+    override fun commitChanges(): Boolean {
+        viewModel.updateCapableDays(listOf(1,4,7))
+        return true
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

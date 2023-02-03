@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import study.project.databinding.FragmentAgeBinding
+import study.project.utils.isNumber
 
 class AgeFragment : RegisterFragmentBase() {
 
@@ -19,6 +20,23 @@ class AgeFragment : RegisterFragmentBase() {
         _binding = FragmentAgeBinding.inflate(inflater, container, false)
 
         return binding.root
+    }
+
+    override fun commitChanges(): Boolean {
+        binding.apply {
+            if (etAge.text.toString().isEmpty()) {
+                etAge.error = "Please enter your Age"
+                return false
+            }
+
+            return if (etAge.text.toString().isNumber()){
+                viewModel.updateAge(etAge.text.toString().toInt())
+                true
+            } else {
+                etAge.error = "Please enter a valid Age"
+                false
+            }
+        }
     }
 
     override fun onDestroyView() {

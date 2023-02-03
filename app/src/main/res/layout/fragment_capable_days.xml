@@ -3,142 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".CapableDaysActivity"
-        android:paddingTop="@dimen/toolbar_height"
         android:background="@color/gray_light">
 
         <!--Title-->
         <TextView
-            android:id="@+id/ttlCapable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center"
+            android:id="@+id/tv_title_capable_days"
+            style="@style/register_titles"
             android:text="@string/ttl_capable_days"
-            android:textColor="@color/white"
-            android:textSize="40dp"
-            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--GuideLines-->
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/Guide1"
+        <LinearLayout
+            android:id="@+id/ll_1_row"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2" />
+            android:gravity="center"
+            android:layout_marginTop="@dimen/register_toggle_height"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_capable_days">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/Guide2"
+            <android.widget.Button
+                android:id="@+id/btMonday"
+                android:text="@string/monday"
+                style="@style/register_toggle_button"/>
+
+            <android.widget.Button
+                android:id="@+id/btTuesday"
+                android:text="@string/tuesday"
+                style="@style/register_toggle_button"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_2_row"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.4" />
+            android:gravity="center"
+            android:layout_marginTop="@dimen/register_toggle_height"
+            app:layout_constraintTop_toBottomOf="@+id/ll_1_row">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/Guide3"
+            <android.widget.Button
+                android:id="@+id/btWednesday"
+                android:text="@string/wednesday"
+                style="@style/register_toggle_button"/>
+
+            <android.widget.Button
+                android:id="@+id/btThursday"
+                android:text="@string/thursday"
+                style="@style/register_toggle_button"/>
+
+            <android.widget.Button
+                android:id="@+id/btFriday"
+                android:text="@string/friday"
+                style="@style/register_toggle_button"/>
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.6" />
+            android:gravity="center"
+            android:layout_marginTop="@dimen/register_toggle_height"
+            app:layout_constraintTop_toBottomOf="@+id/ll_2_row">
 
-        <!--Monday, Tuesday-->
-        <android.widget.Button
-            android:id="@+id/btMonday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:text="@string/monday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Guide1"
-            app:layout_constraintStart_toEndOf="@id/btTuesday" />
+            <android.widget.Button
+                android:id="@+id/btSaturday"
+                style="@style/register_toggle_button"/>
 
-        <android.widget.Button
-            android:id="@+id/btTuesday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:layout_marginEnd="75dp"
-            android:text="@string/tuesday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Guide1" />
+            <android.widget.Button
+                android:id="@+id/btSunday"
+                android:text="@string/sunday"
+                style="@style/register_toggle_button"/>
 
-        <!--Wednesday, Thursday. Friday-->
-        <android.widget.Button
-            android:id="@+id/btWednesday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:layout_marginStart="10dp"
-            android:text="@string/wednesday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Guide2" />
-
-        <android.widget.Button
-            android:id="@+id/btThursday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:text="@string/thursday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            app:layout_constraintTop_toBottomOf="@id/Guide2"
-            app:layout_constraintStart_toEndOf="@id/btWednesday"
-            app:layout_constraintEnd_toStartOf="@id/btFriday" />
-
-        <android.widget.Button
-            android:id="@+id/btFriday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:text="@string/friday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintTop_toBottomOf="@id/Guide2"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <!--Saturday, sunday-->
-        <android.widget.Button
-            android:id="@+id/btSaturday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:text="@string/saturday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Guide3"
-            app:layout_constraintStart_toEndOf="@id/btTuesday" />
-
-        <android.widget.Button
-            android:id="@+id/btSunday"
-            android:layout_width="@dimen/btdays_width"
-            android:layout_height="@dimen/btdays_height"
-            android:layout_marginTop="@dimen/btdays_top"
-            android:layout_marginEnd="75dp"
-            android:text="@string/sunday"
-            android:textColor="@color/white"
-            android:background="@drawable/button_days"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/Guide3" />
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
