@@ -9,14 +9,15 @@
     <string name="abdominal">abdominal</string>
     <string name="onboarding_welcome">WELCOME!!</string>
     <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_confirm">Confirm</string>
     <string name="onboardong_finish">FINISH</string>
     <string name="confPass">Confirm Password</string>
     <string name="bttCreate">Create account</string>
     <string name="ttlpassword">Create a Password</string>
     <string name="title_activity_bottom">BottomActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_excercise">Exercise</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="title_favorites">Favorites</string>
     <string name="user">User</string>
     <string name="profile">Profile</string>
     <string name="ready">Ready to Start!</string>
@@ -41,12 +42,12 @@
     <string name="back">back</string>
 
 <!--     TITLES     -->
-    <string name="gender_t">Tell us about you</string>
-    <string name="age_t">How old are you</string>
-    <string name="weight_t">Tell us your weight</string>
-    <string name="height_t">Tell us your height</string>
-    <string name="name_t">What is your name</string>
-    <string name="email_t">Enter your email</string>
+    <string name="register_gender_title">Tell us about you</string>
+    <string name="register_age_title">How old are you</string>
+    <string name="register_weight_title">Tell us your weight</string>
+    <string name="register_height_title">Tell us your height</string>
+    <string name="register_name_title">Tell us your name</string>
+    <string name="register_register_title">Enter your email</string>
     <string name="male">male</string>
     <string name="female">female</string>
 
@@ -54,6 +55,8 @@
     <string name="onboarding_terms_and_conditions_title">Terms and Conditions</string>
     <string name="onboarding_usage_title">Usage</string>
     <string name="onboarding_authors_title">Authors</string>
+    <string name="kg_symbol">kg</string>
+    <string name="cm_symbol">cm</string>
 
     <string-array name="onboarding_welcome">
         <item>"Welcome to Health Up"</item>

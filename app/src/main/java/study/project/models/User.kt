@@ -22,7 +22,7 @@ data class User(
     var email: String = "",
 
     @ColumnInfo(name = "weight")
-    var weight: Int = 0,
+    var weight: Double = 0.0,
 
     @ColumnInfo(name = "height")
     var height: Int = 0,
@@ -31,7 +31,7 @@ data class User(
     var gender: String = "",
 
     @ColumnInfo(name = "capableDays")
-    var capableDays: Int = 0,
+    var capableDays: List<Int> = listOf(),
 
     @ColumnInfo(name = "age")
     var age: Int = 0,

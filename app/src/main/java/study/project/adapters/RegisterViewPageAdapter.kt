@@ -3,6 +3,7 @@ package study.project.adapters
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import study.project.fragments.register.RegisterFragmentBase
 
 class RegisterViewPageAdapter(fm: FragmentManager, private val fragments: List<Fragment>) : FragmentPagerAdapter(fm) {
     override fun getCount(): Int = fragments.size
@@ -13,5 +14,9 @@ class RegisterViewPageAdapter(fm: FragmentManager, private val fragments: List<F
 
     override fun getPageTitle(position: Int): CharSequence {
         return ""
+    }
+
+    fun getFragment(position: Int): RegisterFragmentBase {
+        return fragments[position] as RegisterFragmentBase
     }
 }
