@@ -10,19 +10,19 @@ import study.project.models.User
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface UserDao : IDao<User>{
-    @Query("SELECT * FROM user_table ORDER BY id ASC")
-    override fun getAll(): Flow<List<User>>
+interface UserDao {
+    @Query("SELECT * FROM user_table")
+    fun getAll(): Flow<List<User>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    override suspend fun insert(model: User)
+    suspend fun insert(user: User)
 
     @Query("DELETE FROM user_table")
-    override fun deleteAll()
+    fun deleteAll()
 
     @Delete
-    override fun delete(model: User)
+    fun delete(model: User)
 
     @Update
-    override suspend fun update(model: User)
+    suspend fun update(model: User)
 }
