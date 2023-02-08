@@ -31,7 +31,7 @@ class CheckFragment : RegisterFragmentBase() {
         binding.apply {
             editGender.text = user.gender
             editAge.text = user.age.toString()
-            editDays.text = user.capableDays.joinToString()
+            editDays.text = user.capableDays
             editEmail.text = user.email
             editName.text = user.username
             editWeight.text = user.weight.toString()

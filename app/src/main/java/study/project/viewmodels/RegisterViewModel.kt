@@ -50,7 +50,7 @@ class RegisterViewModel : ViewModel() {
         user.value = u
     }
 
-    fun updateCapableDays(capableDays: List<Int>) {
+    fun updateCapableDays(capableDays: String) {
         val u = user.value
         if (u != null) {
             u.capableDays = capableDays
@@ -80,5 +80,9 @@ class RegisterViewModel : ViewModel() {
             u.gender = gender
         }
         user.value = u
+    }
+
+    fun notifyChange() {
+        user.value = user.value
     }
 }
