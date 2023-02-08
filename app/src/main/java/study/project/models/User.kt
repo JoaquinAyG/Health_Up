@@ -31,7 +31,7 @@ data class User(
     var gender: String = "",
 
     @ColumnInfo(name = "capableDays")
-    var capableDays: List<Int> = listOf(),
+    var capableDays: String = "",
 
     @ColumnInfo(name = "age")
     var age: Int = 0,
@@ -41,6 +41,6 @@ data class User(
 
 ) : Serializable {
     override fun toString(): String {
-        return "User(id=$id, username='$username', password='$password', email='$email', age=$age)"
+        return "$id $username $password $email $weight $height $gender $capableDays $age $admin"
     }
 }
