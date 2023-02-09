@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -24,7 +20,7 @@
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <androidx.viewpager.widget.ViewPager
+        <study.project.models.NonSweepViewPager
             android:id="@+id/vp_register"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
@@ -62,12 +58,25 @@
             android:layout_width="@dimen/card_width"
             android:layout_height="@dimen/button_main_height"
             android:text="@string/onboarding_continue"
-            style="@style/LoginButtons"
+            style="@style/login_containers"
             android:layout_marginBottom="40dp"
             android:background="@drawable/main_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="@dimen/card_width"
+            android:layout_height="@dimen/button_main_height"
+            android:text="@string/onboarding_confirm"
+            style="@style/login_containers"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/main_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

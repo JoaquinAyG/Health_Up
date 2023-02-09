@@ -38,7 +38,7 @@
         <item name="android:inputType">textPassword</item>
     </style>
 
-    <style name="LoginButtons">
+    <style name="login_containers">
         <item name="android:layout_width">@dimen/button_main_width</item>
         <item name="android:layout_height">@dimen/button_main_height</item>
         <item name="android:textSize">22sp</item>
@@ -60,35 +60,42 @@
 
     <style name="txview" parent="Theme.AppCompat.NoActionBar">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="edtext" parent="Theme.AppCompat.NoActionBar">
         <item name="android:textColor">@color/blue_light</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:gravity">end</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="titles">
-        <item name="android:textSize">35dp</item>
+    <style name="register_titles">
+        <item name="android:textSize">35sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/white</item>
         <item name="fontFamily">sans-serif-medium</item>
+        <item name="android:layout_marginTop">@dimen/register_title_top_margin</item>
     </style>
 
-    <style name="button_gender">
-        <item name="android:backgroundTint">@color/white_dark</item>
-        <item name="android:textColor">@color/blue</item>
+    <style name="register_toggle_button">
+        <item name="android:background">@drawable/register_selector</item>
+        <item name="android:textColor">@color/white</item>
         <item name="android:textSize">16dp</item>
-        <item name="chipCornerRadius">15dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_height">@dimen/register_toggle_height</item>
+        <item name="android:layout_width">@dimen/register_toggle_width</item>
+
     </style>
 
     <style name="button_next">
         <item name="android:backgroundTint">@color/blue</item>
         <item name="android:textColor">@color/white_dark</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="chipCornerRadius">20dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
@@ -98,6 +105,32 @@
         <item name="colorControlNormal">@color/blue</item>
         <item name="colorControlActivated">@color/blue</item>
         <item name="colorControlHighlight">@color/blue</item>
+    </style>
+
+    <style name="edit_text_register">
+        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">150dp</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColorHint">@color/white_dark</item>
+        <item name="android:backgroundTint">@color/blue</item>
+    </style>
+
+    <style name="symbol_register">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/white_dark</item>
+        <item name="android:layout_marginStart">5dp</item>
+    </style>
+
+    <style name="button_settings">
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:textColor">@color/white_dark</item>
+        <item name="android:textSize">22dp</item>
+        <item name="chipCornerRadius">12dp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
