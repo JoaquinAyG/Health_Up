@@ -19,6 +19,10 @@
             android:id="@+id/et_mail"
             style="@style/edit_text_register"
             android:inputType="text"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:textSize="24dp"
+            android:hint="example@example.com"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title_mail">
