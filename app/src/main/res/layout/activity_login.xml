@@ -29,6 +29,7 @@
             android:layout_marginTop="69dp"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
+            android:textColorHint="@color/white_light2"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintTop_toBottomOf="@id/iv_logo">
@@ -44,6 +45,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
             style="@style/login_containers"
+            android:textColorHint="@color/white_light2"
             android:layout_width="248dp"
             android:layout_height="55dp"
             app:boxCornerRadiusBottomEnd="15dp"
@@ -59,7 +61,6 @@
                 android:layout_height="match_parent"
                 android:hint="@string/password"
                 android:inputType="textPassword">
-
             </EditText>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -73,7 +74,7 @@
             android:gravity="center"
             android:text="@string/sign_up_question"
             android:textColor="@color/white"
-            android:textSize="13sp"
+            android:textSize="20dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_login"
             app:layout_constraintEnd_toEndOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline1"
