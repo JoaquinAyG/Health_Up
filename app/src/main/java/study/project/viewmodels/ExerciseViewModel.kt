@@ -37,7 +37,7 @@ class ExerciseViewModel: ViewModel() {
         }
     }
 
-    private fun parseData(exerciseResponse: List<ExerciseView>, infoResponse: List<ExerciseInfoView>, categoryResponse: List<ExerciseCategoryView>, imagesResponse: List<ExerciseImageView>): List<Exercise>? {
+    private fun parseData(exerciseResponse: List<ExerciseView>, infoResponse: List<ExerciseInfoView>, categoryResponse: List<ExerciseCategoryView>, imagesResponse: List<ExerciseImageView>): List<Exercise> {
         val newList = mutableListOf<Exercise>()
         for (exercise in exerciseResponse) {
             val info = infoResponse.find { it.id == exercise.id }
@@ -52,10 +52,9 @@ class ExerciseViewModel: ViewModel() {
             val newExercise = Exercise(
                 id = exercise.id ?: 0,
                 name = exercise.name ?: "No name",
-                isFront = info?.isFront ?: false,
-                imageUrlMain = images.find { it.isMain }?.url ?: "https://pbs.twimg.com/media/EcAED4eWkAAsEZZ.jpg",
-                imageUrlSecondary = images.find { !it.isMain }?.url ?: "https://pbs.twimg.com/media/EcAED4eWkAAsEZZ.jpg",
-                descriptionEn = info?.descriptionEn ?: "No description",
+                imageUrlMain = images.first(),
+                imageUrlSecondary = images.size.let { if (it > 1) images[1] else "" },
+                descriptionEn = info?.description ?: "No description",
                 muscles = exercise.muscles,
                 category = category?.name ?: "No category",
                 variations = exercise.variations
