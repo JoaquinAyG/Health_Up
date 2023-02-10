@@ -36,6 +36,7 @@ class MailFragment : RegisterFragmentBase() {
 
             //TODO Check if mail is already in use
             viewModel.updateEmail(etMail.text.toString())
+            viewModel.notifyChange()
             return true
         }
     }

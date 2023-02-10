@@ -1,21 +1,31 @@
 package study.project.activities
 
-import android.R
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.os.Process
+import android.util.Log
 import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import study.project.HealthUpApplication
 import study.project.databinding.ActivityLoginBinding
-import study.project.utils.Utils
+import study.project.factories.UserViewModelFactory
+import study.project.models.User
+import study.project.viewmodels.UserViewModel
 
 
 class LoginActivity : AppCompatActivity() {
+
+    private val userViewModel: UserViewModel by viewModels {
+        UserViewModelFactory((application as HealthUpApplication).repository)
+    }
+
+    private val users = mutableListOf<User>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
 
@@ -23,13 +33,15 @@ class LoginActivity : AppCompatActivity() {
 
         val binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportActionBar?.hide();
+        supportActionBar?.hide()
+
+        observeUsers()
 
         binding.apply {
             btnLogin.setOnClickListener {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
-                if (Utils.validateCredentials(username, password)) {
+                if (validateCredentials(username, password)) {
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
@@ -49,6 +61,16 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
+
+    private fun observeUsers() {
+        userViewModel.allUsers.observe(this) {
+            it.forEach{ user ->
+                Log.i("Users", "added: ${user.username}")
+                users.add(user)
+            }
+        }
+    }
+
     fun ExercisePage(view: View?) {
         Toast.makeText(
             this@LoginActivity,
@@ -87,6 +109,18 @@ class LoginActivity : AppCompatActivity() {
             return true
         }
         return super.onKeyDown(keyCode, event)
+    }
+
+    private fun validateCredentials(username: String, password: String): Boolean {
+        var validate = false
+        users.forEach {
+            validate = when {
+                (it.username == username && it.password == password) -> true
+                (it.email == username && it.password == password) -> true
+                else -> false
+            }
+        }
+        return validate
     }
 
 }

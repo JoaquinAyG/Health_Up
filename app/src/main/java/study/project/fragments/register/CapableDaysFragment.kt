@@ -36,7 +36,7 @@ class CapableDaysFragment : RegisterFragmentBase() {
                 }
             })
         }
-        viewModel.updateCapableDays(list)
+        viewModel.updateCapableDays(list.joinToString(","))
         return true
     }
 

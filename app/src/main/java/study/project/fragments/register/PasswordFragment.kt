@@ -17,14 +17,14 @@ class PasswordFragment : RegisterFragmentBase(){
                 etPassword.error = "Please enter a password"
                 return false
             }
-
-            return if (etPassword.text.toString() == etConfirmPassword.text.toString()){
-                viewModel.updatePassword(etPassword.text.toString())
-                true
-            } else {
+            if (etPassword.text.toString() != etConfirmPassword.text.toString()){
                 etPassword.error = "Passwords do not match"
-                false
+                return false
+
             }
+            viewModel.updatePassword(etPassword.text.toString())
+            viewModel.notifyChange()
+            return true
         }
     }
     override fun onCreateView(

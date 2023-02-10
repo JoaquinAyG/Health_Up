@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".HealthUpApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -18,7 +19,7 @@
         <activity
             android:name=".activities.RegisterActivity"
             android:exported="false"
-            android:label="@string/title_activity_registerr" />
+            android:label="@string/title_activity_register" />
         <activity
             android:name=".activities.MainActivity"
             android:exported="false"
