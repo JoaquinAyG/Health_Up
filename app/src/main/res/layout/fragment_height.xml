@@ -30,6 +30,7 @@
             android:id="@+id/tv_cm_symbol"
             style="@style/symbol_register"
             android:text="@string/cm_symbol"
+            android:textSize="24dp"
             app:layout_constraintStart_toEndOf="@id/et_height"
             app:layout_constraintTop_toTopOf="@id/et_height"
             app:layout_constraintBottom_toBottomOf="@id/et_height"/>

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.Process
 import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import androidx.viewpager.widget.ViewPager
 import study.project.R
@@ -26,6 +27,7 @@ class OnBoardActivity : AppCompatActivity(){
 
     private lateinit var pages : ArrayList<OnboardPresentation>
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         super.onCreate(savedInstanceState)
         if (!sharedPreferences.getBoolean("first_time", true)) {
             startActivity(Intent(this, LoginActivity::class.java))
