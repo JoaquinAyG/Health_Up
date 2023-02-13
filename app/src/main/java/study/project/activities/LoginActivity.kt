@@ -4,17 +4,15 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Process
-import android.util.Log
 import android.view.KeyEvent
-import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import study.project.HealthUpApplication
 import study.project.databinding.ActivityLoginBinding
 import study.project.factories.UserViewModelFactory
 import study.project.models.User
+import study.project.utils.forceDarkMode
 import study.project.viewmodels.UserViewModel
 
 
@@ -27,8 +25,7 @@ class LoginActivity : AppCompatActivity() {
     private val users = mutableListOf<User>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-
+        forceDarkMode()
         super.onCreate(savedInstanceState)
 
         val binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -65,13 +62,12 @@ class LoginActivity : AppCompatActivity() {
     private fun observeUsers() {
         userViewModel.allUsers.observe(this) {
             it.forEach{ user ->
-                Log.i("Users", "added: ${user.username}")
                 users.add(user)
             }
         }
     }
 
-    fun ExercisePage(view: View?) {
+    fun ExercisePage() {
         Toast.makeText(
             this@LoginActivity,
             "Exercise Page",
@@ -80,7 +76,7 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, ExerciseActivity::class.java)
         startActivity(intent)
     }
-    fun ExercisePage2(view: View?) {
+    fun ExercisePage2() {
         Toast.makeText(
             this@LoginActivity,
             "Easter Egg Page",

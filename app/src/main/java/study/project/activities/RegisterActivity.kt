@@ -4,7 +4,6 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
 import androidx.fragment.app.FragmentActivity
@@ -15,6 +14,7 @@ import study.project.databinding.ActivityRegisterBinding
 import study.project.factories.UserViewModelFactory
 import study.project.fragments.register.*
 import study.project.models.UserProfile
+import study.project.utils.forceDarkMode
 import study.project.viewmodels.RegisterViewModel
 import study.project.viewmodels.UserViewModel
 
@@ -27,7 +27,7 @@ class RegisterActivity : FragmentActivity() {
     private val registerViewModel: RegisterViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        forceDarkMode()
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)

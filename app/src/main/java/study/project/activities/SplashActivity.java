@@ -1,5 +1,7 @@
 package study.project.activities;
 
+import static study.project.utils.GeneralFunctionsKt.forceDarkMode;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,17 +12,19 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+import java.util.Objects;
+
 import study.project.R;
 
 public class SplashActivity extends AppCompatActivity {
     TextView texto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        forceDarkMode();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         openApp();
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
 
         texto = findViewById(R.id.health);
 

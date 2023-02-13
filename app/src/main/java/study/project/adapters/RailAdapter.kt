@@ -1,6 +1,5 @@
 package study.project.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +20,6 @@ class RailAdapter(
 
     override fun onBindViewHolder(holder: RailHolder, position: Int) {
         val data = exerciseList.filter { it.category == categoryList[position] }
-        Log.i("exerciseList Adapter", "$exerciseList")
         holder.bind(data, categoryList[position])
         holder.binding.rvExercises.adapter?.notifyDataSetChanged()
     }

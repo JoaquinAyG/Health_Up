@@ -1,23 +1,20 @@
 package study.project.activities
 
 
-import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
-import study.project.R
 import study.project.databinding.ActivityExerciseBinding
 import study.project.models.Exercise
+import study.project.utils.forceDarkMode
 
 class ExerciseActivity : AppCompatActivity() {
     val exercise = Exercise()
     lateinit var binding: ActivityExerciseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        forceDarkMode()
         binding = ActivityExerciseBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
