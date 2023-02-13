@@ -17,6 +17,8 @@ class ExerciseViewModel: ViewModel() {
     private val _exerciseList = MutableLiveData<List<Exercise>>()
     val exerciseList: LiveData<List<Exercise>>
         get() = _exerciseList
+
+    val categoryList = listOf("Abs", "Arms", "Back", "Chest", "Legs", "Shoulders", "Cardio", "Calves")
     fun fetchData() {
         uiScope.launch {
             val exerciseResponse = withContext(Dispatchers.IO) {
@@ -46,13 +48,13 @@ class ExerciseViewModel: ViewModel() {
             info?.images?.forEach { image ->
                 val newImage = imagesResponse.find { it.id == image.id }
                 if (newImage != null) {
-                    newImage.image?.let { images.add(it) }
+                    newImage.image?.let { images.add(it.replace("_", "-")) }
                 }
             }
             val newExercise = Exercise(
                 id = exercise.id ?: 0,
                 name = exercise.name ?: "No name",
-                imageUrlMain = images.first(),
+                imageUrlMain = images.firstOrNull() ?: "",
                 imageUrlSecondary = images.size.let { if (it > 1) images[1] else "" },
                 descriptionEn = info?.description ?: "No description",
                 muscles = exercise.muscles,
