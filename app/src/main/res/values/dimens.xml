@@ -18,4 +18,8 @@
     <dimen name="register_toggle_height">60dp</dimen>
     <dimen name="register_toggle_width">120dp</dimen>
     <dimen name="register_toggle_top_margin">40dp</dimen>
+    <dimen name="rail_height">200dp</dimen>
+    <dimen name="card_height">130dp</dimen>
+    <dimen name="exercise_card_width">100dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
 </resources>

@@ -82,7 +82,7 @@
     <style name="register_toggle_button">
         <item name="android:background">@drawable/register_selector</item>
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAlignment">center</item>
         <item name="android:layout_marginEnd">10dp</item>
@@ -111,7 +111,7 @@
         <item name="android:layout_width">160dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">150dp</item>
-        <item name="android:textSize">40dp</item>
+        <item name="android:textSize">40sp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:textColorHint">@color/white_dark</item>
         <item name="android:backgroundTint">@color/blue</item>
@@ -120,7 +120,7 @@
     <style name="symbol_register">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/white_dark</item>
         <item name="android:layout_marginStart">5dp</item>
     </style>
@@ -131,6 +131,13 @@
         <item name="android:textSize">22dp</item>
         <item name="chipCornerRadius">12dp</item>
         <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="style_rail_title">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
 </resources>

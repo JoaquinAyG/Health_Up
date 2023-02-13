@@ -62,6 +62,7 @@
     <string name="onboarding_authors_title">Authors</string>
     <string name="kg_symbol">kg</string>
     <string name="cm_symbol">cm</string>
+    <string name="category_title">CATEGORY</string>
 
     <string-array name="onboarding_welcome">
         <item>"Welcome to Health Up"</item>
