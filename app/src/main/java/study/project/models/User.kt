@@ -39,8 +39,11 @@ data class User(
     @ColumnInfo(name = "admin")
     var admin: Boolean = false,
 
-) : Serializable {
+    @ColumnInfo(name = "favourites")
+    var favourites: String = ""
+
+    ) : Serializable {
     override fun toString(): String {
-        return "$id $username $password $email $weight $height $gender $capableDays $age $admin"
+        return "User(id=$id, username='$username', password='$password', email='$email', weight=$weight, height=$height, gender='$gender', capableDays='$capableDays', age=$age, admin=$admin, favourites=$favourites)"
     }
 }

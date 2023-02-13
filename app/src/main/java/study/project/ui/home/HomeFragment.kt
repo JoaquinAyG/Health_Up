@@ -30,7 +30,16 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvRails.layoutManager = layoutManager
-        binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList)
+        binding.rvRails.adapter = RailAdapter(
+            exerciseList,
+            viewModel.categoryList,
+            onFavourite = {
+                viewModel.updateFavourite(it)
+            },
+            onClick = {
+                viewModel.updateExercise(it)
+            }
+        )
         viewModel.fetchData()
         viewModel.status.observe(viewLifecycleOwner){ status ->
             when (status) {
@@ -48,7 +57,13 @@ class HomeFragment : Fragment() {
                     exerciseList.add(exercise)
                 }
             }
-            binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList)
+            binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList,
+                onFavourite = {
+                    viewModel.updateFavourite(it)
+                },
+                onClick = {
+                    viewModel.updateExercise(it)
+                })
         }
 
         return root
