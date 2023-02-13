@@ -16,7 +16,9 @@ class RailAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RailHolder {
         return RailHolder(
-            RailItemBinding.inflate(LayoutInflater.from(parent.context), parent,false)
+            RailItemBinding.inflate(LayoutInflater.from(parent.context), parent,false),
+            onFavourite,
+            onClick
         )
     }
 

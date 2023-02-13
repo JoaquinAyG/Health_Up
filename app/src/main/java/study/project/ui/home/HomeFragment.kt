@@ -5,12 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import study.project.HealthUpApplication
+import study.project.activities.MainActivity
 import study.project.adapters.RailAdapter
 import study.project.databinding.FragmentHomeBinding
+import study.project.factories.UserViewModelFactory
 import study.project.models.Exercise
 import study.project.viewmodels.ExerciseViewModel
+import study.project.viewmodels.UserViewModel
 
 
 class HomeFragment : Fragment() {
@@ -19,6 +24,9 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewModel: ExerciseViewModel by lazy {
         ViewModelProvider(this)[ExerciseViewModel::class.java]
+    }
+    private val userViewModel: UserViewModel by viewModels {
+        UserViewModelFactory((requireActivity().application as HealthUpApplication).repository)
     }
     private val exerciseList = mutableListOf<Exercise>()
     override fun onCreateView(
@@ -34,10 +42,12 @@ class HomeFragment : Fragment() {
             exerciseList,
             viewModel.categoryList,
             onFavourite = {
-                viewModel.updateFavourite(it)
+                userViewModel.updateFavoriteExercise(it)
             },
             onClick = {
-                viewModel.updateExercise(it)
+                (requireActivity() as MainActivity).navigateUpTo(
+                    (requireActivity() as MainActivity).getIntentForExercise(it)
+                )
             }
         )
         viewModel.fetchData()
@@ -59,10 +69,10 @@ class HomeFragment : Fragment() {
             }
             binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList,
                 onFavourite = {
-                    viewModel.updateFavourite(it)
+
                 },
                 onClick = {
-                    viewModel.updateExercise(it)
+
                 })
         }
 

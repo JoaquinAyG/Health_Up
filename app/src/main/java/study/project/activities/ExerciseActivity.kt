@@ -11,13 +11,14 @@ import study.project.models.Exercise
 import study.project.utils.forceDarkMode
 
 class ExerciseActivity : AppCompatActivity() {
-    val exercise = Exercise()
+    var exercise = Exercise()
     lateinit var binding: ActivityExerciseBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         forceDarkMode()
         binding = ActivityExerciseBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        exercise = intent.getSerializableExtra("exercise") as Exercise
         loadImage(binding.imageView, exercise.imageUrlMain)
         binding.imageView.setImageURI(Uri.parse(exercise.imageUrlMain))
         binding.tvTittle.text=exercise.nameEn
@@ -26,9 +27,6 @@ class ExerciseActivity : AppCompatActivity() {
             binding.tvMusclist.text = "${binding.tvMusclist.text} $it \n"
         }
         binding.tvDesc.text = exercise.descriptionEn
-
-
-
 
     }
 

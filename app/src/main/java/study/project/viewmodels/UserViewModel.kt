@@ -5,7 +5,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
+import study.project.models.Exercise
 import study.project.models.User
+import study.project.models.UserProfile
 import study.project.repos.UserRepository
 
 class UserViewModel(private val repository: UserRepository) : ViewModel() {
@@ -26,5 +28,9 @@ class UserViewModel(private val repository: UserRepository) : ViewModel() {
 
     fun update(user: User) = viewModelScope.launch {
         repository.update(user)
+    }
+
+    fun updateFavoriteExercise(exercise: Exercise) = viewModelScope.launch {
+        repository.updateFavoriteExercise(UserProfile.instance, exercise)
     }
 }

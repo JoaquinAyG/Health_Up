@@ -79,21 +79,9 @@ class ExerciseViewModel: ViewModel() {
         return newList
     }
 
-    fun updateFavourite(exercise: Exercise) {
-        uiScope.launch {
-            withContext(Dispatchers.IO) {
-
-            }
-        }
-    }
-
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()
-    }
-
-    fun updateExercise(it: Exercise) {
-
     }
 }
 
