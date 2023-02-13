@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Process
 import android.view.KeyEvent
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -67,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun ExercisePage() {
+    fun ExercisePage(view: View) {
         Toast.makeText(
             this@LoginActivity,
             "Exercise Page",
@@ -76,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, ExerciseActivity::class.java)
         startActivity(intent)
     }
-    fun ExercisePage2() {
+    fun ExercisePage2(view: View) {
         Toast.makeText(
             this@LoginActivity,
             "Easter Egg Page",
