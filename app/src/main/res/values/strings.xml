@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Health Up^</string>
+    <string name="app_name">Health Up</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_up_question">Don´t have account? SIGN UP</string>
@@ -30,7 +30,7 @@
     <string name="days">Capable days</string>
     <string name="next">NEXT</string>
     <string name="health_up">Health_Up</string>
-    <string name="ttl_capable_days">Your trainning days</string>
+    <string name="ttl_capable_days">Your training days</string>
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
     <string name="wednesday">wednesday</string>
@@ -38,16 +38,21 @@
     <string name="friday">Friday</string>
     <string name="sunday">Sunday</string>
     <string name="saturday">Saturday</string>
-    <string name="title_activity_registerr">RegisterrActivity</string>
+    <string name="title_activity_register">RegisterActivity</string>
     <string name="back">back</string>
+    <string name="change_e">Change email</string>
+    <string name="change_p">Change password</string>
+    <string name="notifications">Notifications</string>
+    <string name="about_us">About us</string>
+    <string name="log">Log out</string>
 
 <!--     TITLES     -->
     <string name="register_gender_title">Tell us about you</string>
-    <string name="register_age_title">How old are you</string>
+    <string name="register_age_title">How old are you?</string>
     <string name="register_weight_title">Tell us your weight</string>
-    <string name="register_height_title">Tell us your height</string>
-    <string name="register_name_title">Tell us your name</string>
-    <string name="register_register_title">Enter your email</string>
+    <string name="register_height_title">and your height</string>
+    <string name="register_name_title">Your name is...</string>
+    <string name="register_register_title">and your email?</string>
     <string name="male">male</string>
     <string name="female">female</string>
 
