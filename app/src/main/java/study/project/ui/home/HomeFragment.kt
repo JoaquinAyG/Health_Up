@@ -32,6 +32,16 @@ class HomeFragment : Fragment() {
         binding.rvRails.layoutManager = layoutManager
         binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList)
         viewModel.fetchData()
+        viewModel.status.observe(viewLifecycleOwner){ status ->
+            when (status) {
+                "SUCCESS" -> {
+                    binding.loadingAnimation.visibility = View.GONE
+                }
+                "LOADING" -> {
+                    binding.loadingAnimation.visibility = View.VISIBLE
+                }
+            }
+        }
         viewModel.exerciseList.observe(viewLifecycleOwner){ exercises ->
             exercises.forEach { exercise ->
                 if (!exerciseList.map { it.nameEn.ifEmpty { it.name } }.contains(exercise.nameEn.ifEmpty { exercise.name })) {

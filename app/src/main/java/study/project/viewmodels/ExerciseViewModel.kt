@@ -1,5 +1,6 @@
 package study.project.viewmodels
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -9,6 +10,7 @@ import study.project.api.models.views.ExerciseCategoryView
 import study.project.api.models.views.ExerciseImageView
 import study.project.api.models.views.ExerciseInfoView
 import study.project.api.models.views.ExerciseView
+import study.project.models.AppStatus
 import study.project.models.Exercise
 
 class ExerciseViewModel: ViewModel() {
@@ -19,8 +21,13 @@ class ExerciseViewModel: ViewModel() {
         get() = _exerciseList
 
     val categoryList = listOf("Abs", "Arms", "Back", "Chest", "Legs", "Shoulders", "Cardio", "Calves")
+    private val _status = MutableLiveData<String>()
+    val status: LiveData<String>
+        get() = _status
     fun fetchData() {
         uiScope.launch {
+            _status.value = AppStatus.LOADING
+            Log.i("ExerciseViewModel", "Fetching data...")
             val exerciseResponse = withContext(Dispatchers.IO) {
                 HealthApiManagerClient.getAllExercises()
             }
@@ -34,8 +41,14 @@ class ExerciseViewModel: ViewModel() {
                 HealthApiManagerClient.getAllExerciseImages()
             }
 
+
+            Log.i("ExerciseViewModel", "Parsing data...")
+
             val newList = parseData(exerciseResponse, infoResponse, categoryResponse, imagesResponse)
             _exerciseList.value = newList
+
+            Log.i("ExerciseViewModel", "Data generated")
+            _status.value = AppStatus.SUCCESS
         }
     }
 
