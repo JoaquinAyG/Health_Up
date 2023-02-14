@@ -15,6 +15,7 @@ import study.project.models.Exercise
 
 class ExerciseViewModel: ViewModel() {
     private val viewModelJob = Job()
+    var fetched = false
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
     private val _exerciseList = MutableLiveData<List<Exercise>>()
     val exerciseList: LiveData<List<Exercise>>
@@ -49,6 +50,7 @@ class ExerciseViewModel: ViewModel() {
 
             Log.i("ExerciseViewModel", "Data generated")
             _status.value = AppStatus.SUCCESS
+            fetched = true
         }
     }
 
