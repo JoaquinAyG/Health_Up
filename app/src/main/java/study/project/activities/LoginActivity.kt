@@ -20,7 +20,7 @@ import study.project.viewmodels.UserViewModel
 class LoginActivity : AppCompatActivity() {
 
     private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory((application as HealthUpApplication).repository)
+        UserViewModelFactory((application as HealthUpApplication).userRepository)
     }
 
     private val users = mutableListOf<User>()
@@ -68,7 +68,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    fun ExercisePage() {
+    fun ExercisePage(view: View) {
         Toast.makeText(
             this@LoginActivity,
             "Exercise Page",
@@ -77,7 +77,7 @@ class LoginActivity : AppCompatActivity() {
         val intent = Intent(this, ExerciseActivity::class.java)
         startActivity(intent)
     }
-    fun ExercisePage2() {
+    fun ExercisePage2(view: View) {
         Toast.makeText(
             this@LoginActivity,
             "Easter Egg Page",

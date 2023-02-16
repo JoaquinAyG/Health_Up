@@ -50,7 +50,9 @@ class HomeFragment : Fragment() {
                 )
             }
         )
-        viewModel.fetchData()
+        if (!viewModel.fetched) {
+            viewModel.fetchData()
+        }
         viewModel.status.observe(viewLifecycleOwner){ status ->
             when (status) {
                 "SUCCESS" -> {
