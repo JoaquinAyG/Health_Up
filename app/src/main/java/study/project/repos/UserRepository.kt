@@ -1,8 +1,10 @@
 package study.project.repos
 
+import android.util.Log
 import androidx.annotation.WorkerThread
 import kotlinx.coroutines.flow.Flow
 import study.project.dao.UserDao
+import study.project.models.Exercise
 import study.project.models.User
 
 class UserRepository(private val userDao: UserDao) {
@@ -24,4 +26,5 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun update(user: User) {
         userDao.update(user)
     }
+
 }

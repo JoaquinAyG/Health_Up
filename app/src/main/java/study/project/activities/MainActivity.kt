@@ -1,5 +1,6 @@
 package study.project.activities
 import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
 import android.os.Process
 import android.view.KeyEvent
@@ -11,6 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import study.project.R
 import study.project.databinding.ActivityMainBinding
+import study.project.models.Exercise
 import study.project.utils.forceDarkMode
 
 class MainActivity : AppCompatActivity() {
@@ -57,5 +59,10 @@ class MainActivity : AppCompatActivity() {
         return super.onKeyDown(keyCode, event)
     }
 
-
+    fun navigateToExercise(it: Exercise) {
+        val i = Intent(this, ExerciseActivity::class.java).apply {
+            putExtra("exercise", it)
+        }
+        startActivity(i)
+    }
 }
