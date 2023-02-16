@@ -59,11 +59,10 @@ class MainActivity : AppCompatActivity() {
         return super.onKeyDown(keyCode, event)
     }
 
-    fun getIntentForExercise(it: Exercise): Intent? {
-        return Intent(this, ExerciseActivity::class.java).apply {
+    fun navigateToExercise(it: Exercise) {
+        val i = Intent(this, ExerciseActivity::class.java).apply {
             putExtra("exercise", it)
         }
+        startActivity(i)
     }
-
-
 }

@@ -26,9 +26,5 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun update(user: User) {
         userDao.update(user)
     }
-    @WorkerThread
-    suspend fun updateFavoriteExercise(instance: User, exercise: Exercise) {
-        instance.addFavoriteExercise(exercise.id)
-        userDao.update(instance)
-    }
+
 }

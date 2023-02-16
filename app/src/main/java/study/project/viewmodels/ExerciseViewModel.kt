@@ -25,6 +25,10 @@ class ExerciseViewModel: ViewModel() {
     private val _status = MutableLiveData<String>()
     val status: LiveData<String>
         get() = _status
+
+    private val mutableExerciseStatus = MutableLiveData<String>()
+    val exerciseStatus: LiveData<String>
+        get() = mutableExerciseStatus
     fun fetchData() {
         uiScope.launch {
             _status.value = AppStatus.LOADING
@@ -79,6 +83,10 @@ class ExerciseViewModel: ViewModel() {
             newList.add(newExercise)
         }
         return newList
+    }
+
+    fun updateExerciseStatus() {
+        mutableExerciseStatus.postValue("CHANGE")
     }
 
     override fun onCleared() {

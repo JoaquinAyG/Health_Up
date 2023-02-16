@@ -17,8 +17,6 @@ class ExerciseViewHolder(
     var favourite = false
     fun bind(exercise: Exercise) {
 
-        favourite = UserProfile.instance.favoriteList.contains(exercise.id)
-
         binding.apply{
 
             setFav(ivFavorite)
@@ -27,8 +25,6 @@ class ExerciseViewHolder(
 
             ivFavorite.setOnClickListener {
                 onFavourite(exercise)
-                favourite = !favourite
-                setFav(ivFavorite)
             }
 
             Glide.with(itemView.context)
@@ -43,7 +39,6 @@ class ExerciseViewHolder(
     }
 
     private fun setFav(ivFavorite: ImageView){
-        Log.i("ExerciseViewHolder", "fav = $favourite")
         ivFavorite.setImageResource(
             if (favourite)
                 R.drawable.ic_favorite

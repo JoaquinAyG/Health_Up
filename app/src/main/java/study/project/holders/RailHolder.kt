@@ -1,5 +1,6 @@
 package study.project.holders
 
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import study.project.adapters.ExerciseAdapter

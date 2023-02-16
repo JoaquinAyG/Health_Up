@@ -29,8 +29,4 @@ class UserViewModel(private val repository: UserRepository) : ViewModel() {
     fun update(user: User) = viewModelScope.launch {
         repository.update(user)
     }
-
-    fun updateFavoriteExercise(exercise: Exercise) = viewModelScope.launch {
-        repository.updateFavoriteExercise(UserProfile.instance, exercise)
-    }
 }

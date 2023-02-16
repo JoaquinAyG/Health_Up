@@ -2,6 +2,7 @@ package study.project.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "fav_table")
@@ -10,10 +11,11 @@ data class Fav(
     @ColumnInfo(name = "id")
     var id: Int = -1,
 
-    @ColumnInfo(name = "favourite")
-    var favourite: String = "",
+    @ColumnInfo(name = "exerciseId")
+    var exerciseId: Int = -1,
+
 ) {
     override fun toString(): String {
-        return "$id $favourite"
+        return "$id - $exerciseId"
     }
 }

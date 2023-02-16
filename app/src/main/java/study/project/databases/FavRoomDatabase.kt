@@ -29,6 +29,7 @@ abstract class FavRoomDatabase : RoomDatabase() {
                     "fav_database"
                 ).fallbackToDestructiveMigration()
                     .addCallback(FavDatabaseCallback(scope))
+                    .allowMainThreadQueries()
                     .build()
 
                 INSTANCE = instance

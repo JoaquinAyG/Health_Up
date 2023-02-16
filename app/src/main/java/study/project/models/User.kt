@@ -40,31 +40,11 @@ data class User(
     @ColumnInfo(name = "admin")
     var admin: Boolean = false,
 
-    @ColumnInfo(name = "favourites")
-    var favourites: String = "",
-
-    @Ignore
-    var favoriteList: MutableList<Int> = mutableListOf()
 
     ) : Serializable {
 
-    init {
-        if (favourites.isNotEmpty()) {
-            val favList = favourites.split(",")
-            favList.forEach {
-                favoriteList.add(it.toInt())
-            }
-        }
-    }
 
-    @Ignore
-    fun addFavoriteExercise(exercise: Int) {
-        if (!favoriteList.contains(exercise)) {
-            favoriteList.add(exercise)
-            favourites = favoriteList.joinToString(",")
-        }
-    }
     override fun toString(): String {
-        return "User(id=$id, username='$username', password='$password', email='$email', weight=$weight, height=$height, gender='$gender', capableDays='$capableDays', age=$age, admin=$admin, favourites=$favourites)"
+        return "User(id=$id, username='$username', password='$password', email='$email', weight=$weight, height=$height, gender='$gender', capableDays='$capableDays', age=$age, admin=$admin)"
     }
 }
