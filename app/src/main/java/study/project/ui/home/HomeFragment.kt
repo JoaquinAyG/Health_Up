@@ -31,7 +31,11 @@ class HomeFragment : Fragment() {
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvRails.layoutManager = layoutManager
         binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList)
-        viewModel.fetchData()
+
+        if (!viewModel.fetched) {
+            viewModel.fetchData()
+        }
+
         viewModel.status.observe(viewLifecycleOwner){ status ->
             when (status) {
                 "SUCCESS" -> {

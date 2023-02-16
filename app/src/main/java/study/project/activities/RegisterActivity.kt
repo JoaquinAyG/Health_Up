@@ -22,7 +22,7 @@ class RegisterActivity : FragmentActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
     private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory((application as HealthUpApplication).repository)
+        UserViewModelFactory((application as HealthUpApplication).userRepository)
     }
     private val registerViewModel: RegisterViewModel by viewModels()
 
