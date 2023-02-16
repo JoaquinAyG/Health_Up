@@ -80,7 +80,10 @@ class ExerciseViewModel: ViewModel() {
                 category = category?.name ?: "No category",
                 variations = exercise.variations
             )
-            newList.add(newExercise)
+
+            if (newExercise.imageUrlMain.isNotEmpty() && newExercise.imageUrlSecondary.isNotEmpty()) {
+                newList.add(newExercise)
+            }
         }
         return newList
     }

@@ -55,6 +55,7 @@
     <string name="register_register_title">and your email?</string>
     <string name="male">male</string>
     <string name="female">female</string>
+    <string name="other">other</string>
 
     <string name="onboarding_welcome_title">WELCOME!!</string>
     <string name="onboarding_terms_and_conditions_title">Terms and Conditions</string>
