@@ -1,10 +1,9 @@
 package study.project.activities
 
 
-import android.net.Uri
 import android.os.Bundle
 import android.text.Html
-import android.widget.ImageView
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import study.project.databinding.ActivityExerciseBinding
@@ -20,25 +19,22 @@ class ExerciseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         exercise = intent.getSerializableExtra("exercise") as Exercise
-        loadImage(binding.imageView, exercise.imageUrlMain)
-        binding.imageView.setImageURI(Uri.parse(exercise.imageUrlMain))
-        binding.tvTittle.text=exercise.nameEn
-        binding.tvCategory.text=exercise.category
-        exercise.muscles.forEach{
+        val img = if (exercise.imageUrlMain.isEmpty())
+            exercise.imageUrlSecondary
+        else
+            exercise.imageUrlMain
+
+        Glide.with(binding.root.context)
+            .load(img)
+            .fitCenter()
+            .into(binding.imageView)
+        binding.tvTittle.text = exercise.nameEn.ifEmpty { exercise.name }
+        binding.tvCategory.text = exercise.category
+        exercise.muscles.forEach {
             binding.tvMusclist.text = "${binding.tvMusclist.text} $it \n"
         }
         binding.tvDesc.text = Html.fromHtml(exercise.descriptionEn)
 
     }
 
-    companion object {
-        @JvmStatic
-        private fun loadImage(view: ImageView, image: String) {
-            Glide.with(view.context)
-                .load(image)
-                .centerCrop()
-                .into(view)
-        }
-
-    }
 }
