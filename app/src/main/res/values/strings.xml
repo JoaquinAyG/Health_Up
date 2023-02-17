@@ -46,7 +46,7 @@
     <string name="about_us">About us</string>
     <string name="log">Log out</string>
 
-<!--     TITLES     -->
+    <!--     TITLES     -->
     <string name="register_gender_title">Tell us about you</string>
     <string name="register_age_title">How old are you?</string>
     <string name="register_weight_title">Tell us your weight</string>
@@ -93,5 +93,21 @@
         <item>"Marta López"</item>
         <item>"https://github.com/JoaquinAyG/Health_Up"</item>
     </string-array>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>
 

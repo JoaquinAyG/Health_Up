@@ -31,7 +31,7 @@
                 android:textColor="@color/gray_light"
                 android:textSize="15sp"
                 android:textAlignment="center"
-                android:background="#00000000"
+                android:background="#66005D7C"
                 android:maxLines="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
