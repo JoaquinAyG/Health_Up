@@ -7,34 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.coroutines.launch
 import study.project.HealthUpApplication
 import study.project.activities.MainActivity
 import study.project.adapters.RailAdapter
 import study.project.databinding.FragmentHomeBinding
 import study.project.factories.FavViewModelFactory
-import study.project.factories.UserViewModelFactory
 import study.project.models.Exercise
 import study.project.models.Fav
 import study.project.models.UserProfile
 import study.project.viewmodels.ExerciseViewModel
 import study.project.viewmodels.FavViewModel
-import study.project.viewmodels.UserViewModel
 
 
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-    private val viewModel: ExerciseViewModel by lazy {
-        ViewModelProvider(this)[ExerciseViewModel::class.java]
-    }
-    private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory((requireActivity().application as HealthUpApplication).userRepository)
-    }
+    private val viewModel: ExerciseViewModel by viewModels()
     private val favViewModel: FavViewModel by viewModels {
         FavViewModelFactory((requireActivity().application as HealthUpApplication).favRepository)
     }
@@ -58,7 +48,7 @@ class HomeFragment : Fragment() {
     private fun configureAdapter() {
         val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvRails.layoutManager = layoutManager
-        binding.rvRails.adapter = RailAdapter(
+        val adapter = RailAdapter(
             exerciseList,
             viewModel.categoryList,
             onFavourite = {
@@ -74,6 +64,8 @@ class HomeFragment : Fragment() {
 
             }
         )
+        binding.rvRails.adapter = adapter
+
     }
 
     private fun bindViewModel(){

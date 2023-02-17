@@ -13,6 +13,7 @@ import study.project.HealthUpApplication
 import study.project.databinding.ActivityLoginBinding
 import study.project.factories.UserViewModelFactory
 import study.project.models.User
+import study.project.models.UserProfile
 import study.project.utils.forceDarkMode
 import study.project.viewmodels.UserViewModel
 
@@ -40,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
                 val username = etUsername.text.toString()
                 val password = etPassword.text.toString()
                 if (validateCredentials(username, password)) {
+                    UserProfile().setInstance(users.find { it.username == username }!!)
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
