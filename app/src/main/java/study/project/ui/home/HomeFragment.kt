@@ -1,16 +1,28 @@
 package study.project.ui.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.coroutines.launch
+import study.project.HealthUpApplication
+import study.project.activities.MainActivity
 import study.project.adapters.RailAdapter
 import study.project.databinding.FragmentHomeBinding
+import study.project.factories.FavViewModelFactory
+import study.project.factories.UserViewModelFactory
 import study.project.models.Exercise
+import study.project.models.Fav
+import study.project.models.UserProfile
 import study.project.viewmodels.ExerciseViewModel
+import study.project.viewmodels.FavViewModel
+import study.project.viewmodels.UserViewModel
 
 
 class HomeFragment : Fragment() {
@@ -20,6 +32,12 @@ class HomeFragment : Fragment() {
     private val viewModel: ExerciseViewModel by lazy {
         ViewModelProvider(this)[ExerciseViewModel::class.java]
     }
+    private val userViewModel: UserViewModel by viewModels {
+        UserViewModelFactory((requireActivity().application as HealthUpApplication).userRepository)
+    }
+    private val favViewModel: FavViewModel by viewModels {
+        FavViewModelFactory((requireActivity().application as HealthUpApplication).favRepository)
+    }
     private val exerciseList = mutableListOf<Exercise>()
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,14 +46,41 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        binding.rvRails.layoutManager = layoutManager
-        binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList)
-
+        bindViewModel()
+        configureAdapter()
+        subscribe()
         if (!viewModel.fetched) {
             viewModel.fetchData()
         }
+        return root
+    }
 
+    private fun configureAdapter() {
+        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        binding.rvRails.layoutManager = layoutManager
+        binding.rvRails.adapter = RailAdapter(
+            exerciseList,
+            viewModel.categoryList,
+            onFavourite = {
+                Log.i("RailAdapter", "Fav clicked")
+                favViewModel.allFavs.observe(viewLifecycleOwner){ favs ->
+                    Log.i("RailAdapter", "insert")
+                    favViewModel.insert(Fav(UserProfile.instance.id, it.id))
+                }
+            },
+            onClick = {
+                Log.i("RailAdapter", "clicked")
+                (activity as MainActivity).navigateToExercise(it)
+
+            }
+        )
+    }
+
+    private fun bindViewModel(){
+        binding.lifecycleOwner = this@HomeFragment
+    }
+
+    private fun subscribe() {
         viewModel.status.observe(viewLifecycleOwner){ status ->
             when (status) {
                 "SUCCESS" -> {
@@ -52,10 +97,27 @@ class HomeFragment : Fragment() {
                     exerciseList.add(exercise)
                 }
             }
-            binding.rvRails.adapter = RailAdapter(exerciseList, viewModel.categoryList)
+            binding.rvRails.adapter?.notifyDataSetChanged()
         }
-
-        return root
+        favViewModel.status.observe(viewLifecycleOwner){ status ->
+            when (status) {
+                "CHANGE" -> {
+                    binding.loadingAnimation.visibility = View.GONE
+                    viewModel.updateExerciseStatus()
+                }
+            }
+        }
+        viewModel.exerciseStatus.observe(viewLifecycleOwner){
+            when (it) {
+                "CHANGE" -> {
+                    Log.i("RailAdapter", "exerciseStatus changed")
+                    viewModel.exerciseList.value?.forEach { exercise ->
+                        exercise.favourite = favViewModel.allFavs.value?.map { it.exerciseId }?.contains(exercise.id) ?: false
+                    }
+                    binding.rvRails.adapter?.notifyDataSetChanged()
+                }
+            }
+        }
     }
 
     override fun onDestroyView() {

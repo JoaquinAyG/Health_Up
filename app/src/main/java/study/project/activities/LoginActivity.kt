@@ -20,7 +20,7 @@ import study.project.viewmodels.UserViewModel
 class LoginActivity : AppCompatActivity() {
 
     private val userViewModel: UserViewModel by viewModels {
-        UserViewModelFactory((application as HealthUpApplication).repository)
+        UserViewModelFactory((application as HealthUpApplication).userRepository)
     }
 
     private val users = mutableListOf<User>()
