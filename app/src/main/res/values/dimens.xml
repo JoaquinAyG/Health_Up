@@ -3,6 +3,8 @@
     <dimen name="top_margin">64dp</dimen>
     <dimen name="toolbar_height">76dp</dimen>
     <dimen name="card_width">330dp</dimen>
+    <dimen name="card_height_profile">35dp</dimen>
+    <dimen name="text_size_profile">22dp</dimen>
     <dimen name="ejizq">15dp</dimen>
     <dimen name="ejizqtext">30dp</dimen>
     <dimen name="button_main_width">248dp</dimen>
