@@ -8,31 +8,37 @@
         android:layout_height="@dimen/card_height"
         android:layout_marginStart="@dimen/card_margin"
         android:layout_marginEnd="@dimen/card_margin"
-        app:cardCornerRadius="10dp">
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/white_light">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="@dimen/exercise_card_width"
             android:layout_height="@dimen/card_height">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/user" />
 
             <TextView
                 android:id="@+id/tv_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textColor="@color/white"
+                android:textColor="@color/gray_light"
                 android:textSize="15sp"
                 android:textAlignment="center"
+                android:background="#66005D7C"
                 android:maxLines="1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/iv_image"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_width="match_parent"
-                android:layout_height="110dp"
-                android:scaleType="centerCrop"
-                android:src="@mipmap/user" />
+                android:layout_centerInParent="true"/>
+
+
 
             <ImageView
                 android:id="@+id/iv_favorite"
@@ -40,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_favorite_border"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

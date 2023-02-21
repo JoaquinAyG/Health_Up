@@ -6,4 +6,7 @@ class UserProfile {
         var instance = User()
     }
 
+    fun setInstance(user: User) {
+        instance = user
+    }
 }

@@ -6,10 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.*
 import study.project.api.client.HealthApiManagerClient
-import study.project.api.models.views.ExerciseCategoryView
-import study.project.api.models.views.ExerciseImageView
-import study.project.api.models.views.ExerciseInfoView
-import study.project.api.models.views.ExerciseView
+import study.project.api.models.views.*
 import study.project.models.AppStatus
 import study.project.models.Exercise
 
@@ -21,10 +18,14 @@ class ExerciseViewModel: ViewModel() {
     val exerciseList: LiveData<List<Exercise>>
         get() = _exerciseList
 
-    val categoryList = listOf("Abs", "Arms", "Back", "Chest", "Legs", "Shoulders", "Cardio", "Calves")
+    val categoryList = listOf("Abs", "Arms", "Back", "Chest", "Legs", "Shoulders", "Cardio")
     private val _status = MutableLiveData<String>()
     val status: LiveData<String>
         get() = _status
+
+    private val mutableExerciseStatus = MutableLiveData<String>()
+    val exerciseStatus: LiveData<String>
+        get() = mutableExerciseStatus
     fun fetchData() {
         uiScope.launch {
             _status.value = AppStatus.LOADING
@@ -41,11 +42,14 @@ class ExerciseViewModel: ViewModel() {
             val imagesResponse = withContext(Dispatchers.IO) {
                 HealthApiManagerClient.getAllExerciseImages()
             }
+            val muscleResponse = withContext(Dispatchers.IO) {
+                HealthApiManagerClient.getAllMuscles()
+            }
 
 
             Log.i("ExerciseViewModel", "Parsing data...")
 
-            val newList = parseData(exerciseResponse, infoResponse, categoryResponse, imagesResponse)
+            val newList = parseData(exerciseResponse, infoResponse, categoryResponse, imagesResponse, muscleResponse)
             _exerciseList.value = newList
 
             Log.i("ExerciseViewModel", "Data generated")
@@ -54,7 +58,7 @@ class ExerciseViewModel: ViewModel() {
         }
     }
 
-    private fun parseData(exerciseResponse: List<ExerciseView>, infoResponse: List<ExerciseInfoView>, categoryResponse: List<ExerciseCategoryView>, imagesResponse: List<ExerciseImageView>): List<Exercise> {
+    private fun parseData(exerciseResponse: List<ExerciseView>, infoResponse: List<ExerciseInfoView>, categoryResponse: List<ExerciseCategoryView>, imagesResponse: List<ExerciseImageView>, muscleResponse: List<MuscleView>): List<Exercise> {
         val newList = mutableListOf<Exercise>()
         for (exercise in exerciseResponse) {
             val info = infoResponse.find { it.id == exercise.id }
@@ -66,19 +70,36 @@ class ExerciseViewModel: ViewModel() {
                     newImage.image?.let { images.add(it.replace("_", "-")) }
                 }
             }
+            val muscles = mutableListOf<String>()
+            exercise.muscles.forEach { muscle ->
+                val newMuscle = muscleResponse.find { it.id == muscle.toInt() }
+                muscle.let {
+                    if (newMuscle != null) {
+                        newMuscle.nameEn?.let { it1 -> muscles.add(it1) }
+                    }
+                }
+            }
             val newExercise = Exercise(
                 id = exercise.id ?: 0,
                 name = exercise.name ?: "No name",
                 imageUrlMain = images.firstOrNull() ?: "",
                 imageUrlSecondary = images.size.let { if (it > 1) images[1] else "" },
                 descriptionEn = info?.description ?: "No description",
-                muscles = exercise.muscles,
+                muscles = muscles,
                 category = category?.name ?: "No category",
                 variations = exercise.variations
             )
-            newList.add(newExercise)
+
+            if (newExercise.imageUrlMain.isNotEmpty() || newExercise.imageUrlSecondary.isNotEmpty()) {
+                newList.add(newExercise)
+            }
         }
+        Log.i("ExerciseViewModel", "${newList.map { it.id }}")
         return newList
+    }
+
+    fun updateExerciseStatus() {
+        mutableExerciseStatus.postValue("CHANGE")
     }
 
     override fun onCleared() {

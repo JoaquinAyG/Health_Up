@@ -15,21 +15,21 @@
             android:id="@+id/imageView"
             android:layout_width="175dp"
             android:layout_height="190dp"
-            android:layout_marginTop="75dp"
             android:layout_marginEnd="40dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
-            app:layout_constraintTop_toTopOf="parent"
-            android:src="@mipmap/usuario" />
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle"
+            android:src="@mipmap/usuario"/>
 
         <TextView
             android:id="@+id/tv_tittle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="80dp"
             android:text="Exercise"
             android:textSize="30dp"
             android:textStyle="bold"
+            android:textAlignment="center"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white_light"/>
@@ -60,24 +60,12 @@
         <TextView
             android:id="@+id/tv_desc"
             android:layout_width="329dp"
-            android:layout_height="87dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-
             android:text="Descripción del ejercicio Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor "
             android:textColor="@color/white_light"
             app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <TextView
-            android:id="@+id/tv_vari"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="57dp"
-            android:text="Variants"
-            app:layout_constraintTop_toBottomOf="@+id/tv_desc"
-            app:layout_constraintLeft_toLeftOf="@id/guidelineizq"
-            tools:layout_editor_absoluteX="45dp"
-            android:textColor="@color/white_light"/>
 
 
         <androidx.constraintlayout.widget.Guideline
@@ -85,17 +73,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_percent=".1"
-            android:orientation="vertical">
-
-        </androidx.constraintlayout.widget.Guideline>
+            android:orientation="vertical"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintGuide_percent=".9"
-            android:orientation="vertical">
+            android:orientation="vertical"/>
 
-        </androidx.constraintlayout.widget.Guideline>
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="61dp"
+            android:layout_height="68dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="39dp"
+            android:src="@drawable/ic_favorite_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -13,4 +13,5 @@ data class Exercise(
     var muscles          : List<String> = listOf(),
     var category: String = "",
     var variations: List<Int> = listOf(),
+    var favourite: Boolean = false
 ) : Serializable

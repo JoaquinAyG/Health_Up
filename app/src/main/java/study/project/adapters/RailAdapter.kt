@@ -9,12 +9,16 @@ import study.project.models.Exercise
 
 class RailAdapter(
     private val exerciseList: List<Exercise>,
-    private val categoryList: List<String>
+    private val categoryList: List<String>,
+    private val onFavourite: (Exercise) -> Unit,
+    private val onClick: (Exercise) -> Unit
 ) : RecyclerView.Adapter<RailHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RailHolder {
         return RailHolder(
-            RailItemBinding.inflate(LayoutInflater.from(parent.context), parent,false)
+            RailItemBinding.inflate(LayoutInflater.from(parent.context), parent,false),
+            onFavourite,
+            onClick
         )
     }
 

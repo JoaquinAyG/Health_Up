@@ -2,6 +2,7 @@ package study.project.models
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
@@ -39,8 +40,11 @@ data class User(
     @ColumnInfo(name = "admin")
     var admin: Boolean = false,
 
-) : Serializable {
+
+    ) : Serializable {
+
+
     override fun toString(): String {
-        return "$id $username $password $email $weight $height $gender $capableDays $age $admin"
+        return "User(id=$id, username='$username', password='$password', email='$email', weight=$weight, height=$height, gender='$gender', capableDays='$capableDays', age=$age, admin=$admin)"
     }
 }

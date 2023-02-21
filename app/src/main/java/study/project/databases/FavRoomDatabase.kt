@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import study.project.dao.FavDao
 import study.project.models.Fav
 
-@Database(entities = [Fav::class], version = 1, exportSchema = false)
+@Database(entities = [Fav::class], version = 2, exportSchema = false)
 abstract class FavRoomDatabase : RoomDatabase() {
 
     abstract fun favDao(): FavDao
@@ -29,6 +29,7 @@ abstract class FavRoomDatabase : RoomDatabase() {
                     "fav_database"
                 ).fallbackToDestructiveMigration()
                     .addCallback(FavDatabaseCallback(scope))
+                    .allowMainThreadQueries()
                     .build()
 
                 INSTANCE = instance

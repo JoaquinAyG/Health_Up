@@ -3,6 +3,8 @@
     <dimen name="top_margin">64dp</dimen>
     <dimen name="toolbar_height">76dp</dimen>
     <dimen name="card_width">330dp</dimen>
+    <dimen name="card_height_profile">35dp</dimen>
+    <dimen name="text_size_profile">22dp</dimen>
     <dimen name="ejizq">15dp</dimen>
     <dimen name="ejizqtext">30dp</dimen>
     <dimen name="button_main_width">248dp</dimen>
@@ -20,6 +22,7 @@
     <dimen name="register_toggle_top_margin">40dp</dimen>
     <dimen name="rail_height">200dp</dimen>
     <dimen name="card_height">130dp</dimen>
+    <dimen name="rail_card_height">140dp</dimen>
     <dimen name="exercise_card_width">100dp</dimen>
     <dimen name="card_margin">10dp</dimen>
 </resources>

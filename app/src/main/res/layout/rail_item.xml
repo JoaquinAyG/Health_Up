@@ -10,13 +10,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:text="@string/category_title"
+        android:textColor="@color/blue_light"
         style="@style/style_rail_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_exercises"
         app:layout_constraintTop_toBottomOf="@id/tv_category_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/card_height"
+        android:layout_height="@dimen/rail_card_height"
         tools:listitem="@layout/exercise_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
