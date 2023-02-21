@@ -141,4 +141,18 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="style_card_profile">
+        <item name="android:layout_width">@dimen/card_width</item>
+        <item name="android:layout_height">@dimen/card_height_profile</item>
+        <item name="backgroundColor">@color/white_light</item>
+
+    </style>
+
+    <style name="text_card_profile">
+        <item name="backgroundColor">@color/white_light</item>
+        <item name="android:textSize">@dimen/text_size_profile</item>
+        <item name="android:layout_marginStart">50dp</item>
+    </style>
+
+
 </resources>
