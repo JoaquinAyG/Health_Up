@@ -41,4 +41,8 @@ class FavViewModel(private val repository: FavRepository) : ViewModel() {
     fun update(fav: Fav) = viewModelScope.launch {
         repository.update(fav)
     }
+
+    fun notyfyChanges() {
+        mutableFav.postValue(mutableFav.value)
+    }
 }

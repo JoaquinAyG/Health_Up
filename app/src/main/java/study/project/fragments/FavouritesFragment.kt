@@ -35,14 +35,24 @@ class FavouritesFragment : Fragment() {
         _binding = FragmentFavouritesBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.rvFavourites.layoutManager = GridLayoutManager(requireContext(), 2)
-        viewModel.allFavs.observe(viewLifecycleOwner) {
+        viewModel.notyfyChanges()
+
+        binding.rvFavourites.layoutManager = GridLayoutManager(requireContext(), 3)
+
+        if (!exerciseViewModel.fetched) {
+            exerciseViewModel.fetchData()
+        }
+        exerciseViewModel.exerciseList.observe(viewLifecycleOwner) { exercises ->
             val list = mutableListOf<Exercise>()
-            exerciseViewModel.exerciseList.value?.let { exercises ->
-                for (fav in it) {
-                    for (exercise in exercises) {
+            viewModel.allFavs.observe(viewLifecycleOwner) { favs ->
+
+                favs.forEach { fav ->
+                    exercises.forEach { exercise ->
                         if (fav.exerciseId == exercise.id && fav.id == UserProfile.instance.id) {
-                            list.add(exercise)
+
+                            Log.i("ExerciseViewModel", "$exercise")
+                            if (!list.contains(exercise)) list.add(exercise)
+                            binding.rvFavourites.adapter?.notifyDataSetChanged()
                         }
                     }
                 }
@@ -55,6 +65,7 @@ class FavouritesFragment : Fragment() {
                 }
             )
         }
+
         return root
     }
 
