@@ -17,8 +17,7 @@
         android:id="@+id/rv_exercises"
         app:layout_constraintTop_toBottomOf="@id/tv_category_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/card_height"
-        tools:listitem="@layout/exercise_item"
-        android:layout_marginTop="8dp"/>
+        android:layout_height="@dimen/rail_card_height"
+        tools:listitem="@layout/exercise_item"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
