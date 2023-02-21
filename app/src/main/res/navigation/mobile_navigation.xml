@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="study.project.ui.home.HomeFragment"
+        android:name="study.project.fragments.HomeFragment"
         android:label="@string/title_excercise"
         tools:layout="@layout/fragment_home" />
 
@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="study.project.ui.notifications.NotificationsFragment"
+        android:name="study.project.fragments.FavouritesFragment"
         android:label="@string/title_favorites"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_favourites" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="study.project.ui.profile.ProfileFragment"

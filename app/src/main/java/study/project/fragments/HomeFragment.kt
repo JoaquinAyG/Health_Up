@@ -1,4 +1,4 @@
-package study.project.ui.home
+package study.project.fragments
 
 import android.os.Bundle
 import android.util.Log
@@ -53,10 +53,10 @@ class HomeFragment : Fragment() {
             viewModel.categoryList,
             onFavourite = {
                 Log.i("RailAdapter", "Fav clicked")
-                favViewModel.allFavs.observe(viewLifecycleOwner){ favs ->
-                    Log.i("RailAdapter", "insert")
-                    favViewModel.insert(Fav(UserProfile.instance.id, it.id))
-                }
+                val fav = Fav(id = UserProfile.instance.id, exerciseId =  it.id)
+
+                Log.i("RailAdapter", "$fav")
+                favViewModel.insert(fav)
             },
             onClick = {
                 Log.i("RailAdapter", "clicked")
