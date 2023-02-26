@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "130523494394",
+    "project_id": "healthup-bfebc",
+    "storage_bucket": "healthup-bfebc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130523494394:android:394eb7381ae02736061643",
+        "android_client_info": {
+          "package_name": "study.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130523494394-bprl03noooc6idk4a4m175hpk92te4s7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8TDs1jxNp3vcXVBrDacPtNrzBiBDaiCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130523494394-bprl03noooc6idk4a4m175hpk92te4s7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
