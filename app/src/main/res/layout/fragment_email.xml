@@ -9,22 +9,22 @@
 
         <TextView
             android:id="@+id/tv_title_mail"
-            android:text="@string/register_register_title"
             style="@style/register_titles"
-            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/register_register_title"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/et_mail"
             style="@style/edit_text_register"
-            android:inputType="text"
             android:layout_width="240dp"
             android:layout_height="50dp"
-            android:textSize="24dp"
             android:hint="example@example.com"
-            app:layout_constraintStart_toStartOf="parent"
+            android:inputType="text"
+            android:textSize="24dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title_mail">
 
         </EditText>

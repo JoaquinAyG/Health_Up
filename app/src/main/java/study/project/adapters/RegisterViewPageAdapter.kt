@@ -5,7 +5,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import study.project.fragments.register.RegisterFragmentBase
 
-class RegisterViewPageAdapter(fm: FragmentManager, private val fragments: List<Fragment>) : FragmentPagerAdapter(fm) {
+class RegisterViewPageAdapter(fm: FragmentManager, private val fragments: List<Fragment>) :
+    FragmentPagerAdapter(fm) {
     override fun getCount(): Int = fragments.size
 
     override fun getItem(position: Int): Fragment {

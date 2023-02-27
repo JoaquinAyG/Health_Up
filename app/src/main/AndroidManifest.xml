@@ -52,13 +52,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.TabbedActivity"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".activities.LoginActivity"
             android:exported="false">
             <meta-data

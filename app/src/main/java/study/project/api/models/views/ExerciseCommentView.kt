@@ -2,15 +2,15 @@ package study.project.api.models.views
 
 import study.project.api.models.responses.ExerciseCommentResponse
 
-class ExerciseCommentView (
-    var id       : Int?    = null,
-    var exercise : Int?    = null,
-    var comment  : String? = null
+class ExerciseCommentView(
+    var id: Int? = null,
+    var exercise: Int? = null,
+    var comment: String? = null
 ) {
     fun fromResult(res: ExerciseCommentResponse.Results): ExerciseCommentView {
-        id       = res.id
+        id = res.id
         exercise = res.exercise
-        comment  = res.comment
+        comment = res.comment
         return this
     }
 

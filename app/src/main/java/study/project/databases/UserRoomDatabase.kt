@@ -48,9 +48,10 @@ abstract class UserRoomDatabase : RoomDatabase() {
                 }
             }
         }
+
         suspend fun populateDatabase(userDao: UserDao) {
             userDao.deleteAll()
-            val user = User(1,"a","b","a@a.a", 1.1, 1, "male", "1,2,3", 5, false)
+            val user = User(1, "a", "b", "a@a.a", 1.1, 1, "male", "1,2,3", 5, false)
             userDao.insert(user)
         }
     }

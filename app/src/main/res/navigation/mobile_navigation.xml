@@ -12,8 +12,8 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="study.project.ui.dashboard.DashboardFragment"
+        android:id="@+id/settings"
+        android:name="study.project."
         android:label="@string/title_nutrition"
         tools:layout="@layout/fragment_dashboard" />
 
@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_favourites" />
     <fragment
         android:id="@+id/navigation_profile"
-        android:name="study.project.ui.profile.ProfileFragment"
+        android:name="study.project.fragments.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 </navigation>

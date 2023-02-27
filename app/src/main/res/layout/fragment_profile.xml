@@ -7,8 +7,8 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.profile.ProfileFragment"
-        android:background="@color/gray_light">
+        android:background="@color/gray_light"
+        tools:context=".fragments.ProfileFragment">
 
 
         <ImageView
@@ -22,23 +22,23 @@
             android:shape="ring"
             android:thicknessRatio="1.9"
             android:useLevel="false"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/user"
-            app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"
-            />
+            app:srcCompat="@mipmap/tomato_logo" />
 
-        <TextView
+        <EditText
             android:id="@+id/editName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="1dp"
-            android:text="Joaquin Ayingui"
+            android:background="@null"
+            android:inputType="none"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
             android:textColor="@color/white_light"
             app:layout_constraintEnd_toEndOf="parent"
@@ -46,190 +46,158 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_profile" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardAge"
-            style="@style/style_card_profile"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="96dp"
-            android:layout_marginEnd="1dp"
-            android:alpha="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editName" />
-
-        <TextView
-            android:id="@+id/tv_age"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/ll_age"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="96dp"
-            android:text="Age"
-            android:textColor="@color/white_light"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editName" />
+            app:layout_constraintTop_toBottomOf="@id/editName">
 
-        <EditText
-            android:id="@+id/editAge"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/text_card_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textColor="@color/white_light" />
+
+            <EditText
+                android:id="@+id/editAge"
+                style="@style/text_card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:text="Age"
+                android:textColor="@color/blue_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_height"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="84dp"
-            android:text="Age"
-            android:textColor="@color/blue_light"
-            app:layout_constraintTop_toBottomOf="@id/editName"
-            app:layout_constraintEnd_toEndOf="@id/guide_1"
-            android:gravity="left"/>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardHeight"
-            style="@style/style_card_profile"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="1dp"
-            android:alpha="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardAge" />
+            app:layout_constraintTop_toBottomOf="@id/ll_age">
 
-        <TextView
-            android:id="@+id/tv_height"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_height"
+                style="@style/text_card_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Height"
+                android:textColor="@color/white_light" />
+
+            <EditText
+                android:id="@+id/editHeight"
+                style="@style/text_card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:inputType="number"
+                android:text="Height"
+                android:textColor="@color/blue_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_weight"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="12dp"
-            android:text="Height"
-            android:textColor="@color/white_light"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardAge" />
+            app:layout_constraintTop_toBottomOf="@id/ll_height">
 
-        <EditText
-            android:id="@+id/editHeight"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_weight"
+                style="@style/text_card_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight"
+                android:textColor="@color/white_light" />
+
+            <EditText
+                android:id="@+id/editWeight"
+                style="@style/text_card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:inputType="number"
+                android:text="Weight"
+                android:textColor="@color/blue_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_gender"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="12dp"
-            android:text="Height"
-            android:textColor="@color/blue_light"
-            app:layout_constraintTop_toBottomOf="@id/cardAge"
-            app:layout_constraintEnd_toEndOf="@id/guide_1"
-            android:gravity="left"/>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardWeight"
-            style="@style/style_card_profile"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="1dp"
-            android:alpha="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardHeight" />
+            app:layout_constraintTop_toBottomOf="@id/ll_weight">
 
-        <TextView
-            android:id="@+id/tv_weight"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tv_gender"
+                style="@style/text_card_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textColor="@color/white_light" />
+
+            <EditText
+                android:id="@+id/editGender"
+                style="@style/text_card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:text="Gender"
+                android:textColor="@color/blue_light" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_capable_days"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="12dp"
-            android:text="Weight"
-            android:textColor="@color/white_light"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardHeight" />
+            app:layout_constraintTop_toBottomOf="@id/ll_gender">
 
-        <EditText
-            android:id="@+id/editWeight"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="12dp"
-            android:text="Weight"
-            android:textColor="@color/blue_light"
-            app:layout_constraintTop_toBottomOf="@id/cardHeight"
-            app:layout_constraintEnd_toEndOf="@id/guide_1"
-            android:gravity="left"/>
+            <TextView
+                android:id="@+id/tv_days"
+                style="@style/text_card_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capable days"
+                android:textColor="@color/white_light" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardGender"
-            style="@style/style_card_profile"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="1dp"
-            android:alpha="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardWeight" />
+            <EditText
+                android:id="@+id/editDays"
+                style="@style/text_card_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="right"
+                android:text="3/week"
+                android:textColor="@color/blue_light" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_gender"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="12dp"
-            android:text="Gender"
-            android:textColor="@color/white_light"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardWeight" />
-
-        <EditText
-            android:id="@+id/editGender"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="12dp"
-            android:text="Gender"
-            android:textColor="@color/blue_light"
-            app:layout_constraintTop_toBottomOf="@id/cardWeight"
-            app:layout_constraintEnd_toEndOf="@id/guide_1"
-            android:gravity="left"/>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardDays"
-            style="@style/style_card_profile"
-            android:layout_marginStart="1dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="1dp"
-            android:alpha="0"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardGender" />
-
-        <TextView
-            android:id="@+id/tv_days"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="8dp"
-            android:text="Capable days"
-            android:textColor="@color/white_light"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardGender" />
-
-        <EditText
-            android:id="@+id/editDays"
-            style="@style/text_card_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="8dp"
-            android:text="3/week"
-            android:textColor="@color/blue_light"
-            app:layout_constraintTop_toBottomOf="@id/cardGender"
-            app:layout_constraintEnd_toEndOf="@id/guide_1"
-            android:gravity="left"/>
 
         <ImageView
             android:id="@+id/imageView"
@@ -237,19 +205,22 @@
             android:layout_height="30dp"
             android:layout_marginBottom="4dp"
             android:src="@mipmap/editpen"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
-            app:layout_constraintRight_toRightOf="@id/iv_profile"
+            app:civ_border_color="#FF000000"
             app:civ_border_width="2dp"
-            app:civ_border_color="#FF000000"/>
+            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
+            app:layout_constraintRight_toRightOf="@id/iv_profile" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guide_1"
+        <Button
+            android:id="@+id/btn_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintGuide_percent="0.85"
-            android:orientation="vertical">
-
-        </androidx.constraintlayout.widget.Guideline>
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button"
+            android:text="Save"
+            android:textColor="@color/white_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_capable_days" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

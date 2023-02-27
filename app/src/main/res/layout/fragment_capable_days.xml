@@ -6,8 +6,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".CapableDaysActivity"
-        android:background="@color/gray_light">
+        android:background="@color/gray_light"
+        tools:context=".CapableDaysActivity">
 
         <!--Title-->
         <TextView
@@ -22,22 +22,22 @@
             android:id="@+id/ll_1_row"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
             android:layout_marginTop="@dimen/register_toggle_top_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/tv_title_capable_days">
 
             <android.widget.ToggleButton
                 android:id="@+id/btMonday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/monday"
-                android:textOn="@string/monday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/monday" />
 
             <android.widget.ToggleButton
                 android:id="@+id/btTuesday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/tuesday"
-                android:textOn="@string/tuesday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/tuesday" />
 
         </LinearLayout>
 
@@ -45,50 +45,50 @@
             android:id="@+id/ll_2_row"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
             android:layout_marginTop="@dimen/register_toggle_top_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/ll_1_row">
 
             <android.widget.ToggleButton
                 android:id="@+id/btWednesday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/wednesday"
-                android:textOn="@string/wednesday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/wednesday" />
 
             <android.widget.ToggleButton
                 android:id="@+id/btThursday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/thursday"
-                android:textOn="@string/thursday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/thursday" />
 
             <android.widget.ToggleButton
                 android:id="@+id/btFriday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/friday"
-                android:textOn="@string/friday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/friday" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
             android:layout_marginTop="@dimen/register_toggle_top_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
             app:layout_constraintTop_toBottomOf="@+id/ll_2_row">
 
             <android.widget.ToggleButton
                 android:id="@+id/btSaturday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/saturday"
-                android:textOn="@string/saturday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/saturday" />
 
             <android.widget.ToggleButton
                 android:id="@+id/btSunday"
+                style="@style/register_toggle_button"
                 android:textOff="@string/sunday"
-                android:textOn="@string/sunday"
-                style="@style/register_toggle_button"/>
+                android:textOn="@string/sunday" />
 
         </LinearLayout>
 

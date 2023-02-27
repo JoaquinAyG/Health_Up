@@ -1,6 +1,6 @@
 package study.project.models
 
-class OnboardPresentation (
+class OnboardPresentation(
     var title: String = "WELCOME",
     var description: String = ""
 )

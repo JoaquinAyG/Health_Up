@@ -44,7 +44,7 @@
     <string name="change_p">Change password</string>
     <string name="notifications">Notifications</string>
     <string name="about_us">About us</string>
-    <string name="log">Log out</string>
+    <string name="log_out">Log out</string>
 
     <!--     TITLES     -->
     <string name="register_gender_title">Tell us about you</string>
@@ -109,5 +109,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
 

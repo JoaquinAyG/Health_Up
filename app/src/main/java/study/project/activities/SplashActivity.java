@@ -9,8 +9,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 
 import java.util.Objects;
 
@@ -18,6 +18,7 @@ import study.project.R;
 
 public class SplashActivity extends AppCompatActivity {
     TextView texto;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         forceDarkMode();
@@ -36,6 +37,7 @@ public class SplashActivity extends AppCompatActivity {
         Animation myanim2 = AnimationUtils.loadAnimation(this, R.anim.fadein);
         texto.startAnimation(myanim2);
     }
+
     private void openApp() {
         Handler handler = new Handler();
         handler.postDelayed(() -> {

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -9,10 +8,10 @@
         tools:context=".fragments.FavouritesFragment">
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_favourites"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rv_favourites"
-            tools:listitem="@layout/exercise_item"/>
+            tools:listitem="@layout/exercise_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

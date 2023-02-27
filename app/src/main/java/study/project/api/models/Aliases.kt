@@ -2,9 +2,9 @@ package study.project.api.models
 
 import com.google.gson.annotations.SerializedName
 
-data class Aliases (
+data class Aliases(
 
-    @SerializedName("id"    ) var id    : Int?    = null,
-    @SerializedName("alias" ) var alias : String? = null
+    @SerializedName("id") var id: Int? = null,
+    @SerializedName("alias") var alias: String? = null
 
 )

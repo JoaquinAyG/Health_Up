@@ -9,11 +9,11 @@ import study.project.models.Exercise
 
 class FavouritesAdapter(
     private val exerciseList: List<Exercise>,
-    val onClick : (Exercise) -> Unit
+    val onClick: (Exercise) -> Unit
 ) : RecyclerView.Adapter<FavouriteViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavouriteViewHolder {
         return FavouriteViewHolder(
-            ExerciseItemBinding.inflate(LayoutInflater.from(parent.context), parent,false),
+            ExerciseItemBinding.inflate(LayoutInflater.from(parent.context), parent, false),
             onClick
         )
     }

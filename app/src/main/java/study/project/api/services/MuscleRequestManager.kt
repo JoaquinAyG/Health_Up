@@ -7,7 +7,10 @@ import java.net.URL
 
 class MuscleRequestManager : ApiRequestManager<MuscleResponse> {
     override fun getId(id: Int): MuscleResponse.Results {
-        return getUrlObject(URL("$API_MUSCLE_URL$id/$FORMAT_JSON"), MuscleResponse.Results::class.java)
+        return getUrlObject(
+            URL("$API_MUSCLE_URL$id/$FORMAT_JSON"),
+            MuscleResponse.Results::class.java
+        )
     }
 
     override fun getAll(): MutableCollection<MuscleResponse> {
@@ -16,7 +19,7 @@ class MuscleRequestManager : ApiRequestManager<MuscleResponse> {
         do {
             muscleResponse = getUrlObject(URL(muscleResponse.next), MuscleResponse::class.java)
             muscleList.add(muscleResponse)
-        } while(muscleResponse.next != null)
+        } while (muscleResponse.next != null)
         return muscleList
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -17,27 +17,27 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:fontFamily="@font/inter_bold"
+            android:gravity="center"
             android:text="@string/onboarding_welcome"
             android:textAlignment="center"
-            android:gravity="center"
-            android:textSize="30sp"
             android:textColor="@color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guidelineTop"/>
+            android:textSize="30sp"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineTop"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_description"
             android:layout_width="match_parent"
-            android:fontFamily="@font/inter_bold"
+            android:layout_height="fill_parent"
             android:layout_marginTop="10dp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/inter_bold"
             android:text="@string/onboarding_welcome"
             android:textAlignment="textStart"
             android:textColor="@color/white"
-            android:autoSizeMaxTextSize="20sp"
-            android:autoSizeTextType="uniform"
-            android:layout_height="fill_parent"
-            app:layout_constraintTop_toTopOf="@id/guidelineTop"
-            app:layout_constraintTop_toBottomOf="parent"/>
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
 
     </LinearLayout>
 </layout>

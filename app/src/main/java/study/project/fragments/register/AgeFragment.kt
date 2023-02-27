@@ -28,14 +28,16 @@ class AgeFragment : RegisterFragmentBase() {
                 etAge.error = "Please enter your Age"
                 return false
             }
-
-            return if (etAge.text.toString().isNumber()){
-                viewModel.updateAge(etAge.text.toString().toInt())
-                true
-            } else {
+            if (!etAge.text.toString().isNumber()) {
                 etAge.error = "Please enter a valid Age"
-                false
+                return false
             }
+            if (etAge.text.toString().toInt() < 4 || etAge.text.toString().toInt() > 100) {
+                etAge.error = "Please enter a valid Age"
+                return false
+            }
+            viewModel.updateAge(etAge.text.toString().toInt())
+            return true
         }
     }
 

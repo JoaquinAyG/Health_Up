@@ -3,7 +3,6 @@ package study.project.activities
 
 import android.os.Bundle
 import android.text.Html
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import study.project.databinding.ActivityExerciseBinding
@@ -34,7 +33,5 @@ class ExerciseActivity : AppCompatActivity() {
             binding.tvMusclist.text = "${binding.tvMusclist.text} $it \n"
         }
         binding.tvDesc.text = Html.fromHtml(exercise.descriptionEn)
-
     }
-
 }

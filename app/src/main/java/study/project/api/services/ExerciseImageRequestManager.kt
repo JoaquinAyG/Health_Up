@@ -7,16 +7,21 @@ import java.net.URL
 
 class ExerciseImageRequestManager : ApiRequestManager<ExerciseImageResponse> {
     override fun getId(id: Int): ExerciseImageResponse.Results {
-        return getUrlObject(URL("$API_EXERCISE_IMAGE_URL$id/$FORMAT_JSON"), ExerciseImageResponse.Results::class.java)
+        return getUrlObject(
+            URL("$API_EXERCISE_IMAGE_URL$id/$FORMAT_JSON"),
+            ExerciseImageResponse.Results::class.java
+        )
     }
 
     override fun getAll(): MutableCollection<ExerciseImageResponse> {
         val exerciseList = mutableListOf<ExerciseImageResponse>()
-        var exerciseImageResponse = ExerciseImageResponse(null, API_EXERCISE_IMAGE_URL + FORMAT_JSON, null, arrayListOf())
+        var exerciseImageResponse =
+            ExerciseImageResponse(null, API_EXERCISE_IMAGE_URL + FORMAT_JSON, null, arrayListOf())
         do {
-            exerciseImageResponse = getUrlObject(URL(exerciseImageResponse.next), ExerciseImageResponse::class.java)
+            exerciseImageResponse =
+                getUrlObject(URL(exerciseImageResponse.next), ExerciseImageResponse::class.java)
             exerciseList.add(exerciseImageResponse)
-        } while(exerciseImageResponse.next != null)
+        } while (exerciseImageResponse.next != null)
         return exerciseList
     }
 }
