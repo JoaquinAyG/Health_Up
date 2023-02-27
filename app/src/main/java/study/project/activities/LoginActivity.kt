@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Process
 import android.view.KeyEvent
-import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -64,47 +63,24 @@ class LoginActivity : AppCompatActivity() {
 
     private fun observeUsers() {
         userViewModel.allUsers.observe(this) {
-            it.forEach{ user ->
+            it.forEach { user ->
                 users.add(user)
             }
         }
     }
 
-    fun ExercisePage(view: View) {
-        Toast.makeText(
-            this@LoginActivity,
-            "Exercise Page",
-            Toast.LENGTH_SHORT
-        ).show()
-        val intent = Intent(this, ExerciseActivity::class.java)
-        startActivity(intent)
-    }
-    fun ExercisePage2(view: View) {
-        Toast.makeText(
-            this@LoginActivity,
-            "Easter Egg Page",
-            Toast.LENGTH_SHORT
-        ).show()
-        val intent = Intent(this, TabbedActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun cerrarAplicacion() {
-        AlertDialog.Builder(this)
-            .setIcon(study.project.R.drawable.logo)
-            .setTitle("Are you sure you want to exit?")
-            .setCancelable(false)
-            .setNegativeButton("Cancel", null)
-            .setPositiveButton(
-                "exit"
-            ) { _, _ ->
-                Process.killProcess(Process.myPid())
-            }.show()
-
-    }
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            cerrarAplicacion()
+            AlertDialog.Builder(this)
+                .setIcon(study.project.R.drawable.logo)
+                .setTitle("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setNegativeButton("Cancel", null)
+                .setPositiveButton(
+                    "exit"
+                ) { _, _ ->
+                    Process.killProcess(Process.myPid())
+                }.show()
             return true
         }
         return super.onKeyDown(keyCode, event)
@@ -121,5 +97,4 @@ class LoginActivity : AppCompatActivity() {
         }
         return validate
     }
-
 }

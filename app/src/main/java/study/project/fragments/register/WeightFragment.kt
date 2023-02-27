@@ -28,14 +28,16 @@ class WeightFragment : RegisterFragmentBase() {
                 etWeight.error = "Please enter your weight"
                 return false
             }
-
-            return if (etWeight.text.toString().isNumber()){
-                viewModel.updateWeight(etWeight.text.toString().toDouble())
-                true
-            } else {
+            if (!etWeight.text.toString().isNumber()) {
                 etWeight.error = "Please enter a valid weight"
-                false
+                return false
             }
+            if (etWeight.text.toString().toInt() < 30 || etWeight.text.toString().toInt() > 200) {
+                etWeight.error = "Please enter a valid weight"
+                return false
+            }
+            viewModel.updateWeight(etWeight.text.toString().toDouble())
+            return true
         }
     }
 

@@ -9,11 +9,11 @@ import study.project.models.Exercise
 class FavouriteViewHolder(
     private val binding: ExerciseItemBinding,
     private val onClick: (Exercise) -> Unit,
-): RecyclerView.ViewHolder(binding.root) {
+) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(exercise: Exercise) {
 
-        binding.apply{
+        binding.apply {
 
             tvTitle.text = exercise.nameEn.ifEmpty { exercise.name }
             Glide.with(itemView.context)

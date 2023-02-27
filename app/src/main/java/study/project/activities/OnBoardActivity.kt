@@ -17,7 +17,7 @@ import study.project.models.OnboardPresentation
 import study.project.utils.forceDarkMode
 
 
-class OnBoardActivity : AppCompatActivity(){
+class OnBoardActivity : AppCompatActivity() {
 
     private val sharedPreferences: SharedPreferences by lazy {
         getSharedPreferences("prefs", Context.MODE_PRIVATE)
@@ -25,7 +25,7 @@ class OnBoardActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityOnBoardBinding
 
-    private lateinit var pages : ArrayList<OnboardPresentation>
+    private lateinit var pages: ArrayList<OnboardPresentation>
     override fun onCreate(savedInstanceState: Bundle?) {
         forceDarkMode()
         super.onCreate(savedInstanceState)
@@ -38,10 +38,23 @@ class OnBoardActivity : AppCompatActivity(){
         supportActionBar?.hide()
 
         pages = arrayListOf(
-            OnboardPresentation(resources.getString(R.string.onboarding_welcome_title),resources.getStringArray(R.array.onboarding_welcome).joinToString("\n \n")),
-            OnboardPresentation(resources.getString(R.string.onboarding_terms_and_conditions_title),resources.getStringArray(R.array.onboarding_terms_and_conditions).joinToString("\n \n")),
-            OnboardPresentation(resources.getString(R.string.onboarding_usage_title),resources.getStringArray(R.array.onboarding_usage).joinToString("\n \n")),
-            OnboardPresentation(resources.getString(R.string.onboarding_authors_title),resources.getStringArray(R.array.onboarding_authors).joinToString("\n \n")),
+            OnboardPresentation(
+                resources.getString(R.string.onboarding_welcome_title),
+                resources.getStringArray(R.array.onboarding_welcome).joinToString("\n \n")
+            ),
+            OnboardPresentation(
+                resources.getString(R.string.onboarding_terms_and_conditions_title),
+                resources.getStringArray(R.array.onboarding_terms_and_conditions)
+                    .joinToString("\n \n")
+            ),
+            OnboardPresentation(
+                resources.getString(R.string.onboarding_usage_title),
+                resources.getStringArray(R.array.onboarding_usage).joinToString("\n \n")
+            ),
+            OnboardPresentation(
+                resources.getString(R.string.onboarding_authors_title),
+                resources.getStringArray(R.array.onboarding_authors).joinToString("\n \n")
+            ),
         )
 
         binding.apply {
@@ -53,14 +66,21 @@ class OnBoardActivity : AppCompatActivity(){
         setListeners()
     }
 
-    private fun setListeners(){
+    private fun setListeners() {
         binding.apply {
             vpOnboarding.addOnPageChangeListener(
                 object : ViewPager.OnPageChangeListener {
-                    override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {}
+                    override fun onPageScrolled(
+                        position: Int,
+                        positionOffset: Float,
+                        positionOffsetPixels: Int
+                    ) {
+                    }
+
                     override fun onPageSelected(position: Int) {
                         setButtonVisibility(pages.size, position)
                     }
+
                     override fun onPageScrollStateChanged(state: Int) {}
                 }
             )

@@ -27,9 +27,9 @@
             android:layout_width="248dp"
             android:layout_height="55dp"
             android:layout_marginTop="69dp"
+            android:textColorHint="@color/white_light2"
             app:boxCornerRadiusTopEnd="15dp"
             app:boxCornerRadiusTopStart="15dp"
-            android:textColorHint="@color/white_light2"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintTop_toBottomOf="@id/iv_logo">
@@ -37,6 +37,8 @@
             <EditText
                 android:id="@+id/et_username"
                 style="@style/login_et"
+                android:autofillHints=""
+                android:background="@null"
                 android:hint="@string/username"
                 android:inputType="text" />
 
@@ -45,9 +47,9 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/til_password"
             style="@style/login_containers"
-            android:textColorHint="@color/white_light2"
             android:layout_width="248dp"
             android:layout_height="55dp"
+            android:textColorHint="@color/white_light2"
             app:boxCornerRadiusBottomEnd="15dp"
             app:boxCornerRadiusBottomStart="15dp"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -59,9 +61,10 @@
                 style="@style/login_et"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:autofillHints=""
+                android:background="@null"
                 android:hint="@string/password"
-                android:inputType="textPassword">
-            </EditText>
+                android:inputType="textPassword"></EditText>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -74,19 +77,18 @@
             android:gravity="center"
             android:text="@string/sign_up_question"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/btn_login"
             app:layout_constraintEnd_toEndOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline1"
-            app:layout_constraintTop_toBottomOf="@+id/til_password"
-            />
+            app:layout_constraintTop_toBottomOf="@+id/til_password" />
 
         <Button
             android:id="@+id/btn_login"
+            style="@style/login_containers"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="79dp"
             android:background="@drawable/main_btn"
-            style="@style/login_containers"
             android:text="@string/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/guideline2"
@@ -106,28 +108,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.849" />
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="86dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="228dp"
-            android:layout_marginBottom="44dp"
-            android:onClick="ExercisePage"
-            android:text="Temp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="86dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="90dp"
-            android:layout_marginBottom="45dp"
-            android:onClick="ExercisePage2"
-            android:text="Tem2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

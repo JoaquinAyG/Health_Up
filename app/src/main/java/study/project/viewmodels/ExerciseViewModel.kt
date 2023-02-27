@@ -10,7 +10,7 @@ import study.project.api.models.views.*
 import study.project.models.AppStatus
 import study.project.models.Exercise
 
-class ExerciseViewModel: ViewModel() {
+class ExerciseViewModel : ViewModel() {
     private val viewModelJob = Job()
     var fetched = false
     private val uiScope = CoroutineScope(Dispatchers.Main + viewModelJob)
@@ -26,6 +26,7 @@ class ExerciseViewModel: ViewModel() {
     private val mutableExerciseStatus = MutableLiveData<String>()
     val exerciseStatus: LiveData<String>
         get() = mutableExerciseStatus
+
     fun fetchData() {
         uiScope.launch {
             _status.value = AppStatus.LOADING
@@ -49,7 +50,13 @@ class ExerciseViewModel: ViewModel() {
 
             Log.i("ExerciseViewModel", "Parsing data...")
 
-            val newList = parseData(exerciseResponse, infoResponse, categoryResponse, imagesResponse, muscleResponse)
+            val newList = parseData(
+                exerciseResponse,
+                infoResponse,
+                categoryResponse,
+                imagesResponse,
+                muscleResponse
+            )
             _exerciseList.value = newList
 
             Log.i("ExerciseViewModel", "Data generated")
@@ -58,7 +65,13 @@ class ExerciseViewModel: ViewModel() {
         }
     }
 
-    private fun parseData(exerciseResponse: List<ExerciseView>, infoResponse: List<ExerciseInfoView>, categoryResponse: List<ExerciseCategoryView>, imagesResponse: List<ExerciseImageView>, muscleResponse: List<MuscleView>): List<Exercise> {
+    private fun parseData(
+        exerciseResponse: List<ExerciseView>,
+        infoResponse: List<ExerciseInfoView>,
+        categoryResponse: List<ExerciseCategoryView>,
+        imagesResponse: List<ExerciseImageView>,
+        muscleResponse: List<MuscleView>
+    ): List<Exercise> {
         val newList = mutableListOf<Exercise>()
         for (exercise in exerciseResponse) {
             val info = infoResponse.find { it.id == exercise.id }

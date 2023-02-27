@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="MainBut">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:backgroundTint">@color/blue</item>
@@ -50,8 +51,8 @@
     </style>
 
     <style name="login_et">
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_width">@dimen/button_main_width</item>
+        <item name="android:layout_height">@dimen/button_main_height</item>
         <item name="android:backgroundTint">@color/gray</item>
         <item name="android:textSize">22sp</item>
         <item name="android:textColor">@color/white</item>
@@ -151,7 +152,9 @@
     <style name="text_card_profile">
         <item name="backgroundColor">@color/white_light</item>
         <item name="android:textSize">@dimen/text_size_profile</item>
-        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:inputType">none</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
     </style>
 
 

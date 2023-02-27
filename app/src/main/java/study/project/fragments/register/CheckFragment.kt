@@ -22,7 +22,7 @@ class CheckFragment : RegisterFragmentBase() {
         return binding.root
     }
 
-    private fun initView(){
+    private fun initView() {
         val user = if (viewModel.user.value == null) {
             User()
         } else {
@@ -39,6 +39,7 @@ class CheckFragment : RegisterFragmentBase() {
 
         }
     }
+
     override fun commitChanges(): Boolean {
         return (viewModel.user.value != null)
     }

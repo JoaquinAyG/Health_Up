@@ -18,6 +18,7 @@ class RegisterViewModel : ViewModel() {
         }
         user.value = u
     }
+
     fun updateName(name: String) {
         val u = user.value
         if (u != null) {

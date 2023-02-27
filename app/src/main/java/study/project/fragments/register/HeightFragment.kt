@@ -28,14 +28,16 @@ class HeightFragment : RegisterFragmentBase() {
                 etHeight.error = "Please enter your height"
                 return false
             }
-
-            if (etHeight.text.toString().isInt()){
-                viewModel.updateHeight(etHeight.text.toString().toInt())
-                return true
-            } else {
-                etHeight.error = "Please enter the height in centimeters"
+            if (!etHeight.text.toString().isInt()) {
+                etHeight.error = "Please enter a valid height"
                 return false
             }
+            if (etHeight.text.toString().toInt() < 100 || etHeight.text.toString().toInt() > 250) {
+                etHeight.error = "Please enter a valid height"
+                return false
+            }
+            viewModel.updateHeight(etHeight.text.toString().toInt())
+            return true
         }
     }
 

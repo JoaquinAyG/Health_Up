@@ -1,12 +1,8 @@
 package study.project.viewmodels
 
 import androidx.lifecycle.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import study.project.models.Fav
-import study.project.models.User
 import study.project.repos.FavRepository
 
 class FavViewModel(private val repository: FavRepository) : ViewModel() {

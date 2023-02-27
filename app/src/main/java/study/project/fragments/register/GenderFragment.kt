@@ -8,7 +8,7 @@ import android.widget.Toast
 import study.project.R
 import study.project.databinding.FragmentGenderBinding
 
-class GenderFragment: RegisterFragmentBase(){
+class GenderFragment : RegisterFragmentBase() {
 
     private var _binding: FragmentGenderBinding? = null
     private val binding get() = _binding!!
@@ -44,11 +44,15 @@ class GenderFragment: RegisterFragmentBase(){
     override fun commitChanges(): Boolean {
         binding.apply {
             if (!btnFemale.isChecked && !btnMale.isChecked && !btnOther.isChecked) {
-                Toast.makeText(context, "Please select one of them, we are sorry if you are not represented here but we need to do a estimation", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    context,
+                    "Please select one of them, we are sorry if you are not represented here but we need to do a estimation",
+                    Toast.LENGTH_SHORT
+                ).show()
                 return false
             } else {
                 viewModel.updateGender(
-                    when{
+                    when {
                         btnFemale.isChecked -> resources.getString(R.string.female)
                         btnOther.isChecked -> resources.getString(R.string.other)
                         else -> resources.getString(R.string.male)

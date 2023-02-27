@@ -1,23 +1,21 @@
 package study.project.holders
 
-import android.util.Log
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import study.project.R
 import study.project.databinding.ExerciseItemBinding
 import study.project.models.Exercise
-import study.project.models.UserProfile
 
 class ExerciseViewHolder(
     private val binding: ExerciseItemBinding,
     private val onFavourite: (Exercise) -> Unit,
     private val onClick: (Exercise) -> Unit,
-): RecyclerView.ViewHolder(binding.root) {
+) : RecyclerView.ViewHolder(binding.root) {
     var favourite = false
     fun bind(exercise: Exercise) {
 
-        binding.apply{
+        binding.apply {
 
             setFav(ivFavorite)
 
@@ -38,7 +36,7 @@ class ExerciseViewHolder(
         }
     }
 
-    private fun setFav(ivFavorite: ImageView){
+    private fun setFav(ivFavorite: ImageView) {
         ivFavorite.setImageResource(
             if (favourite)
                 R.drawable.ic_favorite

@@ -1,7 +1,6 @@
 package study.project.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,20 +45,18 @@ class HomeFragment : Fragment() {
     }
 
     private fun configureAdapter() {
-        val layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        val layoutManager =
+            LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
         binding.rvRails.layoutManager = layoutManager
         val adapter = RailAdapter(
             exerciseList,
             viewModel.categoryList,
-            onFavourite = {
-                Log.i("RailAdapter", "Fav clicked")
-                val fav = Fav(id = UserProfile.instance.id, exerciseId =  it.id)
-
-                Log.i("RailAdapter", "$fav")
+            onFavourite = { exercise ->
+                val fav = Fav(id = UserProfile.instance.id, exerciseId = exercise.id)
                 favViewModel.insert(fav)
+                exerciseList.find { it.id == fav.exerciseId }?.favourite = true
             },
             onClick = {
-                Log.i("RailAdapter", "clicked")
                 (activity as MainActivity).navigateToExercise(it)
 
             }
@@ -68,12 +65,12 @@ class HomeFragment : Fragment() {
 
     }
 
-    private fun bindViewModel(){
+    private fun bindViewModel() {
         binding.lifecycleOwner = this@HomeFragment
     }
 
     private fun subscribe() {
-        viewModel.status.observe(viewLifecycleOwner){ status ->
+        viewModel.status.observe(viewLifecycleOwner) { status ->
             when (status) {
                 "SUCCESS" -> {
                     binding.loadingAnimation.visibility = View.GONE
@@ -83,15 +80,16 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-        viewModel.exerciseList.observe(viewLifecycleOwner){ exercises ->
+        viewModel.exerciseList.observe(viewLifecycleOwner) { exercises ->
             exercises.forEach { exercise ->
-                if (!exerciseList.map { it.nameEn.ifEmpty { it.name } }.contains(exercise.nameEn.ifEmpty { exercise.name })) {
+                if (!exerciseList.map { it.nameEn.ifEmpty { it.name } }
+                        .contains(exercise.nameEn.ifEmpty { exercise.name })) {
                     exerciseList.add(exercise)
                 }
             }
             binding.rvRails.adapter?.notifyDataSetChanged()
         }
-        favViewModel.status.observe(viewLifecycleOwner){ status ->
+        favViewModel.status.observe(viewLifecycleOwner) { status ->
             when (status) {
                 "CHANGE" -> {
                     binding.loadingAnimation.visibility = View.GONE
@@ -99,12 +97,13 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-        viewModel.exerciseStatus.observe(viewLifecycleOwner){
+        viewModel.exerciseStatus.observe(viewLifecycleOwner) {
             when (it) {
                 "CHANGE" -> {
-                    Log.i("RailAdapter", "exerciseStatus changed")
                     viewModel.exerciseList.value?.forEach { exercise ->
-                        exercise.favourite = favViewModel.allFavs.value?.map { it.exerciseId }?.contains(exercise.id) ?: false
+                        exercise.favourite =
+                            favViewModel.allFavs.value?.map { it.exerciseId }?.contains(exercise.id)
+                                ?: false
                     }
                     binding.rvRails.adapter?.notifyDataSetChanged()
                 }

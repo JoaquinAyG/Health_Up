@@ -1,6 +1,5 @@
 package study.project.holders
 
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import study.project.adapters.ExerciseAdapter
@@ -11,10 +10,11 @@ class RailHolder(
     val binding: RailItemBinding,
     private val onFavourite: (Exercise) -> Unit,
     private val onClick: (Exercise) -> Unit
-): RecyclerView.ViewHolder(binding.root) {
+) : RecyclerView.ViewHolder(binding.root) {
 
     init {
-        binding.rvExercises.layoutManager = LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
+        binding.rvExercises.layoutManager =
+            LinearLayoutManager(binding.root.context, LinearLayoutManager.HORIZONTAL, false)
     }
 
     fun bind(itemList: List<Exercise>, category: String) {

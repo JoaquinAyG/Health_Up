@@ -29,7 +29,7 @@ class MailFragment : RegisterFragmentBase() {
                 etMail.error = "Please enter your mail"
                 return false
             }
-            if (!etMail.text.toString().isMail()){
+            if (!etMail.text.toString().isMail()) {
                 etMail.error = "That mail is not valid"
                 return false
             }

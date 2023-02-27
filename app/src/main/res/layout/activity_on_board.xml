@@ -6,9 +6,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.OnBoardActivity"
         android:background="@color/gray_light"
-        android:theme="@style/Theme.HealthUpNoActionBar">
+        android:theme="@style/Theme.HealthUpNoActionBar"
+        tools:context=".activities.OnBoardActivity">
 
 
         <androidx.viewpager.widget.ViewPager
@@ -16,49 +16,49 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="@+id/guidelineBot" />
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineBot"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
             android:id="@+id/worm_dots_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:dotsColor="@color/primary"
-            app:dotsStrokeColor="@color/white"
             app:dotsCornerRadius="10dp"
             app:dotsSize="12dp"
             app:dotsSpacing="12dp"
+            app:dotsStrokeColor="@color/white"
             app:dotsStrokeWidth="2dp"
-            app:layout_constraintTop_toBottomOf="@id/vp_onboarding"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vp_onboarding" />
 
         <Button
             android:id="@+id/btn_continue"
+            style="@style/login_containers"
             android:layout_width="@dimen/card_width"
             android:layout_height="@dimen/button_main_height"
-            android:text="@string/onboarding_continue"
-            style="@style/login_containers"
             android:background="@drawable/main_btn"
-            app:layout_constraintTop_toTopOf="@+id/guidelineBot"
+            android:text="@string/onboarding_continue"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/guidelineBot" />
 
         <Button
             android:id="@+id/btn_finish"
-            android:visibility="gone"
+            style="@style/login_containers"
             android:layout_width="@dimen/card_width"
             android:layout_height="@dimen/button_main_height"
-            android:text="@string/onboardong_finish"
-            style="@style/login_containers"
             android:background="@drawable/main_btn"
-            app:layout_constraintTop_toTopOf="@+id/guidelineBot"
+            android:text="@string/onboardong_finish"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/btn_continue"
             app:layout_constraintStart_toStartOf="@id/btn_continue"
-            app:layout_constraintEnd_toEndOf="@id/btn_continue" />
+            app:layout_constraintTop_toTopOf="@+id/guidelineBot" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guidelineBot"

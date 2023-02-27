@@ -1,4 +1,5 @@
 package study.project.utils
+
 import androidx.appcompat.app.AppCompatDelegate
 
 fun forceDarkMode() {

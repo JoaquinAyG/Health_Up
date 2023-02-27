@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.HomeFragment"
-        android:background="@color/gray_light">
+        android:background="@color/gray_light"
+        tools:context=".fragments.HomeFragment">
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/loading_animation"
             android:layout_width="74dp"
             android:layout_height="74dp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:visibility="visible"
-            app:lottie_rawRes="@raw/loading"/>
+            app:lottie_rawRes="@raw/loading" />
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_rails"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                tools:listitem="@layout/rail_item"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_rails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:listitem="@layout/rail_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -1,88 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/gray_light"
-    android:theme="@style/Theme.HealthUp"
-    android:id="@+id/settings">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/b1"
-        android:layout_height="74dp"
-        android:layout_width="300dp"
-        style="@style/button_settings"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        android:layout_marginTop="170dp"
-        android:text="@string/change_e"
-        app:textStartPadding="20dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_light"
+        android:theme="@style/Theme.HealthUp">
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/b2"
-        android:layout_height="74dp"
-        android:layout_width="300dp"
-        style="@style/button_settings"
-      app:layout_constraintTop_toBottomOf="@id/b1"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        android:text="@string/change_p"
-        android:layout_marginTop="-10dp"
-        app:textStartPadding="20dp"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/btn_change_password"
+            style="@style/button_settings"
+            android:layout_width="300dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="170dp"
+            android:text="@string/change_p"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:textStartPadding="20dp" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/b3"
-        android:layout_height="74dp"
-        android:layout_width="300dp"
-        style="@style/button_settings"
-        app:layout_constraintTop_toBottomOf="@id/b2"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        android:layout_marginTop="20dp"
-        android:text="@string/notifications"
-        app:textStartPadding="20dp"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/btn_about_us"
+            style="@style/button_settings"
+            android:layout_width="300dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="-10dp"
+            android:text="@string/about_us"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_change_password"
+            app:textStartPadding="20dp" />
 
-    <com.google.android.material.chip.Chip
-        android:id="@+id/b4"
-        android:layout_height="74dp"
-        android:layout_width="300dp"
-        style="@style/button_settings"
-        app:layout_constraintTop_toBottomOf="@id/b3"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        android:text="@string/about_us"
-        android:layout_marginTop="-10dp"
-        app:textStartPadding="20dp"/>
-
-    <com.google.android.material.chip.Chip
-        android:id="@+id/b5"
-        android:layout_height="74dp"
-        android:layout_width="300dp"
-        style="@style/button_settings"
-        app:layout_constraintTop_toBottomOf="@id/b4"
-        app:layout_constraintStart_toStartOf="@id/guide1"
-        app:layout_constraintEnd_toEndOf="@id/guide2"
-        android:text="@string/log"
-        android:textColor="@color/accentRed"
-       android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        app:textStartPadding="20dp"/>
+        <com.google.android.material.chip.Chip
+            android:id="@+id/btn_log_out"
+            style="@style/button_settings"
+            android:layout_width="300dp"
+            android:layout_height="74dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/log_out"
+            android:textColor="@color/accentRed"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_about_us"
+            app:textStartPadding="20dp" />
 
 
-        <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.20" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.80" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

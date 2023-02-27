@@ -55,7 +55,9 @@ class RegisterActivity : FragmentActivity() {
 
             btnNext.setOnClickListener {
                 if (vpRegister.currentItem == 5) {
-                    if (adapter.getFragment(vpRegister.currentItem).commitChanges() && !mailExists()) {
+                    if (adapter.getFragment(vpRegister.currentItem)
+                            .commitChanges() && !mailExists()
+                    ) {
                         vpRegister.currentItem = vpRegister.currentItem + 1
                     } else {
                         AlertDialog.Builder(this@RegisterActivity)
