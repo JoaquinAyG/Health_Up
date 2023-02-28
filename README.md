@@ -7,7 +7,7 @@
 
 -- Login de inicio de aplicación --
 
-![Login](img/login.png)
+![Login](img/login.jpg)
 
 
 -- Pelfil del usuario --
