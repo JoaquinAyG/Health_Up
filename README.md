@@ -1,45 +1,41 @@
 # Health up -- Alimentacion y deporte
-    
+
+-- Presentación de la aplicación en el primer inicio de sesión --
+
+![presentacion](img/presentacion.jpg)
+
+
 -- Login de inicio de aplicación --
 
 ![Login](img/login.png)
 
 
+-- Pelfil del usuario --
 
--- Presentación de la aplicación en el primer inicio de sesión --
-
-![presentacion](img/presentacion1.png)
-
-![presentacion](img/presentacion2.png)
+![Profile](img/profile.jpg)
 
 
+-- Sign up --
+![Name](img/name.jpg)   ![Gender](img/gender.jpg)
 
--- Prototipo en figma --
-
-Pelfil del usuario
-
-![Profile](img/profile.png)
-
-Navigation bar
-
-![navegacion](img/navegacion.png)
+![training days](img/capable.jpg)   ![check](img/check.jpg)    ![password](img/password.png)
 
 Progress bar para Sign up
 
 ![Progress bar](img/progress1.png)  ![Progress bar](img/progress2.png)
 
-Ejemplos del Sign up
 
-![training days](img/capable.png)   ![check](img/check.png)    ![password](img/password.png)
+-- Ejercicios --
 
-Pantalla de ejercicios
+![ejercicio](img/ejercicios.jpg)   
 
-![ejercicio](img/ejercicios1.png)   ![ejercicio](img/ejercicios2.png)
+Información detallada de cada ejercicio
+![ejercicio](img/ejercicios2.jpg)
 
-Pantalla de favoritos
 
-![Favorites](img/favoritos.png)
+-- Favoritos --
 
+![Favorites](img/favorites.jpg)
 
 
 -- Enlace a nuestro figma --

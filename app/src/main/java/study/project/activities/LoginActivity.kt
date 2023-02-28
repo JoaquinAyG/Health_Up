@@ -60,7 +60,6 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
-
     private fun observeUsers() {
         userViewModel.allUsers.observe(this) {
             it.forEach { user ->
