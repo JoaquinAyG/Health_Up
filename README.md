@@ -45,4 +45,4 @@ https://www.figma.com/file/fHtFCWCAkLZTQdqZ4F44fX/Untitled?node-id=0%3A1&t=RsfQH
 
 
 >This repository is licensed under
->[Creativecommons Org Licenses By Sa 4](http://creativecommons.org/licenses/by-sa/4.0/)
+>[Creative commons Org Licenses By Sa 4](http://creativecommons.org/licenses/by-sa/4.0/)
