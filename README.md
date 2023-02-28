@@ -1,45 +1,37 @@
 # Health up -- Alimentacion y deporte
-    
--- Login de inicio de aplicación --
-
-![Login](img/login.png)
-
-
 
 -- Presentación de la aplicación en el primer inicio de sesión --
 
-![presentacion](img/presentacion1.png)
-
-![presentacion](img/presentacion2.png)
+![presentacion](https://github.com/martuka23/Health_Up/blob/feature/readme/img/presentacion.jpg)
 
 
+-- Login de inicio de aplicación --
 
--- Prototipo en figma --
+![Login](https://github.com/martuka23/Health_Up/blob/feature/readme/img/login.jpg)
 
-Pelfil del usuario
 
-![Profile](img/profile.png)
+-- Pelfil del usuario --
 
-Navigation bar
+![Profile](https://github.com/martuka23/Health_Up/blob/feature/readme/img/profile.jpg)
 
-![navegacion](img/navegacion.png)
 
-Progress bar para Sign up
+-- Sign up --
 
-![Progress bar](img/progress1.png)  ![Progress bar](img/progress2.png)
+![Name](https://github.com/martuka23/Health_Up/blob/feature/readme/img/name.jpg)   ![Gender](https://github.com/martuka23/Health_Up/blob/feature/readme/img/gender.jpg)
 
-Ejemplos del Sign up
+![training days](https://github.com/martuka23/Health_Up/blob/feature/readme/img/capable.jpg)   ![check](https://github.com/martuka23/Health_Up/blob/feature/readme/img/check.jpg)    ![password](https://github.com/martuka23/Health_Up/blob/feature/readme/img/password.png)
 
-![training days](img/capable.png)   ![check](img/check.png)    ![password](img/password.png)
+-- Ejercicios --
 
-Pantalla de ejercicios
+![ejercicio](https://github.com/martuka23/Health_Up/blob/feature/readme/img/ejercicios.jpg)   
 
-![ejercicio](img/ejercicios1.png)   ![ejercicio](img/ejercicios2.png)
+Información detallada de cada ejercicio
+![ejercicio](https://github.com/martuka23/Health_Up/blob/feature/readme/img/ejercicios2.jpg)
 
-Pantalla de favoritos
 
-![Favorites](img/favoritos.png)
+-- Favoritos --
 
+![Favorites](https://github.com/martuka23/Health_Up/blob/feature/readme/img/favorites.jpg)
 
 
 -- Enlace a nuestro figma --
@@ -48,4 +40,4 @@ https://www.figma.com/file/fHtFCWCAkLZTQdqZ4F44fX/Untitled?node-id=0%3A1&t=RsfQH
 
 
 >This repository is licensed under
->[Creativecommons Org Licenses By Sa 4](http://creativecommons.org/licenses/by-sa/4.0/)
+>[Creative commons Org Licenses By Sa 4](http://creativecommons.org/licenses/by-sa/4.0/)
