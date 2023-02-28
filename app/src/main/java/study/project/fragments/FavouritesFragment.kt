@@ -1,7 +1,6 @@
 package study.project.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,7 +49,6 @@ class FavouritesFragment : Fragment() {
                     exercises.forEach { exercise ->
                         if (fav.exerciseId == exercise.id && fav.id == UserProfile.instance.id) {
 
-                            Log.i("ExerciseViewModel", "$exercise")
                             if (!list.contains(exercise)) list.add(exercise)
                             binding.rvFavourites.adapter?.notifyDataSetChanged()
                         }
@@ -60,7 +58,6 @@ class FavouritesFragment : Fragment() {
             binding.rvFavourites.adapter = FavouritesAdapter(
                 list,
                 onClick = {
-                    Log.i("RailAdapter", "clicked")
                     (activity as MainActivity).navigateToExercise(it)
                 }
             )
