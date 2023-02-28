@@ -107,7 +107,6 @@ class ExerciseViewModel : ViewModel() {
                 newList.add(newExercise)
             }
         }
-        Log.i("ExerciseViewModel", "${newList.map { it.id }}")
         return newList
     }
 

@@ -1,9 +1,19 @@
 package study.project.fragments
 
+import android.Manifest
+import android.app.Activity
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -20,6 +30,8 @@ class ProfileFragment : Fragment() {
     private val userViewModel: UserViewModel by viewModels {
         UserViewModelFactory((requireActivity().application as HealthUpApplication).userRepository)
     }
+    private lateinit var takePictureLauncher: ActivityResultLauncher<Intent>
+    private lateinit var requestPermissionLauncher: ActivityResultLauncher<String>
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -37,6 +49,25 @@ class ProfileFragment : Fragment() {
         return root
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        takePictureLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                val data = result.data
+                val imageBitmap = data?.extras?.get("data") as Bitmap
+                binding.ivProfile.setImageBitmap(imageBitmap)
+            }
+        }
+        requestPermissionLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                takePictureLauncher.launch(cameraIntent)
+            } else {
+                Toast.makeText(requireContext(), "Camera permission denied", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
     private fun initView() {
 
         binding.apply {
@@ -46,7 +77,7 @@ class ProfileFragment : Fragment() {
             editWeight.setText(profile.weight.toString())
             editHeight.setText(profile.height.toString())
             editGender.setText(profile.gender)
-            ivProfile.setOnClickListener {
+            imageView.setOnClickListener {
                 swapEnabled()
             }
             btnSave.setOnClickListener {
@@ -59,6 +90,14 @@ class ProfileFragment : Fragment() {
                 }
                 userViewModel.update(profile)
                 swapEnabled()
+            }
+            ivProfile.setOnClickListener {
+                if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                    val cameraIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+                    takePictureLauncher.launch(cameraIntent)
+                } else {
+                    requestPermissionLauncher.launch(Manifest.permission.CAMERA)
+                }
             }
         }
 
