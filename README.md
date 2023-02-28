@@ -2,41 +2,36 @@
 
 -- Presentación de la aplicación en el primer inicio de sesión --
 
-![presentacion](img/presentacion.jpg)
+![presentacion](https://github.com/martuka23/Health_Up/blob/feature/readme/img/presentacion.jpg)
 
 
 -- Login de inicio de aplicación --
 
-![Login](img/login.jpg)
+![Login](https://github.com/martuka23/Health_Up/blob/feature/readme/img/login.jpg)
 
 
 -- Pelfil del usuario --
 
-![Profile](img/profile.jpg)
+![Profile](https://github.com/martuka23/Health_Up/blob/feature/readme/img/profile.jpg)
 
 
 -- Sign up --
 
-![Name](img/name.jpg)   ![Gender](img/gender.jpg)
+![Name](https://github.com/martuka23/Health_Up/blob/feature/readme/img/name.jpg)   ![Gender](https://github.com/martuka23/Health_Up/blob/feature/readme/img/gender.jpg)
 
-![training days](img/capable.jpg)   ![check](img/check.jpg)    ![password](img/password.png)
-
-Progress bar para Sign up
-
-![Progress bar](img/progress1.png)  ![Progress bar](img/progress2.png)
-
+![training days](https://github.com/martuka23/Health_Up/blob/feature/readme/img/capable.jpg)   ![check](https://github.com/martuka23/Health_Up/blob/feature/readme/img/check.jpg)    ![password](https://github.com/martuka23/Health_Up/blob/feature/readme/img/password.png)
 
 -- Ejercicios --
 
-![ejercicio](img/ejercicios.jpg)   
+![ejercicio](https://github.com/martuka23/Health_Up/blob/feature/readme/img/ejercicios.jpg)   
 
 Información detallada de cada ejercicio
-![ejercicio](img/ejercicios2.jpg)
+![ejercicio](https://github.com/martuka23/Health_Up/blob/feature/readme/img/ejercicios2.jpg)
 
 
 -- Favoritos --
 
-![Favorites](img/favorites.jpg)
+![Favorites](https://github.com/martuka23/Health_Up/blob/feature/readme/img/favorites.jpg)
 
 
 -- Enlace a nuestro figma --
